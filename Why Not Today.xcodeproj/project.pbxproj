@@ -12,7 +12,7 @@
 		BA9C77CC32ED57178745F673 /* Why_Not_Today.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7DDA1F0CBE1F327B7ABB /* Why_Not_Today.xcdatamodeld */; };
 		BA9C79242B4FEF533D0C9CC2 /* Why_Not_TodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C717A9D1C67EA2BD94D91 /* Why_Not_TodayTests.swift */; };
 		BA9C7952C33C89CF4EB226E8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA9C769E9654C0E01444340A /* Info.plist */; };
-		BA9C7C01533C15B63244F330 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7949583DD7F10F9345B4 /* ViewController.swift */; };
+		BA9C7C01533C15B63244F330 /* HabitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */; };
 		BA9C7D16C365EA3B55EEF5DA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA9C76FA918EC962CB886050 /* Info.plist */; };
 		BA9C7E69E37960B290B75D78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7793F4C93009FE27E286 /* AppDelegate.swift */; };
 		BA9C7E9F1CF49328DD5DB961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9C7BD349C92AAC6124313C /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 		BA9C773ED22B5D48A303663F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA9C7793F4C93009FE27E286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA9C7818EA43A57363FB85E0 /* Why Not TodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Why Not TodayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA9C7949583DD7F10F9345B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewController.swift; sourceTree = "<group>"; };
 		BA9C7BD349C92AAC6124313C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA9C7F281201038953810C53 /* Why_Not_Today.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Why_Not_Today.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +96,7 @@
 				BA9C7793F4C93009FE27E286 /* AppDelegate.swift */,
 				BA9C7DDA1F0CBE1F327B7ABB /* Why_Not_Today.xcdatamodeld */,
 				BA9C7B6A3A4506FF202950B4 /* Main.storyboard */,
-				BA9C7949583DD7F10F9345B4 /* ViewController.swift */,
+				BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */,
 			);
 			path = "Why Not Today";
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 			files = (
 				BA9C7E69E37960B290B75D78 /* AppDelegate.swift in Sources */,
 				BA9C77CC32ED57178745F673 /* Why_Not_Today.xcdatamodeld in Sources */,
-				BA9C7C01533C15B63244F330 /* ViewController.swift in Sources */,
+				BA9C7C01533C15B63244F330 /* HabitTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
