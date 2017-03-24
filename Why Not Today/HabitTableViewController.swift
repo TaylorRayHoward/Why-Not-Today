@@ -8,11 +8,15 @@
 
 import UIKit
 
+class HabitTableViewCell: UITableViewCell {
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+}
 
 class HabitTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var habitTable: UITableView!
-    var habits: [String] = ["This", "Is", "A", "Test"]
+    var habits: [Habit] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         habitTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -32,21 +36,30 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = habitTable.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
-        cell.textLabel?.text = habits[indexPath.row]
+        let cell = habitTable.dequeueReusableCell(withIdentifier: "HabitCell", for: indexPath) as! HabitTableViewCell
+        cell.nameLabel?.text = habits[indexPath.row].name
+        cell.typeLabel?.text = habits[indexPath.row].type
         return cell
     }
     @IBAction func addHabit(_ sender: UIBarButtonItem) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let habit = Habit(context: context)
         let alert = UIAlertController(title: "Some Title", message: "Enter a text", preferredStyle: .alert)
         alert.addTextField()
+        alert.addTextField()
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-            let textField = alert!.textFields![0]
-            if let enteredText = textField.text {
+            let habitName = alert!.textFields![0]
+            let habitType = alert!.textFields![1]
+            if let enteredText = habitName.text {
                 if enteredText == "" {
                     return
                 }
-                self.habits.append(enteredText)
+                habit.name = enteredText
             }
+            if let enteredText = habitType.text {
+                habit.type = enteredText
+            }
+            self.habits.append(habit)
             self.habitTable.reloadData()
         }))
         self.present(alert, animated: true, completion: nil)

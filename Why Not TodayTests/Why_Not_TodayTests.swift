@@ -26,4 +26,22 @@ class Why_Not_TodayTests: XCTestCase {
         XCTAssert(habits[0] == "This")
     }
 
+    func testHabitAttributes() {
+        var habits = [Habit]()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        var habit = Habit(context: context)
+        habit.name = "Foo"
+        habit.type = "Bar"
+        habits.append(habit)
+        XCTAssert(habits.count == 1)
+        XCTAssert(habits[0].name == "Foo")
+        XCTAssert(habits[0].type == "Bar")
+        habit = Habit(context: context)
+        habit.name = "FooBar"
+        habit.type = "BarFoo"
+        habits.append(habit)
+        XCTAssert(habits[1].name == "FooBar")
+        XCTAssertEqual(habits[1].type, "BarFoo")
+    }
+
 }
