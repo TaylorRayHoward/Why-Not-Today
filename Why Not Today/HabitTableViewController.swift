@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
+
+class Habit: Object {
+    dynamic var name = ""
+    dynamic var type = ""
+}
 
 class HabitTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
@@ -42,8 +48,7 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     @IBAction func addHabit(_ sender: UIBarButtonItem) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let habit = Habit(context: context)
+        let habit = Habit()
         let alert = UIAlertController(title: "Some Title", message: "Enter a text", preferredStyle: .alert)
         alert.addTextField()
         alert.addTextField()

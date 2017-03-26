@@ -29,7 +29,10 @@
             </BuildableReference>
             <SkippedTests>
                <Test
-                  Identifier = "Why_Not_TodayTests/testExample()">
+                  Identifier = "Why_Not_TodayTests/testArrays()">
+               </Test>
+               <Test
+                  Identifier = "Why_Not_TodayTests/testHabitAttributes()">
                </Test>
             </SkippedTests>
          </TestableReference>
