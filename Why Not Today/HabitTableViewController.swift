@@ -14,20 +14,22 @@ class Habit: Object {
     dynamic var type = ""
 }
 
+
 class HabitTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
 }
 
 class HabitTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    let realm = try! Realm()
+    var habits: Results<Habit>!
     @IBOutlet weak var habitTable: UITableView!
-    var habits: [Habit] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         habitTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         habitTable.dataSource = self
         habitTable.delegate = self
+        reload()
     // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -64,9 +66,20 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
             if let enteredText = habitType.text {
                 habit.type = enteredText
             }
-            self.habits.append(habit)
-            self.habitTable.reloadData()
+
+            try! self.realm.write {
+                self.realm.add(habit)
+            }
+            self.reload()
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+
+    func reload(){
+        habits = self.realm.objects(Habit.self)
+        for h in habits {
+            print(h.name)
+        }
+        self.habitTable.reloadData()
     }
 }
