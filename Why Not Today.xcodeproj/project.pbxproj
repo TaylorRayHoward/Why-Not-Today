@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59CE67191E88826200A4180A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CE67181E88826200A4180A /* Realm.framework */; };
+		59CE671A1E88826200A4180A /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 59CE67181E88826200A4180A /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		59CE671D1E88826500A4180A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CE671C1E88826500A4180A /* RealmSwift.framework */; };
+		59CE671E1E88826500A4180A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 59CE671C1E88826500A4180A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA9C757BC83B2DE70CD39D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C77EEADB3AD0A66B83C06 /* LaunchScreen.storyboard */; };
 		BA9C764833B679D807A45781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C7B6A3A4506FF202950B4 /* Main.storyboard */; };
-		BA9C77CC32ED57178745F673 /* Why_Not_Today.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7DDA1F0CBE1F327B7ABB /* Why_Not_Today.xcdatamodeld */; };
 		BA9C79242B4FEF533D0C9CC2 /* Why_Not_TodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C717A9D1C67EA2BD94D91 /* Why_Not_TodayTests.swift */; };
 		BA9C7952C33C89CF4EB226E8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA9C769E9654C0E01444340A /* Info.plist */; };
-		BA9C7C01533C15B63244F330 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7949583DD7F10F9345B4 /* ViewController.swift */; };
+		BA9C7C01533C15B63244F330 /* HabitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */; };
 		BA9C7D16C365EA3B55EEF5DA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA9C76FA918EC962CB886050 /* Info.plist */; };
 		BA9C7E69E37960B290B75D78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7793F4C93009FE27E286 /* AppDelegate.swift */; };
 		BA9C7E9F1CF49328DD5DB961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9C7BD349C92AAC6124313C /* Assets.xcassets */; };
@@ -28,7 +31,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		59CE671B1E88826200A4180A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				59CE671E1E88826500A4180A /* RealmSwift.framework in Embed Frameworks */,
+				59CE671A1E88826200A4180A /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		59CE67181E88826200A4180A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		59CE671C1E88826500A4180A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		BA9C717A9D1C67EA2BD94D91 /* Why_Not_TodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Why_Not_TodayTests.swift; sourceTree = "<group>"; };
 		BA9C731562A7E83124A94892 /* Why Not Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Why Not Today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9C765C6EA98B12CB48C9FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,9 +57,8 @@
 		BA9C773ED22B5D48A303663F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA9C7793F4C93009FE27E286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA9C7818EA43A57363FB85E0 /* Why Not TodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Why Not TodayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA9C7949583DD7F10F9345B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewController.swift; sourceTree = "<group>"; };
 		BA9C7BD349C92AAC6124313C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BA9C7F281201038953810C53 /* Why_Not_Today.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Why_Not_Today.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59CE67191E88826200A4180A /* Realm.framework in Frameworks */,
+				59CE671D1E88826500A4180A /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,8 @@
 		BA9C707D96793DFB0AA89EF5 = {
 			isa = PBXGroup;
 			children = (
+				59CE671C1E88826500A4180A /* RealmSwift.framework */,
+				59CE67181E88826200A4180A /* Realm.framework */,
 				BA9C7E52F31241793DA38FD7 /* Products */,
 				BA9C7F20A2ACFC9FCCD65CAF /* Why Not Today */,
 				BA9C7A06FEAFD19DDB1DD5BA /* Why Not TodayTests */,
@@ -94,9 +117,8 @@
 				BA9C7BD349C92AAC6124313C /* Assets.xcassets */,
 				BA9C77EEADB3AD0A66B83C06 /* LaunchScreen.storyboard */,
 				BA9C7793F4C93009FE27E286 /* AppDelegate.swift */,
-				BA9C7DDA1F0CBE1F327B7ABB /* Why_Not_Today.xcdatamodeld */,
 				BA9C7B6A3A4506FF202950B4 /* Main.storyboard */,
-				BA9C7949583DD7F10F9345B4 /* ViewController.swift */,
+				BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */,
 			);
 			path = "Why Not Today";
 			sourceTree = "<group>";
@@ -129,6 +151,7 @@
 				BA9C7EEB39AC73214AF9D8E2 /* Sources */,
 				BA9C79C6F64E52998EDCCAF8 /* Frameworks */,
 				BA9C7DA1888DD6F8FD306C56 /* Resources */,
+				59CE671B1E88826200A4180A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,8 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9C7E69E37960B290B75D78 /* AppDelegate.swift in Sources */,
-				BA9C77CC32ED57178745F673 /* Why_Not_Today.xcdatamodeld in Sources */,
-				BA9C7C01533C15B63244F330 /* ViewController.swift in Sources */,
+				BA9C7C01533C15B63244F330 /* HabitTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +310,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SEDJW78WSB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Why Not Today/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorRayHoward.Why-Not-Today";
@@ -301,6 +331,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SEDJW78WSB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Why Not Today/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorRayHoward.Why-Not-Today";
@@ -375,6 +409,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Why Not Today.app/Why Not Today";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Why Not TodayTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorRayHoward.Why-Not-TodayTests";
@@ -415,19 +453,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		BA9C7DDA1F0CBE1F327B7ABB /* Why_Not_Today.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BA9C7F281201038953810C53 /* Why_Not_Today.xcdatamodel */,
-			);
-			currentVersion = BA9C7F281201038953810C53 /* Why_Not_Today.xcdatamodel */;
-			path = Why_Not_Today.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = BA9C74469C25F4F860B98898 /* Project object */;
 }
