@@ -9,12 +9,6 @@
 import UIKit
 import RealmSwift
 
-class Habit: Object {
-    dynamic var name = ""
-    dynamic var type = ""
-}
-
-
 class HabitTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
@@ -30,13 +24,14 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
         habitTable.dataSource = self
         habitTable.delegate = self
         reload()
-    // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewWillAppear(_ animated: Bool){
+        reload()
+    }
 
     override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+        super.didReceiveMemoryWarning()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,37 +44,31 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.typeLabel?.text = habits[indexPath.row].type
         return cell
     }
-    @IBAction func addHabit(_ sender: UIBarButtonItem) {
-        let habit = Habit()
-        let alert = UIAlertController(title: "Some Title", message: "Enter a text", preferredStyle: .alert)
-        alert.addTextField()
-        alert.addTextField()
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-            let habitName = alert!.textFields![0]
-            let habitType = alert!.textFields![1]
-            if let enteredText = habitName.text {
-                if enteredText == "" {
-                    return
-                }
-                habit.name = enteredText
-            }
-            if let enteredText = habitType.text {
-                habit.type = enteredText
-            }
 
-            try! self.realm.write {
-                self.realm.add(habit)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
+                   forRowAt indexPath: IndexPath){
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            let cell = tableView.cellForRow(at: indexPath) as! HabitTableViewCell
+
+            let predicate = NSPredicate(format: "name == %@", "\(cell.nameLabel!.text!)")
+            let deleteHabit = realm.objects(Habit.self).filter(predicate)
+            try! realm.write {
+                realm.delete(deleteHabit)
             }
-            self.reload()
-        }))
-        self.present(alert, animated: true, completion: nil)
+            reload()
+        }
     }
 
     func reload(){
         habits = self.realm.objects(Habit.self)
-        for h in habits {
-            print(h.name)
-        }
         self.habitTable.reloadData()
     }
 }

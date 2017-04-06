@@ -2,9 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751eebd8-aedd-4072-9c8a-f13590d2dcdc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today.xcodeproj/project.xcworkspace/xcuserdata/taylorrayhoward.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Why Not Today.xcodeproj/project.xcworkspace/xcuserdata/taylorrayhoward.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Realm.framework/233A5D05-49CC-33D6-8949-5D97CB2DE0E1.bcsymbolmap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Realm.framework/96901D28-2ACB-3312-A0EA-37DA8564D50A.bcsymbolmap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RealmSwift.framework/72106643-9205-35B0-A9FE-22865E910C3C.bcsymbolmap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RealmSwift.framework/8C381E9A-CF0F-3482-9D3F-629263628F5D.bcsymbolmap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RealmSwift.framework/A0F97A2B-27AF-34CB-8269-E75458B87B2A.bcsymbolmap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RealmSwift.framework/E5B3A769-AF38-3E97-A256-2BFD0299080D.bcsymbolmap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Why Not Today/Habit.swift" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/57419A35-1141-314E-BBDE-2A6218F810D2.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/6C663DAC-3E42-3FFB-A2B8-B51BAE148557.bcsymbolmap" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/61D42F29-2BA6-367B-ACB1-78B76B13A6B9.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/4F483ADC-0CEE-3148-A36D-A5246F50D1DB.bcsymbolmap" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/6DE6285F-B67E-33A9-8322-0A9A606361CF.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/950A8F95-6855-3900-8697-198C426FF869.bcsymbolmap" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/BEA60A8B-DE68-3F75-974D-5C0AD717D517.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/65CB8822-3D59-3AB5-BA58-358D4D59879C.bcsymbolmap" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/D4ED643F-6ADA-343B-8E4C-F343E740C760.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/A8D29870-6F08-33AA-904C-A5E7B783AB1E.bcsymbolmap" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/E6AED89D-FC58-3D17-A165-C70A0C94F659.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/E9A9BE40-7A11-3C61-B4A2-39C38EEABEE7.bcsymbolmap" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/57419A35-1141-314E-BBDE-2A6218F810D2.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/6C663DAC-3E42-3FFB-A2B8-B51BAE148557.bcsymbolmap" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/61D42F29-2BA6-367B-ACB1-78B76B13A6B9.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/4F483ADC-0CEE-3148-A36D-A5246F50D1DB.bcsymbolmap" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/6DE6285F-B67E-33A9-8322-0A9A606361CF.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/950A8F95-6855-3900-8697-198C426FF869.bcsymbolmap" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/BEA60A8B-DE68-3F75-974D-5C0AD717D517.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/65CB8822-3D59-3AB5-BA58-358D4D59879C.bcsymbolmap" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/D4ED643F-6ADA-343B-8E4C-F343E740C760.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/A8D29870-6F08-33AA-904C-A5E7B783AB1E.bcsymbolmap" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/E6AED89D-FC58-3D17-A165-C70A0C94F659.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/E9A9BE40-7A11-3C61-B4A2-39C38EEABEE7.bcsymbolmap" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/Realm" afterPath="$PROJECT_DIR$/Realm.framework/Realm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm.swiftdoc" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm.swiftdoc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm.swiftmodule" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm.swiftmodule" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftdoc" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftdoc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftdoc" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftdoc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftmodule" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftmodule" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftdoc" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftdoc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftmodule" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftmodule" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/RealmSwift" afterPath="$PROJECT_DIR$/RealmSwift.framework/RealmSwift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/CHANGELOG.md" afterPath="$PROJECT_DIR$/Realm.framework/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMRealm.h" afterPath="$PROJECT_DIR$/Realm.framework/Headers/RLMRealm.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/Info.plist" afterPath="$PROJECT_DIR$/Realm.framework/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMProperty_Private.h" afterPath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMProperty_Private.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h" afterPath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMSyncUtil_Private.h" afterPath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMSyncUtil_Private.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Headers/RealmSwift-Swift.h" afterPath="$PROJECT_DIR$/RealmSwift.framework/Headers/RealmSwift-Swift.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Info.plist" afterPath="$PROJECT_DIR$/RealmSwift.framework/Info.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Why Not Today.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Why Not Today/Base.lproj/Main.storyboard" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift" afterPath="$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift" afterPath="$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift" />
     </list>
@@ -18,14 +56,14 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulatoriPhone_7_10.2_x86_64_1" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulatoriPhone_7_Plus_10.3_x86_64_1" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="HabitTableViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+            <state relative-caret-position="263">
+              <caret line="58" column="71" lean-forward="false" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
               <folding>
                 <element signature="e#169#181#0" expanded="true" />
               </folding>
@@ -33,12 +71,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppDelegate.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Why Not Today/AppDelegate.swift">
+      <file leaf-file-name="Habit.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Why Not Today/Habit.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="66">
+              <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+              <folding>
+                <element signature="e#106#123#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateHabitViewController.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
+              <folding>
+                <element signature="e#106#118#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,13 +98,21 @@
       <file leaf-file-name="Why_Not_TodayTests.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-299">
-              <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="261">
+              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="e#168#181#0" expanded="true" />
-                <marker date="1490572655000" expanded="true" signature="1270:1851" ph="{...}" />
-                <marker date="1490572655000" expanded="true" signature="1880:2376" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LaunchScreen.storyboard" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Why Not Today/Base.lproj/LaunchScreen.storyboard">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-55">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,6 +128,8 @@
         <option value="$PROJECT_DIR$/Why Not Today/ViewController.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/AppDelegate.swift" />
         <option value="$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift" />
+        <option value="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" />
+        <option value="$PROJECT_DIR$/Why Not Today/Habit.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift" />
       </list>
     </option>
@@ -80,11 +142,13 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="2560" />
-    <option name="height" value="1338" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="797" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -162,22 +226,35 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="SearchEverywhereHistoryKey" value="habittabl&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift" />
+    <property name="SearchEverywhereHistoryKey" value="habittable&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift&#10;test&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/Why_Not_TodayTests.swift&#10;habittabl&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Why Not Today" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.Why Not Today">
-    <configuration default="false" name="All in Why_Not_TodayTests.swift" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Why Not Today" TARGET_NAME="Why Not TodayTests" CONFIG_NAME="Debug" SCHEME_NAME="All in Why_Not_TodayTests.swift" TEST_PATTERN="Why_Not_TodayTests" TEST_MODE="PATTERN" XCODE_SKIPPED_TESTS_HASH_CODE="0">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="-[Why_Not_TodayTests testEasy]" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Why Not Today" TARGET_NAME="Why Not TodayTests" CONFIG_NAME="Debug" SCHEME_NAME="-[Why_Not_TodayTests testEasy]" TEST_PATTERN="None" TEST_MODE="PATTERN" XCODE_SKIPPED_TESTS_HASH_CODE="1001871783">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Why Not Today" TARGET_NAME="Why Not Today" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Why Not Today" RUN_TARGET_NAME="Why Not Today" MAKE_ACTIVE="TRUE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -213,24 +290,21 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Why Not Today" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Why Not Today" TARGET_NAME="Why Not Today" CONFIG_NAME="Debug" SCHEME_NAME="Why Not Today" RUN_TARGET_PROJECT_NAME="Why Not Today" RUN_TARGET_NAME="Why Not Today" MAKE_ACTIVE="TRUE">
+    <configuration default="false" name="Why Not Today" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Why Not Today" TARGET_NAME="Why Not Today" CONFIG_NAME="Debug" SCHEME_NAME="Why Not Today" RUN_TARGET_PROJECT_NAME="Why Not Today" RUN_TARGET_NAME="Why Not Today" MAKE_ACTIVE="TRUE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
       <method />
     </configuration>
-    <list size="3">
+    <configuration default="false" name="RunTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Why Not Today" TARGET_NAME="Why Not TodayTests" CONFIG_NAME="Debug" SCHEME_NAME="RunTests" TEST_MODE="SUITE_TEST" XCODE_SKIPPED_TESTS_HASH_CODE="0">
+      <envs />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Why Not Today" />
-      <item index="1" class="java.lang.String" itemvalue="XCTest/Kiwi.All in Why_Not_TodayTests.swift" />
-      <item index="2" class="java.lang.String" itemvalue="XCTest/Kiwi.-[Why_Not_TodayTests testEasy]" />
+      <item index="1" class="java.lang.String" itemvalue="XCTest/Kiwi.RunTests" />
     </list>
-    <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="XCTest/Kiwi.All in Why_Not_TodayTests.swift" />
-        <item index="1" class="java.lang.String" itemvalue="XCTest/Kiwi.-[Why_Not_TodayTests testEasy]" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -253,19 +327,11 @@
       <workItem from="1489967029048" duration="7345000" />
       <workItem from="1490324170755" duration="3759000" />
       <workItem from="1490569884164" duration="4165000" />
+      <workItem from="1491369100675" duration="7956000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_Why_Not_TodayTests_swift - 2017.03.19 at 21h 04m 41s.xml">
-      <configuration name="All in Why_Not_TodayTests.swift" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="All_in_Why_Not_TodayTests_swift - 2017.03.23 at 22h 35m 41s.xml">
-      <configuration name="All in Why_Not_TodayTests.swift" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="All_in_Why_Not_TodayTests_swift - 2017.03.23 at 22h 36m 17s.xml">
-      <configuration name="All in Why_Not_TodayTests.swift" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
     <history-entry file="All_in_Why_Not_TodayTests_swift - 2017.03.23 at 22h 38m 00s.xml">
       <configuration name="All in Why_Not_TodayTests.swift" configurationId="OCUnitRunConfiguration" />
     </history-entry>
@@ -287,26 +353,35 @@
     <history-entry file="All_in_Why_Not_TodayTests_swift - 2017.03.26 at 18h 57m 45s.xml">
       <configuration name="All in Why_Not_TodayTests.swift" configurationId="OCUnitRunConfiguration" />
     </history-entry>
+    <history-entry file="RunTests - 2017.04.05 at 20h 42m 41s.xml">
+      <configuration name="RunTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="RunTests - 2017.04.05 at 20h 51m 23s.xml">
+      <configuration name="RunTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="RunTests - 2017.04.05 at 20h 56m 47s.xml">
+      <configuration name="RunTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17867000" />
+    <option name="totallyTimeSpent" value="25823000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="2560" height="1338" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1546875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15416667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12362637" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33018124" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -329,11 +404,39 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#169#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="e#168#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -350,17 +453,7 @@
           <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
             <element signature="e#168#181#0" expanded="true" />
-            <marker date="1490572655000" expanded="true" signature="1270:1851" ph="{...}" />
-            <marker date="1490572655000" expanded="true" signature="1880:2376" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Why Not Today/Base.lproj/LaunchScreen.storyboard">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -373,30 +466,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift">
+    <entry file="file://$PROJECT_DIR$/Why Not Today/Base.lproj/LaunchScreen.storyboard">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299">
-          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding>
-            <element signature="e#168#181#0" expanded="true" />
-            <marker date="1490572655000" expanded="true" signature="1270:1851" ph="{...}" />
-            <marker date="1490572655000" expanded="true" signature="1880:2376" ph="{...}" />
-          </folding>
+        <state relative-caret-position="-55">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="154">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/Habit.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding>
+            <element signature="e#106#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#168#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
+          <folding>
+            <element signature="e#106#118#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        <state relative-caret-position="263">
+          <caret line="58" column="71" lean-forward="false" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
           <folding>
             <element signature="e#169#181#0" expanded="true" />
           </folding>

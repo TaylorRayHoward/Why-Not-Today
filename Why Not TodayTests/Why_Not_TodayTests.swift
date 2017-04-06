@@ -28,20 +28,14 @@ class Why_Not_TodayTests: XCTestCase {
     }
 
     func testHabitAttributes() {
-        var habits = [Habit]()
-        var habit = Habit()
-        habit.name = "Foo"
-        habit.type = "Bar"
-        habits.append(habit)
-        XCTAssert(habits.count == 1)
-        XCTAssert(habits[0].name == "Foo")
-        XCTAssert(habits[0].type == "Bar")
-        habit = Habit()
-        habit.name = "FooBar"
-        habit.type = "BarFoo"
-        habits.append(habit)
-        XCTAssert(habits[1].name == "FooBar")
-        XCTAssertEqual(habits[1].type, "BarFoo")
+        let habit1 = Habit()
+        let habit2 = Habit()
+        habit1.name = "Foo"
+        habit1.type = "Bar"
+        habit2.name = "Foo"
+        habit2.type = "Bar"
+        XCTAssertEqual(habit1.name, habit2.name)
+        XCTAssertEqual(habit1.type, habit2.type)
     }
 
     func testRealmAdd() {
@@ -78,7 +72,6 @@ class Why_Not_TodayTests: XCTestCase {
         }
 
         let habits = realm.objects(Habit.self)
-
         XCTAssertEqual(habits.count, 0)
     }
 
