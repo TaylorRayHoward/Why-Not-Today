@@ -2,49 +2,104 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751eebd8-aedd-4072-9c8a-f13590d2dcdc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Realm.framework/233A5D05-49CC-33D6-8949-5D97CB2DE0E1.bcsymbolmap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Realm.framework/96901D28-2ACB-3312-A0EA-37DA8564D50A.bcsymbolmap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RealmSwift.framework/72106643-9205-35B0-A9FE-22865E910C3C.bcsymbolmap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RealmSwift.framework/8C381E9A-CF0F-3482-9D3F-629263628F5D.bcsymbolmap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RealmSwift.framework/A0F97A2B-27AF-34CB-8269-E75458B87B2A.bcsymbolmap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RealmSwift.framework/E5B3A769-AF38-3E97-A256-2BFD0299080D.bcsymbolmap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Why Not Today/Habit.swift" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/57419A35-1141-314E-BBDE-2A6218F810D2.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/6C663DAC-3E42-3FFB-A2B8-B51BAE148557.bcsymbolmap" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/61D42F29-2BA6-367B-ACB1-78B76B13A6B9.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/4F483ADC-0CEE-3148-A36D-A5246F50D1DB.bcsymbolmap" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/6DE6285F-B67E-33A9-8322-0A9A606361CF.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/950A8F95-6855-3900-8697-198C426FF869.bcsymbolmap" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/BEA60A8B-DE68-3F75-974D-5C0AD717D517.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/65CB8822-3D59-3AB5-BA58-358D4D59879C.bcsymbolmap" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/D4ED643F-6ADA-343B-8E4C-F343E740C760.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/A8D29870-6F08-33AA-904C-A5E7B783AB1E.bcsymbolmap" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Realm.framework/E6AED89D-FC58-3D17-A165-C70A0C94F659.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/E9A9BE40-7A11-3C61-B4A2-39C38EEABEE7.bcsymbolmap" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/57419A35-1141-314E-BBDE-2A6218F810D2.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/6C663DAC-3E42-3FFB-A2B8-B51BAE148557.bcsymbolmap" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/61D42F29-2BA6-367B-ACB1-78B76B13A6B9.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/4F483ADC-0CEE-3148-A36D-A5246F50D1DB.bcsymbolmap" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/6DE6285F-B67E-33A9-8322-0A9A606361CF.bcsymbolmap" afterPath="$PROJECT_DIR$/RealmSwift.framework/950A8F95-6855-3900-8697-198C426FF869.bcsymbolmap" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/BEA60A8B-DE68-3F75-974D-5C0AD717D517.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/65CB8822-3D59-3AB5-BA58-358D4D59879C.bcsymbolmap" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/D4ED643F-6ADA-343B-8E4C-F343E740C760.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/A8D29870-6F08-33AA-904C-A5E7B783AB1E.bcsymbolmap" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RealmSwift.framework/E6AED89D-FC58-3D17-A165-C70A0C94F659.bcsymbolmap" afterPath="$PROJECT_DIR$/Realm.framework/E9A9BE40-7A11-3C61-B4A2-39C38EEABEE7.bcsymbolmap" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/Realm" afterPath="$PROJECT_DIR$/Realm.framework/Realm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm.swiftdoc" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm.swiftdoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm.swiftmodule" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm.swiftmodule" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftdoc" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftdoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftdoc" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftdoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftmodule" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftmodule" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftdoc" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftdoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftmodule" afterPath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftmodule" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/RealmSwift" afterPath="$PROJECT_DIR$/RealmSwift.framework/RealmSwift" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/225289DE-1DBE-3763-A572-2F3EBB5CD514.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/233A5D05-49CC-33D6-8949-5D97CB2DE0E1.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/3710A3C4-F4A2-350D-9C03-60B024A09729.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/4F483ADC-0CEE-3148-A36D-A5246F50D1DB.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/65CB8822-3D59-3AB5-BA58-358D4D59879C.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/6C663DAC-3E42-3FFB-A2B8-B51BAE148557.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/7A49FBA1-D0C0-3454-B76C-B5F8C6A30D63.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/950A8F95-6855-3900-8697-198C426FF869.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/96901D28-2ACB-3312-A0EA-37DA8564D50A.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/A8D29870-6F08-33AA-904C-A5E7B783AB1E.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/D007DF9D-42E5-3889-8AE5-D26340E4D4BC.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/E9A9BE40-7A11-3C61-B4A2-39C38EEABEE7.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/NSError+RLMSync.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMArray.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMCollection.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMConstants.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMMigration.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMObject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMObjectBase.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMObjectBase_Dynamic.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMObjectSchema.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMPlatform.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMProperty.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMRealm.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMRealmConfiguration+Sync.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMRealmConfiguration.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMRealm_Dynamic.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMResults.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMSchema.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMSyncConfiguration.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMSyncCredentials.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMSyncManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMSyncPermission.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMSyncPermissionChange.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMSyncPermissionOffer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMSyncPermissionOfferResponse.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMSyncSession.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMSyncUser.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMSyncUtil.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMThreadSafeReference.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Headers/Realm.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Modules/module.modulemap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMAccessor.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMArray_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMListBase.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMMigration_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMObjectStore.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMObject_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMOptionalBase.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMProperty_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMRealm_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMResults_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMSchema_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMSyncConfiguration_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMSyncPermissionChange_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMSyncPermissionOfferResponse_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMSyncPermissionOffer_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMSyncPermission_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMSyncUtil_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/Realm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Realm.framework/strip-frameworks.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/225289DE-1DBE-3763-A572-2F3EBB5CD514.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/233A5D05-49CC-33D6-8949-5D97CB2DE0E1.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/3710A3C4-F4A2-350D-9C03-60B024A09729.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/4F483ADC-0CEE-3148-A36D-A5246F50D1DB.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/65CB8822-3D59-3AB5-BA58-358D4D59879C.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/6C663DAC-3E42-3FFB-A2B8-B51BAE148557.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/72106643-9205-35B0-A9FE-22865E910C3C.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/7A49FBA1-D0C0-3454-B76C-B5F8C6A30D63.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/8C381E9A-CF0F-3482-9D3F-629263628F5D.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/950A8F95-6855-3900-8697-198C426FF869.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/96901D28-2ACB-3312-A0EA-37DA8564D50A.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/A0F97A2B-27AF-34CB-8269-E75458B87B2A.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/A8D29870-6F08-33AA-904C-A5E7B783AB1E.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/D007DF9D-42E5-3889-8AE5-D26340E4D4BC.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/E5B3A769-AF38-3E97-A256-2BFD0299080D.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/E9A9BE40-7A11-3C61-B4A2-39C38EEABEE7.bcsymbolmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/Headers/RealmSwift-Swift.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm.swiftdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm.swiftmodule" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftmodule" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftmodule" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/Modules/module.modulemap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RealmSwift.framework/RealmSwift" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today.xcodeproj/project.xcworkspace/xcuserdata/taylorhoward.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Why Not Today.xcodeproj/project.xcworkspace/xcuserdata/taylorhoward.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/CHANGELOG.md" afterPath="$PROJECT_DIR$/Realm.framework/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/Headers/RLMRealm.h" afterPath="$PROJECT_DIR$/Realm.framework/Headers/RLMRealm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/Info.plist" afterPath="$PROJECT_DIR$/Realm.framework/Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMProperty_Private.h" afterPath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMProperty_Private.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h" afterPath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMSyncUtil_Private.h" afterPath="$PROJECT_DIR$/Realm.framework/PrivateHeaders/RLMSyncUtil_Private.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Headers/RealmSwift-Swift.h" afterPath="$PROJECT_DIR$/RealmSwift.framework/Headers/RealmSwift-Swift.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealmSwift.framework/Info.plist" afterPath="$PROJECT_DIR$/RealmSwift.framework/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/xcode.xml" afterPath="$PROJECT_DIR$/.idea/xcode.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Why Not Today.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Why Not Today/Base.lproj/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift" afterPath="$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift" afterPath="$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,8 +117,8 @@
       <file leaf-file-name="HabitTableViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="58" column="71" lean-forward="false" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
+            <state relative-caret-position="140">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#169#181#0" expanded="true" />
               </folding>
@@ -86,7 +141,7 @@
       <file leaf-file-name="CreateHabitViewController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="638">
               <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
               <folding>
                 <element signature="e#106#118#0" expanded="true" />
@@ -98,7 +153,7 @@
       <file leaf-file-name="Why_Not_TodayTests.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
+            <state relative-caret-position="1496">
               <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="e#168#181#0" expanded="true" />
@@ -110,7 +165,7 @@
       <file leaf-file-name="LaunchScreen.storyboard" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Why Not Today/Base.lproj/LaunchScreen.storyboard">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-55">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -164,18 +219,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Why Not Today" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" />
@@ -213,14 +259,37 @@
               <option name="myItemId" value="Why Not Today" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Products" />
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Why Not Today" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pods" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Why Not Today" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Frameworks" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,6 +298,7 @@
     <property name="SearchEverywhereHistoryKey" value="habittable&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift&#10;test&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/Why_Not_TodayTests.swift&#10;habittabl&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Why Not Today" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Why Not Today.xcworkspace" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -327,7 +397,10 @@
       <workItem from="1489967029048" duration="7345000" />
       <workItem from="1490324170755" duration="3759000" />
       <workItem from="1490569884164" duration="4165000" />
-      <workItem from="1491369100675" duration="7956000" />
+      <workItem from="1491369100675" duration="8564000" />
+      <workItem from="1491605570895" duration="1045000" />
+      <workItem from="1491619790917" duration="244000" />
+      <workItem from="1491620044690" duration="199000" />
     </task>
     <servers />
   </component>
@@ -364,7 +437,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25823000" />
+    <option name="totallyTimeSpent" value="27919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -373,10 +446,10 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15416667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12362637" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2912088" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2912088" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -419,11 +492,154 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/Habit.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding>
+            <element signature="e#106#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
+          <folding>
+            <element signature="e#106#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#168#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/Base.lproj/LaunchScreen.storyboard">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#169#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/Habit.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding>
+            <element signature="e#106#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
+          <folding>
+            <element signature="e#106#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1452">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#168#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/Base.lproj/LaunchScreen.storyboard">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#169#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/Habit.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding>
+            <element signature="e#106#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
+          <folding>
+            <element signature="e#106#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1452">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#168#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/Base.lproj/LaunchScreen.storyboard">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#169#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -468,7 +684,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/Base.lproj/LaunchScreen.storyboard">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -478,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -494,7 +709,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
+        <state relative-caret-position="1496">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="e#168#181#0" expanded="true" />
@@ -504,7 +719,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="638">
           <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
           <folding>
             <element signature="e#106#118#0" expanded="true" />
@@ -514,8 +729,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="58" column="71" lean-forward="false" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
+        <state relative-caret-position="140">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#169#181#0" expanded="true" />
           </folding>

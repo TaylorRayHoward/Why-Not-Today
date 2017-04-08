@@ -9,16 +9,14 @@
 /* Begin PBXBuildFile section */
 		3BB0908205B4D55FCAE69362 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB0929F429D46083CAD9F18 /* Habit.swift */; };
 		3BB09B3303E1EE63BE6B3913 /* CreateHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */; };
-		56BB17FC1E95D6330043E1F1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BB17F41E95D25A0043E1F1 /* Realm.framework */; };
-		56BB17FD1E95D6330043E1F1 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56BB17F41E95D25A0043E1F1 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		56BB17FE1E95D6330043E1F1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BB17F51E95D25A0043E1F1 /* RealmSwift.framework */; };
-		56BB17FF1E95D6330043E1F1 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56BB17F51E95D25A0043E1F1 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA9C757BC83B2DE70CD39D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C77EEADB3AD0A66B83C06 /* LaunchScreen.storyboard */; };
 		BA9C764833B679D807A45781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C7B6A3A4506FF202950B4 /* Main.storyboard */; };
 		BA9C79242B4FEF533D0C9CC2 /* Why_Not_TodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C717A9D1C67EA2BD94D91 /* Why_Not_TodayTests.swift */; };
 		BA9C7C01533C15B63244F330 /* HabitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */; };
 		BA9C7E69E37960B290B75D78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7793F4C93009FE27E286 /* AppDelegate.swift */; };
 		BA9C7E9F1CF49328DD5DB961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9C7BD349C92AAC6124313C /* Assets.xcassets */; };
+		CAE8D3957A6F3930A272D19F /* Pods_Why_Not_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B734C7AF4A0B2E72460209 /* Pods_Why_Not_Today.framework */; };
+		EDC754E90C62E3796EA61D64 /* Pods_Why_Not_TodayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E8BA822806501DA90476B9B /* Pods_Why_Not_TodayTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +36,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				56BB17FF1E95D6330043E1F1 /* RealmSwift.framework in Embed Frameworks */,
-				56BB17FD1E95D6330043E1F1 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,8 +45,11 @@
 /* Begin PBXFileReference section */
 		3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHabitViewController.swift; sourceTree = "<group>"; };
 		3BB0929F429D46083CAD9F18 /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
-		56BB17F41E95D25A0043E1F1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		56BB17F51E95D25A0043E1F1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		45AC03E4B28CF057FBDF3031 /* Pods-Why Not TodayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not TodayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not TodayTests/Pods-Why Not TodayTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E8BA822806501DA90476B9B /* Pods_Why_Not_TodayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Why_Not_TodayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63EF0358EE37CC41EA38FFD1 /* Pods-Why Not Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not Today/Pods-Why Not Today.debug.xcconfig"; sourceTree = "<group>"; };
+		75B734C7AF4A0B2E72460209 /* Pods_Why_Not_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Why_Not_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8932D2C2153DB981E96A42F1 /* Pods-Why Not TodayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not TodayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not TodayTests/Pods-Why Not TodayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA9C717A9D1C67EA2BD94D91 /* Why_Not_TodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Why_Not_TodayTests.swift; sourceTree = "<group>"; };
 		BA9C731562A7E83124A94892 /* Why Not Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Why Not Today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9C765C6EA98B12CB48C9FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		BA9C7818EA43A57363FB85E0 /* Why Not TodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Why Not TodayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewController.swift; sourceTree = "<group>"; };
 		BA9C7BD349C92AAC6124313C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4CB02203E41EA9ABC31F96F /* Pods-Why Not Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not Today/Pods-Why Not Today.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC754E90C62E3796EA61D64 /* Pods_Why_Not_TodayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,22 +76,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56BB17FE1E95D6330043E1F1 /* RealmSwift.framework in Frameworks */,
-				56BB17FC1E95D6330043E1F1 /* Realm.framework in Frameworks */,
+				CAE8D3957A6F3930A272D19F /* Pods_Why_Not_Today.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99FADE995FF27570E71AAF04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75B734C7AF4A0B2E72460209 /* Pods_Why_Not_Today.framework */,
+				4E8BA822806501DA90476B9B /* Pods_Why_Not_TodayTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA7952F2D0CCEF65D38CECF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63EF0358EE37CC41EA38FFD1 /* Pods-Why Not Today.debug.xcconfig */,
+				D4CB02203E41EA9ABC31F96F /* Pods-Why Not Today.release.xcconfig */,
+				8932D2C2153DB981E96A42F1 /* Pods-Why Not TodayTests.debug.xcconfig */,
+				45AC03E4B28CF057FBDF3031 /* Pods-Why Not TodayTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BA9C707D96793DFB0AA89EF5 = {
 			isa = PBXGroup;
 			children = (
-				56BB17F41E95D25A0043E1F1 /* Realm.framework */,
-				56BB17F51E95D25A0043E1F1 /* RealmSwift.framework */,
 				BA9C7E52F31241793DA38FD7 /* Products */,
 				BA9C7F20A2ACFC9FCCD65CAF /* Why Not Today */,
 				BA9C7A06FEAFD19DDB1DD5BA /* Why Not TodayTests */,
+				BA7952F2D0CCEF65D38CECF9 /* Pods */,
+				99FADE995FF27570E71AAF04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +154,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA9C75DC6A8E7117B9B37FF8 /* Build configuration list for PBXNativeTarget "Why Not TodayTests" */;
 			buildPhases = (
+				B8AE956FF53BE4ED5FFA8295 /* [CP] Check Pods Manifest.lock */,
 				BA9C792AA3CAA37154013383 /* Sources */,
 				BA9C75719D47DF3F6D66A926 /* Frameworks */,
 				BA9C7C9B1CAE8CAD5889FCB5 /* Resources */,
+				4A0E76B56C7D388A07D88B59 /* [CP] Embed Pods Frameworks */,
+				EC4FC0A24971B0E319FB9F88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,10 +175,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA9C711A5677166ED6C8CDC4 /* Build configuration list for PBXNativeTarget "Why Not Today" */;
 			buildPhases = (
+				594F31178E9681CFB3A77B7E /* [CP] Check Pods Manifest.lock */,
 				BA9C7EEB39AC73214AF9D8E2 /* Sources */,
 				BA9C79C6F64E52998EDCCAF8 /* Frameworks */,
 				BA9C7DA1888DD6F8FD306C56 /* Resources */,
 				56BB18001E95D6330043E1F1 /* Embed Frameworks */,
+				30CA60EC2D24FD3F7F398A90 /* [CP] Embed Pods Frameworks */,
+				74F82EAC0A1C020FAFEA9A12 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +246,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30CA60EC2D24FD3F7F398A90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Why Not Today/Pods-Why Not Today-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A0E76B56C7D388A07D88B59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Why Not TodayTests/Pods-Why Not TodayTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		594F31178E9681CFB3A77B7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		74F82EAC0A1C020FAFEA9A12 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Why Not Today/Pods-Why Not Today-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8AE956FF53BE4ED5FFA8295 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC4FC0A24971B0E319FB9F88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Why Not TodayTests/Pods-Why Not TodayTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA9C792AA3CAA37154013383 /* Sources */ = {
@@ -315,6 +434,7 @@
 		};
 		BA9C76E6535D3344C2342718 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63EF0358EE37CC41EA38FFD1 /* Pods-Why Not Today.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SEDJW78WSB;
@@ -322,10 +442,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited) $(PROJECT_DIR)";
 				INFOPLIST_FILE = "Why Not Today/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorRayHoward.Why-Not-Today";
@@ -336,6 +453,7 @@
 		};
 		BA9C77E6CA43E36C313CF447 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4CB02203E41EA9ABC31F96F /* Pods-Why Not Today.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SEDJW78WSB;
@@ -353,6 +471,7 @@
 		};
 		BA9C7886C913931C1AF68CE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45AC03E4B28CF057FBDF3031 /* Pods-Why Not TodayTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Why Not Today.app/Why Not Today";
 				DEVELOPMENT_TEAM = SEDJW78WSB;
@@ -416,14 +535,11 @@
 		};
 		BA9C7C9C0385CD33A08A2442 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8932D2C2153DB981E96A42F1 /* Pods-Why Not TodayTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Why Not Today.app/Why Not Today";
 				DEVELOPMENT_TEAM = SEDJW78WSB;
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RealmSwift.framework",
-				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited) $(PROJECT_DIR) $(PROJECT_DIR)/RealmSwift.framework";
 				INFOPLIST_FILE = "Why Not TodayTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorRayHoward.Why-Not-TodayTests";

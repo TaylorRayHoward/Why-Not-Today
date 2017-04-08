@@ -1,0 +1,6 @@
+framework module Pods_Why_Not_Today {
+  umbrella header "Pods-Why Not Today-umbrella.h"
+
+  export *
+  module * { export * }
+}
