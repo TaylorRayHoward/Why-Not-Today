@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3BB0908205B4D55FCAE69362 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB0929F429D46083CAD9F18 /* Habit.swift */; };
 		3BB09B3303E1EE63BE6B3913 /* CreateHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */; };
+		560A823B1E996B8300593671 /* EditHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A823A1E996B8300593671 /* EditHabitViewController.swift */; };
 		BA9C757BC83B2DE70CD39D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C77EEADB3AD0A66B83C06 /* LaunchScreen.storyboard */; };
 		BA9C764833B679D807A45781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C7B6A3A4506FF202950B4 /* Main.storyboard */; };
 		BA9C79242B4FEF533D0C9CC2 /* Why_Not_TodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C717A9D1C67EA2BD94D91 /* Why_Not_TodayTests.swift */; };
@@ -47,6 +48,7 @@
 		3BB0929F429D46083CAD9F18 /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		45AC03E4B28CF057FBDF3031 /* Pods-Why Not TodayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not TodayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not TodayTests/Pods-Why Not TodayTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E8BA822806501DA90476B9B /* Pods_Why_Not_TodayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Why_Not_TodayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		560A823A1E996B8300593671 /* EditHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHabitViewController.swift; sourceTree = "<group>"; };
 		63EF0358EE37CC41EA38FFD1 /* Pods-Why Not Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not Today/Pods-Why Not Today.debug.xcconfig"; sourceTree = "<group>"; };
 		75B734C7AF4A0B2E72460209 /* Pods_Why_Not_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Why_Not_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8932D2C2153DB981E96A42F1 /* Pods-Why Not TodayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not TodayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not TodayTests/Pods-Why Not TodayTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */,
 				3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */,
 				3BB0929F429D46083CAD9F18 /* Habit.swift */,
+				560A823A1E996B8300593671 /* EditHabitViewController.swift */,
 			);
 			path = "Why Not Today";
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9C7E69E37960B290B75D78 /* AppDelegate.swift in Sources */,
+				560A823B1E996B8300593671 /* EditHabitViewController.swift in Sources */,
 				BA9C7C01533C15B63244F330 /* HabitTableViewController.swift in Sources */,
 				3BB09B3303E1EE63BE6B3913 /* CreateHabitViewController.swift in Sources */,
 				3BB0908205B4D55FCAE69362 /* Habit.swift in Sources */,
@@ -442,7 +446,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited) $(PROJECT_DIR)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Why Not Today/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorRayHoward.Why-Not-Today";
@@ -539,7 +546,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Why Not Today.app/Why Not Today";
 				DEVELOPMENT_TEAM = SEDJW78WSB;
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited) $(PROJECT_DIR) $(PROJECT_DIR)/RealmSwift.framework";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RealmSwift.framework",
+				);
 				INFOPLIST_FILE = "Why Not TodayTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorRayHoward.Why-Not-TodayTests";

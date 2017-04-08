@@ -31,7 +31,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="csh-X8-87b" id="YkT-go-nWk">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybV-OA-RlN">
@@ -80,11 +80,70 @@
                     </navigationItem>
                     <connections>
                         <outlet property="habitTable" destination="GSa-J0-5DM" id="UrW-fK-gSD"/>
+                        <segue destination="97E-LC-gpe" kind="show" identifier="EditSegue" id="PoV-BT-cFo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqa-06-l7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052" y="-97.601199400299862"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="LZe-tu-QIH">
+            <objects>
+                <viewController storyboardIdentifier="EditStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="97E-LC-gpe" customClass="EditHabitViewController" customModule="Why_Not_Today" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VQ2-UD-BZN"/>
+                        <viewControllerLayoutGuide type="bottom" id="PrD-Nr-2PJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mLf-48-HSH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s4H-E4-r5D">
+                                <rect key="frame" x="16" y="124" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add type..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cvm-Nm-JO5">
+                                <rect key="frame" x="16" y="184" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cvm-Nm-JO5" firstAttribute="leading" secondItem="mLf-48-HSH" secondAttribute="leadingMargin" id="F1y-3K-WwR"/>
+                            <constraint firstItem="s4H-E4-r5D" firstAttribute="top" secondItem="VQ2-UD-BZN" secondAttribute="bottom" constant="60" id="MyC-R3-NQf"/>
+                            <constraint firstItem="Cvm-Nm-JO5" firstAttribute="centerX" secondItem="mLf-48-HSH" secondAttribute="centerX" id="ZV3-6x-DYa"/>
+                            <constraint firstItem="Cvm-Nm-JO5" firstAttribute="top" secondItem="s4H-E4-r5D" secondAttribute="bottom" constant="30" id="a9k-yF-vlu"/>
+                            <constraint firstItem="s4H-E4-r5D" firstAttribute="centerX" secondItem="mLf-48-HSH" secondAttribute="centerX" id="fqV-o7-kFq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s4H-E4-r5D" secondAttribute="trailing" id="nWa-8e-U2R"/>
+                            <constraint firstItem="s4H-E4-r5D" firstAttribute="leading" secondItem="mLf-48-HSH" secondAttribute="leadingMargin" id="odO-PK-iUU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cvm-Nm-JO5" secondAttribute="trailing" id="wwB-qc-1kK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit" id="eX9-fy-gkk">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="v0D-c6-lj7">
+                            <connections>
+                                <action selector="cancelEdit:" destination="97E-LC-gpe" id="BpF-1c-xoX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bnY-8g-1R3">
+                            <connections>
+                                <action selector="saveEdit:" destination="97E-LC-gpe" id="uix-Pv-1QL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameField" destination="s4H-E4-r5D" id="pxT-09-brH"/>
+                        <outlet property="typeField" destination="Cvm-Nm-JO5" id="80A-vK-dMQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="myJ-4k-q4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="724"/>
         </scene>
         <!--Create-->
         <scene sceneID="OCq-Ve-KpZ">
@@ -103,13 +162,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAK-JI-Npi">
-                                <rect key="frame" x="16" y="124" width="288" height="30"/>
+                                <rect key="frame" x="16" y="154" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add type..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gI3-VI-XjM">
-                                <rect key="frame" x="16" y="184" width="288" height="30"/>
+                                <rect key="frame" x="16" y="214" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -118,10 +177,10 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="gI3-VI-XjM" secondAttribute="trailing" id="IFa-Ii-rhY"/>
+                            <constraint firstItem="RAK-JI-Npi" firstAttribute="top" secondItem="CI9-ro-R3w" secondAttribute="bottom" constant="90" id="PDE-5R-JOO"/>
                             <constraint firstItem="RAK-JI-Npi" firstAttribute="centerX" secondItem="SCm-iW-n7t" secondAttribute="centerX" id="QKg-x7-bje"/>
                             <constraint firstItem="gI3-VI-XjM" firstAttribute="centerX" secondItem="SCm-iW-n7t" secondAttribute="centerX" id="bbe-m7-vT2"/>
                             <constraint firstItem="gI3-VI-XjM" firstAttribute="top" secondItem="RAK-JI-Npi" secondAttribute="bottom" constant="30" id="doR-oJ-P09"/>
-                            <constraint firstItem="RAK-JI-Npi" firstAttribute="top" secondItem="CI9-ro-R3w" secondAttribute="bottom" constant="60" id="g9I-ap-ppy"/>
                             <constraint firstItem="gI3-VI-XjM" firstAttribute="leading" secondItem="SCm-iW-n7t" secondAttribute="leadingMargin" id="mum-yW-aTd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RAK-JI-Npi" secondAttribute="trailing" id="ntc-Rq-AWk"/>
                             <constraint firstItem="RAK-JI-Npi" firstAttribute="leading" secondItem="SCm-iW-n7t" secondAttribute="leadingMargin" id="xiy-f4-ZjL"/>

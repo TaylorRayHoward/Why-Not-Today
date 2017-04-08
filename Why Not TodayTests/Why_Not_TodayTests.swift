@@ -81,7 +81,25 @@ class HabitSpec: QuickSpec {
         let habits = realm.objects(Habit.self).filter("name == 'Foo'")
         expect(habits.count).to(equal(1))
       }
+      it("can update") {
+          var habit = Habit()
+          habit.name = "Foe"
+          habit.type = "Bear"
+          try! realm.write {
+              realm.add(habit)
+          }
 
+          habit = realm.objects(Habit.self).filter("name == 'Foe' AND type == 'Bear'").first!
+
+          try! realm.write {
+              habit.name = "Foo"
+              habit.type = "Bar"
+          }
+
+          habit = realm.objects(Habit.self).filter("name == 'Foo' AND type == 'Bar'").first!
+          expect(habit.name).to(equal("Foo"))
+          expect(habit.type).to(equal("Bar"))
+      }
     }
   }
 }

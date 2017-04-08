@@ -24,9 +24,10 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
         habitTable.dataSource = self
         habitTable.delegate = self
         reload()
+        habitTable.tableFooterView = UIView()
     }
 
-    override func viewWillAppear(_ animated: Bool){
+    override func viewWillAppear(_ animated: Bool) {
         reload()
     }
 
@@ -46,6 +47,12 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard  = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let destination = storyboard.instantiateViewController(withIdentifier: "EditStoryboard") as! EditHabitViewController
+        let cell = tableView.cellForRow(at: indexPath) as! HabitTableViewCell
+        destination.nameText = cell.nameLabel.text!
+        destination.typeText = cell.typeLabel.text!
+        navigationController?.pushViewController(destination, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
@@ -54,7 +61,7 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
-                   forRowAt indexPath: IndexPath){
+                   forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             let cell = tableView.cellForRow(at: indexPath) as! HabitTableViewCell
 
@@ -67,7 +74,12 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
 
-    func reload(){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
+
+
+
+    func reload() {
         habits = self.realm.objects(Habit.self)
         self.habitTable.reloadData()
     }
