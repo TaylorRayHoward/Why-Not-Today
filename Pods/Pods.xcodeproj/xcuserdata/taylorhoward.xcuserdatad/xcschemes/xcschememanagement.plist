@@ -4,21 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Nimble.xcscheme</key>
+		<key>Pods-Why Not Today.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>Pods-Why Not Today.xcscheme</key>
+		<key>Pods-Why Not TodayTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>Pods-Why Not TodayTests.xcscheme</key>
+		<key>Quick.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
@@ -41,6 +41,32 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict />
+	<dict>
+		<key>2119AD9757C22B2F031299311454EA0A</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>5DBF89301DFD7559F5403409EED0A6CA</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>7BBC7A399B8BE6A40455511393BA8BE8</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>94B0027B52559918BB7F200693A210B9</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>F54246EAC7E8DAA6A0D870BD48C448B5</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -3,76 +3,86 @@
 //  Why Not TodayTests
 //
 //  Created by Taylor Ray Howard on 3/19/17.
-//  Copyright (c) 2017 TaylorRayHoward. All rights reserved.
-//
+//  Copyright (c) 2017 TaylorRayHoward. All rights 
 
-import XCTest
-@testable import Why_Not_Today
+import Nimble
+import Quick
 import RealmSwift
+@testable import Why_Not_Today
 
-class Why_Not_TodayTests: XCTestCase {
-
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-
-    func testArrays() {
-        let habits = ["This", "Is", "A", "Test"]
-        XCTAssert(habits[0] == "This")
-    }
-
-    func testHabitAttributes() {
+class HabitSpec: QuickSpec {
+  override func spec() {
+    describe("The habit object has multiple properties") {
+      it("has a name property") {
         let habit1 = Habit()
-        let habit2 = Habit()
         habit1.name = "Foo"
-        habit1.type = "Bar"
+        let habit2 = Habit()
         habit2.name = "Foo"
+        expect(habit1.name).to(equal(habit2.name))
+      }
+      it("has a type property") {
+        let habit1 = Habit()
+        habit1.type = "Bar"
+        let habit2 = Habit()
         habit2.type = "Bar"
-        XCTAssertEqual(habit1.name, habit2.name)
-        XCTAssertEqual(habit1.type, habit2.type)
+        expect(habit1.name).to(equal(habit2.name))
+      }
     }
-
-    func testRealmAdd() {
-        let realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "TestRealm"))
+    describe("The realm database has database features") {
+      var realm: Realm!
+      beforeEach {
+        realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "TestRealm"))
+      }
+      it("can save a habit object") {
         let habit = Habit()
-        let topRange = 5
-        for x in 0..<topRange {
-            let habit = Habit()
-            habit.name = String(x)
-            habit.type = String(x)
-            try! realm.write {
-                realm.add(habit)
-            }
-        }
-        var habits = realm.objects(Habit.self)
-        XCTAssertEqual(habits.count, topRange)
-        habits = realm.objects(Habit.self).filter("name == '1'")
-        XCTAssertEqual(habits.count, 1)
-    }
-
-    func testRealmDelete() {
-        let realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "TestRealm"))
-        let habit = Habit()
-        habit.name = "foo"
-        habit.type = "bar"
-
-        try! realm.write{
-            realm.add(habit)
-        }
-
-        let deleteHabit = realm.objects(Habit.self).filter("name == 'foo'")
+        habit.name = "Foo"
+        habit.type = "Bar"
         try! realm.write {
-            realm.delete(deleteHabit)
+          realm.add(habit)
         }
 
         let habits = realm.objects(Habit.self)
-        XCTAssertEqual(habits.count, 0)
-    }
+        expect(habits.count).to(equal(1))
+      }
 
+      it("can delete a habit object") {
+        let habit = Habit()
+        habit.name = "Foo"
+        habit.type = "Bar"
+        try! realm.write {
+          realm.add(habit)
+        }
+
+        var habits = realm.objects(Habit.self)
+
+        try! realm.write {
+          realm.deleteAll()
+        }
+
+        habits = realm.objects(Habit.self)
+
+        expect(habits.count).to(equal(0))
+      }
+      it("can query") {
+        var habit = Habit()
+        habit.name = "Foo"
+        habit.type = "Bar"
+        try! realm.write {
+          realm.add(habit)
+        }
+        habit = Habit()
+        habit.name = "FooBar"
+        habit.type = "BarFoo"
+
+        try! realm.write {
+          realm.add(habit)
+        }
+
+        let habits = realm.objects(Habit.self).filter("name == 'Foo'")
+        expect(habits.count).to(equal(1))
+      }
+
+    }
+  }
 }
+
