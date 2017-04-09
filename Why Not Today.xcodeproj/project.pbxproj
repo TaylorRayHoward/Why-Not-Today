@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BB0908205B4D55FCAE69362 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB0929F429D46083CAD9F18 /* Habit.swift */; };
+		3BB090B625A988EC286CBC39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB090BBD82C1CF8449905C7 /* Extensions.swift */; };
 		3BB09B3303E1EE63BE6B3913 /* CreateHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */; };
 		560A823B1E996B8300593671 /* EditHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A823A1E996B8300593671 /* EditHabitViewController.swift */; };
 		BA9C757BC83B2DE70CD39D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C77EEADB3AD0A66B83C06 /* LaunchScreen.storyboard */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHabitViewController.swift; sourceTree = "<group>"; };
+		3BB090BBD82C1CF8449905C7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3BB0929F429D46083CAD9F18 /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		45AC03E4B28CF057FBDF3031 /* Pods-Why Not TodayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not TodayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not TodayTests/Pods-Why Not TodayTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E8BA822806501DA90476B9B /* Pods_Why_Not_TodayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Why_Not_TodayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,7 @@
 				3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */,
 				3BB0929F429D46083CAD9F18 /* Habit.swift */,
 				560A823A1E996B8300593671 /* EditHabitViewController.swift */,
+				3BB090BBD82C1CF8449905C7 /* Extensions.swift */,
 			);
 			path = "Why Not Today";
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				BA9C7C01533C15B63244F330 /* HabitTableViewController.swift in Sources */,
 				3BB09B3303E1EE63BE6B3913 /* CreateHabitViewController.swift in Sources */,
 				3BB0908205B4D55FCAE69362 /* Habit.swift in Sources */,
+				3BB090B625A988EC286CBC39 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

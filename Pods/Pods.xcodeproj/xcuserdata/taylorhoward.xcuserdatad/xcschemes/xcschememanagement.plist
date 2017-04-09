@@ -4,40 +4,45 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Why Not Today.xcscheme</key>
+		<key>Nimble.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false />
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>Pods-Why Not TodayTests.xcscheme</key>
+		<key>Pods-Why Not Today.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>Quick.xcscheme</key>
+		<key>Pods-Why Not TodayTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>Realm.xcscheme</key>
+		<key>Quick.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>RealmSwift.xcscheme</key>
+		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -47,32 +52,12 @@
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>2119AD9757C22B2F031299311454EA0A</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
 		<key>24347E215A4F7FA56CD0BF09754AEB3A</key>
 		<dict>
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>5DBF89301DFD7559F5403409EED0A6CA</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
 		<key>5EAD26FEFD7C04C3E2C7218C2145C13E</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
-		<key>7BBC7A399B8BE6A40455511393BA8BE8</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
-		<key>94B0027B52559918BB7F200693A210B9</key>
 		<dict>
 			<key>primary</key>
 			<true />
@@ -83,11 +68,6 @@
 			<true />
 		</dict>
 		<key>B954B9D23B0061FB5D7109DAF86A9B2A</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
-		<key>F54246EAC7E8DAA6A0D870BD48C448B5</key>
 		<dict>
 			<key>primary</key>
 			<true />
