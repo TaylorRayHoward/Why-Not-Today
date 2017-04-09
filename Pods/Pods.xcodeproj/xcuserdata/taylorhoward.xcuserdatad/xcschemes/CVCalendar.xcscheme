@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5EAD26FEFD7C04C3E2C7218C2145C13E'
-               BlueprintName = 'Nimble'
+               BlueprintIdentifier = 'F6204A345A37C6CEE4D4E8E67F6A48C5'
+               BlueprintName = 'CVCalendar'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Nimble.framework'>
+               BuildableName = 'CVCalendar.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

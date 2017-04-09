@@ -4,45 +4,54 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Nimble.xcscheme</key>
+		<key>CVCalendar.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false />
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>Pods-Why Not Today.xcscheme</key>
+		<key>Nimble.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>Pods-Why Not TodayTests.xcscheme</key>
+		<key>Pods-Why Not Today.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>Quick.xcscheme</key>
+		<key>Pods-Why Not TodayTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>Realm.xcscheme</key>
+		<key>Quick.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>RealmSwift.xcscheme</key>
+		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>7</integer>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -52,27 +61,32 @@
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>24347E215A4F7FA56CD0BF09754AEB3A</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
 		<key>5EAD26FEFD7C04C3E2C7218C2145C13E</key>
 		<dict>
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>AF33AC05AAF21DF4E230EEDDB2103316</key>
+		<key>83E01D52727E94B18B0848EF23F07850</key>
 		<dict>
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>B954B9D23B0061FB5D7109DAF86A9B2A</key>
+		<key>A4A104F0CF613F8682C157BDAE4026B4</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>F6204A345A37C6CEE4D4E8E67F6A48C5</key>
 		<dict>
 			<key>primary</key>
 			<true />
 		</dict>
 		<key>FA1FBEBF61D43373F95E4496ACAB86D2</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>FD8306DD28EB8C9B90B89999B6238229</key>
 		<dict>
 			<key>primary</key>
 			<true />
