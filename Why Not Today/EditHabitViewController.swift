@@ -29,7 +29,7 @@ class EditHabitViewController: UIViewController {
     }
     @IBAction func saveEdit(_ sender: UIBarButtonItem) {
         if (nameField?.text != nil && nameField.text != "") || (typeField?.text != nil && typeField.text != "") {
-            var habit = realm.objects(Habit.self).filter("name == '\(nameText)' AND type == '\(typeText)'").first!
+            let habit = realm.objects(Habit.self).filter("name == '\(nameText)' AND type == '\(typeText)'").first!
 
             try! realm.write {
                 habit.name = nameField.text!

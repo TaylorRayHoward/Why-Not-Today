@@ -1,5 +1,5 @@
 PODS:
-  - CVCalendar (1.5.0)
+  - JTAppleCalendar (7.0.0)
   - Nimble (6.1.0)
   - Quick (1.1.0)
   - Realm (2.5.1):
@@ -9,18 +9,18 @@ PODS:
     - Realm (= 2.5.1)
 
 DEPENDENCIES:
-  - CVCalendar
+  - JTAppleCalendar (~> 7.0)
   - Nimble
   - Quick
   - RealmSwift
 
 SPEC CHECKSUMS:
-  CVCalendar: 5d51a7bda1b9439b612de69d86a91a73befa1936
+  JTAppleCalendar: 2dd93a9b9ef65a1dcf2822c8e4ee0c7646705f6f
   Nimble: c53e6903fee94041b90ded74f135820437d8bf59
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   Realm: 32f86104d37c8521f864d4274050b38ba6190733
   RealmSwift: f719e7511c902b8908593e8f143f59e47931bdb6
 
-PODFILE CHECKSUM: 3855260ed844bbd178d91d0991a82fc3cf50f3c1
+PODFILE CHECKSUM: dde396fcf09c07e7571250ec3752aa6d8a87bb27
 
 COCOAPODS: 1.2.1.rc.1
