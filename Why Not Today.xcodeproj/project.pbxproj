@@ -12,7 +12,7 @@
 		3BB09B3303E1EE63BE6B3913 /* CreateHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */; };
 		560A823B1E996B8300593671 /* EditHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A823A1E996B8300593671 /* EditHabitViewController.swift */; };
 		56129CC11E9DC9C700E72834 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56129CC01E9DC9C700E72834 /* CustomCell.swift */; };
-		56129CC31E9DCBA500E72834 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56129CC21E9DCBA500E72834 /* ViewController.swift */; };
+		56129CC31E9DCBA500E72834 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56129CC21E9DCBA500E72834 /* CalendarViewController.swift */; };
 		BA9C757BC83B2DE70CD39D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C77EEADB3AD0A66B83C06 /* LaunchScreen.storyboard */; };
 		BA9C764833B679D807A45781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C7B6A3A4506FF202950B4 /* Main.storyboard */; };
 		BA9C79242B4FEF533D0C9CC2 /* Why_Not_TodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C717A9D1C67EA2BD94D91 /* Why_Not_TodayTests.swift */; };
@@ -54,7 +54,7 @@
 		4E8BA822806501DA90476B9B /* Pods_Why_Not_TodayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Why_Not_TodayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		560A823A1E996B8300593671 /* EditHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHabitViewController.swift; sourceTree = "<group>"; };
 		56129CC01E9DC9C700E72834 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		56129CC21E9DCBA500E72834 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56129CC21E9DCBA500E72834 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		63EF0358EE37CC41EA38FFD1 /* Pods-Why Not Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not Today/Pods-Why Not Today.debug.xcconfig"; sourceTree = "<group>"; };
 		75B734C7AF4A0B2E72460209 /* Pods_Why_Not_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Why_Not_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8932D2C2153DB981E96A42F1 /* Pods-Why Not TodayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not TodayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not TodayTests/Pods-Why Not TodayTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +91,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56129CC41E9F145300E72834 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BA9C77EEADB3AD0A66B83C06 /* LaunchScreen.storyboard */,
+				BA9C7B6A3A4506FF202950B4 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		56129CC51E9F146200E72834 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */,
+				3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */,
+				560A823A1E996B8300593671 /* EditHabitViewController.swift */,
+				56129CC21E9DCBA500E72834 /* CalendarViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		56129CC71E9F148F00E72834 /* Realm Objects */ = {
+			isa = PBXGroup;
+			children = (
+				3BB0929F429D46083CAD9F18 /* Habit.swift */,
+			);
+			name = "Realm Objects";
+			sourceTree = "<group>";
+		};
+		56129CC91E9F14AE00E72834 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56129CC01E9DC9C700E72834 /* CustomCell.swift */,
+				3BB090BBD82C1CF8449905C7 /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		99FADE995FF27570E71AAF04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,18 +180,13 @@
 		BA9C7F20A2ACFC9FCCD65CAF /* Why Not Today */ = {
 			isa = PBXGroup;
 			children = (
-				BA9C76FA918EC962CB886050 /* Info.plist */,
 				BA9C7BD349C92AAC6124313C /* Assets.xcassets */,
-				BA9C77EEADB3AD0A66B83C06 /* LaunchScreen.storyboard */,
+				BA9C76FA918EC962CB886050 /* Info.plist */,
 				BA9C7793F4C93009FE27E286 /* AppDelegate.swift */,
-				BA9C7B6A3A4506FF202950B4 /* Main.storyboard */,
-				BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */,
-				3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */,
-				3BB0929F429D46083CAD9F18 /* Habit.swift */,
-				560A823A1E996B8300593671 /* EditHabitViewController.swift */,
-				3BB090BBD82C1CF8449905C7 /* Extensions.swift */,
-				56129CC01E9DC9C700E72834 /* CustomCell.swift */,
-				56129CC21E9DCBA500E72834 /* ViewController.swift */,
+				56129CC91E9F14AE00E72834 /* Extensions */,
+				56129CC71E9F148F00E72834 /* Realm Objects */,
+				56129CC41E9F145300E72834 /* Storyboards */,
+				56129CC51E9F146200E72834 /* ViewControllers */,
 			);
 			path = "Why Not Today";
 			sourceTree = "<group>";
@@ -371,7 +403,7 @@
 				3BB09B3303E1EE63BE6B3913 /* CreateHabitViewController.swift in Sources */,
 				3BB0908205B4D55FCAE69362 /* Habit.swift in Sources */,
 				56129CC11E9DC9C700E72834 /* CustomCell.swift in Sources */,
-				56129CC31E9DCBA500E72834 /* ViewController.swift in Sources */,
+				56129CC31E9DCBA500E72834 /* CalendarViewController.swift in Sources */,
 				3BB090B625A988EC286CBC39 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
