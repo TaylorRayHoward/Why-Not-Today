@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ute-Cd-QKz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jLj-WP-bmT">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -246,11 +246,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rtk-Cg-Ufk">
-                                <rect key="frame" x="0.0" y="72" width="320" height="276"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-EN-zLd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="324.5"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="T8U-9Y-8CV">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="48.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-l0-w1b">
+                                                <rect key="frame" x="0.0" y="0.0" width="37.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.85098039219999999" green="0.8980392157" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="November" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hD-jQ-WQP">
+                                                <rect key="frame" x="0.0" y="20.5" width="112" height="28"/>
+                                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="24"/>
+                                                <color key="textColor" red="0.85098039219999999" green="0.8980392157" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0jN-ln-fYO">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="48.5" width="320" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej7-PG-Fyb">
                                                 <rect key="frame" x="0.0" y="0.0" width="45.5" height="20.5"/>
@@ -297,7 +314,7 @@
                                         </subviews>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2BY-Lf-oeI" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                        <rect key="frame" x="0.0" y="20.5" width="320" height="255.5"/>
+                                        <rect key="frame" x="0.0" y="69" width="320" height="255.5"/>
                                         <color key="backgroundColor" red="0.054901960784313725" green="0.10980392156862745" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="85s-WB-crs">
                                             <size key="itemSize" width="91" height="95"/>
@@ -353,23 +370,27 @@
                                     </collectionView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="2BY-Lf-oeI" secondAttribute="trailing" id="WHe-8c-Lu1"/>
-                                    <constraint firstItem="0jN-ln-fYO" firstAttribute="leading" secondItem="Rtk-Cg-Ufk" secondAttribute="leading" id="gtL-HQ-xKb"/>
-                                    <constraint firstItem="2BY-Lf-oeI" firstAttribute="leading" secondItem="Rtk-Cg-Ufk" secondAttribute="leading" id="ybQ-Dd-tsa"/>
-                                    <constraint firstAttribute="trailing" secondItem="0jN-ln-fYO" secondAttribute="trailing" id="zec-7Z-6rJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0jN-ln-fYO" secondAttribute="trailing" id="FAO-H4-RVa"/>
+                                    <constraint firstItem="T8U-9Y-8CV" firstAttribute="leading" secondItem="d5G-EN-zLd" secondAttribute="leading" id="Fgz-GK-S3l"/>
+                                    <constraint firstAttribute="trailing" secondItem="2BY-Lf-oeI" secondAttribute="trailing" id="Lef-Z0-7hu"/>
+                                    <constraint firstAttribute="trailing" secondItem="T8U-9Y-8CV" secondAttribute="trailing" id="P8T-lh-uqV"/>
+                                    <constraint firstItem="0jN-ln-fYO" firstAttribute="leading" secondItem="d5G-EN-zLd" secondAttribute="leading" id="WBX-iP-avp"/>
+                                    <constraint firstItem="2BY-Lf-oeI" firstAttribute="leading" secondItem="d5G-EN-zLd" secondAttribute="leading" id="jlK-ow-lg7"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.054901960780000002" green="0.10980392160000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Rtk-Cg-Ufk" firstAttribute="leading" secondItem="3jr-Sh-Qvy" secondAttribute="leading" id="3Tn-Zs-RGm"/>
-                            <constraint firstItem="2BY-Lf-oeI" firstAttribute="height" secondItem="3jr-Sh-Qvy" secondAttribute="height" multiplier="0.45" id="PoL-es-cuG"/>
-                            <constraint firstItem="Rtk-Cg-Ufk" firstAttribute="top" secondItem="twD-xG-CaZ" secondAttribute="bottom" constant="8" symbolic="YES" id="b7t-ab-44N"/>
-                            <constraint firstAttribute="trailing" secondItem="Rtk-Cg-Ufk" secondAttribute="trailing" id="joB-ZL-AhR"/>
+                            <constraint firstAttribute="trailing" secondItem="d5G-EN-zLd" secondAttribute="trailing" id="9TP-n2-yqi"/>
+                            <constraint firstItem="2BY-Lf-oeI" firstAttribute="height" secondItem="3jr-Sh-Qvy" secondAttribute="height" multiplier="0.45" id="B1s-YT-6tF"/>
+                            <constraint firstItem="d5G-EN-zLd" firstAttribute="top" secondItem="twD-xG-CaZ" secondAttribute="bottom" id="h0B-QL-LEj"/>
+                            <constraint firstItem="d5G-EN-zLd" firstAttribute="leading" secondItem="3jr-Sh-Qvy" secondAttribute="leading" id="mZn-bK-2G4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="calendarView" destination="2BY-Lf-oeI" id="zVR-wz-asB"/>
+                        <outlet property="monthLabel" destination="3hD-jQ-WQP" id="LJg-Bg-wSb"/>
+                        <outlet property="yearLabel" destination="Vny-l0-w1b" id="LI2-LX-Kon"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7N-3I-c94" sceneMemberID="firstResponder"/>
