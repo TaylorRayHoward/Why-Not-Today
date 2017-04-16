@@ -308,7 +308,7 @@
                                                     <subviews>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-hG-gL3">
                                                             <rect key="frame" x="26" y="28" width="40" height="40"/>
-                                                            <color key="backgroundColor" red="0.85098039215686272" green="0.45098039215686275" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" red="0.85098039215686272" green="0.88319067861519607" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="VSb-wV-Kew"/>
                                                                 <constraint firstAttribute="height" constant="40" id="eKI-ul-xmw"/>

@@ -20,6 +20,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     var formatter = DateFormatter()
     let realm = try! Realm()
     var habits: Results<Habit>!
+    var selectedDate = Date()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +86,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         cell.denyButton?.tag = indexPath.row
         cell.denyButton?.addTarget(self, action: #selector(denyAction), for: .touchUpInside)
         cell.nameLabel?.text = habits[indexPath.row].name
+        //if the habit has been done for that day, do it here maybe?
+        
         return cell
     }
 
@@ -93,11 +96,20 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func confirmAction(sender: UIButton) {
-        print("touched the confirm button at index \(sender.tag)")
+        let habit = habits[sender.tag]
+        let dc = DateCompleted()
+//        dc.dateCompleted = selectedDate
+//        dc.successfullyCompleted = true
+//        
+//        try! realm.write {
+//            habit.datesCompleted.append(dc)
+//        }
     }
     
     func denyAction(sender: UIButton) {
-        print("touched the deny button at index \(sender.tag)")
+        formatter.dateFormat = "MM/dd/yyyy"
+        let day = formatter.string(from: selectedDate)
+        print("touched the deny button at on day \(day)")
     }
     
     func reload() {
