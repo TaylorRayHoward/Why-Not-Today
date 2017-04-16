@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import JTAppleCalendar
 
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
@@ -33,5 +34,45 @@ extension Date {
     }
     func numberMonthFromDate() -> Int? {
         return Calendar.current.dateComponents([.month], from: self).month
+    }
+}
+
+extension CalendarViewController: JTAppleCalendarViewDataSource {
+    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+        formatter.dateFormat = "yyyy MM dd"
+        formatter.locale = Calendar.current.locale
+        formatter.timeZone = Calendar.current.timeZone
+        
+        
+        var components = DateComponents()
+        components.year = 2016
+        components.month = 1
+        components.day = 1
+        let startDate = Calendar.current.date(from: components)!
+        let params = ConfigurationParameters(startDate: startDate, endDate: Date())
+        
+        return params
+    }
+}
+
+extension CalendarViewController: JTAppleCalendarViewDelegate {
+    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState,
+                  indexPath: IndexPath) -> JTAppleCell {
+        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        changeCellDisplay(cell, with: calendarView, withState: cellState)
+        return cell
+    }
+    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+        setMonthLabel(from: visibleDates)
+        setYearLabel(from: visibleDates)
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+//        guard let validCell = cell as? CustomCell else { return }
+//        TODO Show list of Habits that they have created and then allow them to say completed or not completed
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+//        guard let validCell = cell as? CustomCell else { return }
     }
 }

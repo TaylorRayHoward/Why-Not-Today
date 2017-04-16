@@ -8,9 +8,7 @@
 
 import UIKit
 import JTAppleCalendar
-
-
-
+import RealmSwift
 
 class CalendarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,10 +18,13 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     
     var formatter = DateFormatter()
+    let realm = try! Realm()
+    var habits: Results<Habit>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCalendarView()
+        reload()
         calendarView.visibleDates { (visibleDates) in
             self.setMonthLabel(from: visibleDates)
             self.setYearLabel(from: visibleDates)
@@ -31,6 +32,10 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         calendarView.scrollToDate(Date(), triggerScrollToDateDelegate: true, animateScroll: false,
                                   preferredScrollPosition: nil, extraAddedOffset: 0, completionHandler: nil)
         confirmDenyTable.tableFooterView = UIView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        reload()
     }
     
     func setupCalendarView() {
@@ -70,7 +75,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return habits.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,7 +84,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         cell.confirmButton?.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
         cell.denyButton?.tag = indexPath.row
         cell.denyButton?.addTarget(self, action: #selector(denyAction), for: .touchUpInside)
-        cell.nameLabel?.text = "THIS IS A TEST OF A VERY LONG STRING FOR NO APPARENT REAAAASON"
+        cell.nameLabel?.text = habits[indexPath.row].name
         return cell
     }
 
@@ -94,44 +99,10 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     func denyAction(sender: UIButton) {
         print("touched the deny button at index \(sender.tag)")
     }
-}
-
-extension CalendarViewController: JTAppleCalendarViewDataSource {
-    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-        formatter.dateFormat = "yyyy MM dd"
-        formatter.locale = Calendar.current.locale
-        formatter.timeZone = Calendar.current.timeZone
-        
-        
-        var components = DateComponents()
-        components.year = 2016
-        components.month = 1
-        components.day = 1
-        let startDate = Calendar.current.date(from: components)!
-        let params = ConfigurationParameters(startDate: startDate, endDate: Date())
-        
-        return params
+    
+    func reload() {
+        habits = self.realm.objects(Habit.self)
+        self.confirmDenyTable.reloadData()
     }
 }
 
-extension CalendarViewController: JTAppleCalendarViewDelegate {
-    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState,
-                  indexPath: IndexPath) -> JTAppleCell {
-        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
-        changeCellDisplay(cell, with: calendarView, withState: cellState)
-        return cell
-    }
-    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-        setMonthLabel(from: visibleDates)
-        setYearLabel(from: visibleDates)
-    }
-    
-    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-//        guard let validCell = cell as? CustomCell else { return }
-//        TODO Show list of Habits that they have created and then allow them to say completed or not completed
-    }
-    
-    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-//        guard let validCell = cell as? CustomCell else { return }
-    }
-}

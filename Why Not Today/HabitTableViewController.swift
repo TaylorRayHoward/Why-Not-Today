@@ -70,11 +70,6 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-
-
-
     func reload() {
         habits = self.realm.objects(Habit.self)
         self.habitTable.reloadData()
