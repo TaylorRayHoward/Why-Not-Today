@@ -42,7 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Now that we've told Realm how to handle the schema change, opening the file
         // will automatically perform the migration
         _ = try! Realm()
-    return true
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        UINavigationBar.appearance().barTintColor = UIColor(rgb: 0x0E1C36)
+        UINavigationBar.appearance().tintColor = UIColor(rgb: 0xD9E5D6)
+        return true
     }
 
 

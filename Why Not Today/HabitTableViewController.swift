@@ -9,10 +9,6 @@
 import UIKit
 import RealmSwift
 
-class HabitTableViewCell: UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var typeLabel: UILabel!
-}
 
 class HabitTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let realm = try! Realm()

@@ -5,8 +5,8 @@
 //  Created by Taylor Ray Howard on 3/19/17.
 //  Copyright (c) 2017 TaylorRayHoward. All rights 
 
-import Nimble
 import Quick
+import Nimble
 import RealmSwift
 @testable import Why_Not_Today
 
@@ -33,7 +33,7 @@ class HabitSpec: QuickSpec {
                 dateCompleted.dateCompleted = Date()
                 dateCompleted.successfullyCompleted = true
                 habit.datesCompleted.append(dateCompleted)
-                expect(habit.datesCompleted[0].dateCompleted.dayNumberOfWeek()).to(equal(Date().dayNumberOfWeek()))
+                expect(habit.datesCompleted[0].dateCompleted.numberDayFromDate()).to(equal(Date().numberDayFromDate()))
             }
         }
         describe("The realm database has database features") {
@@ -107,6 +107,14 @@ class HabitSpec: QuickSpec {
                 habit = realm.objects(Habit.self).filter("name == 'Foo' AND type == 'Bar'").first!
                 expect(habit.name).to(equal("Foo"))
                 expect(habit.type).to(equal("Bar"))
+            }
+            it("returns nothing when there is a bad filter") {
+                let habit = Habit()
+                habit.name = "Foo"
+                habit.type = "Bar"
+                
+                let emptyHabit = realm.objects(Habit.self).filter("name == 'abc'").first
+                expect(emptyHabit).to(beNil())
             }
         }
     }

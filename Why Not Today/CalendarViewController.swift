@@ -9,8 +9,12 @@
 import UIKit
 import JTAppleCalendar
 
-class CalendarViewController: UIViewController {
+
+
+
+class CalendarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var confirmDenyTable: UITableView!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
@@ -19,25 +23,20 @@ class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupCalendarView()
         calendarView.visibleDates { (visibleDates) in
             self.setMonthLabel(from: visibleDates)
             self.setYearLabel(from: visibleDates)
         }
-        calendarView.scrollToDate(Date())
+        calendarView.scrollToDate(Date(), triggerScrollToDateDelegate: true, animateScroll: false,
+                                  preferredScrollPosition: nil, extraAddedOffset: 0, completionHandler: nil)
+        confirmDenyTable.tableFooterView = UIView()
     }
     
     func setupCalendarView() {
         calendarView.minimumLineSpacing = 0
         calendarView.minimumInteritemSpacing = 0
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     func setMonthLabel(from visibleDates: DateSegmentInfo) {
         let date = visibleDates.monthDates.first!.date
@@ -68,6 +67,30 @@ class CalendarViewController: UIViewController {
         else {
             cell.dateLabel.textColor = UIColor(rgb: 0xD9E5D6)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = confirmDenyTable.dequeueReusableCell(withIdentifier: "ConfirmDenyCell", for: indexPath) as! ConfirmDenyHabitCell
+        cell.confirmButton?.tag = indexPath.row
+        cell.confirmButton?.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
+        cell.nameLabel?.text = "THIS IS A TEST OF A VERY LONG STRING FOR NO APPARENT REAAAASON"
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func confirmAction(sender: UIButton) {
+        print("touched the confirm button at index \(sender.tag)")
+    }
+    
+    func denyAction(sender: UIButton) {
+        print("touched the deny button")
     }
 }
 
