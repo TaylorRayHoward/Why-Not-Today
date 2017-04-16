@@ -77,6 +77,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = confirmDenyTable.dequeueReusableCell(withIdentifier: "ConfirmDenyCell", for: indexPath) as! ConfirmDenyHabitCell
         cell.confirmButton?.tag = indexPath.row
         cell.confirmButton?.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
+        cell.denyButton?.tag = indexPath.row
+        cell.denyButton?.addTarget(self, action: #selector(denyAction), for: .touchUpInside)
         cell.nameLabel?.text = "THIS IS A TEST OF A VERY LONG STRING FOR NO APPARENT REAAAASON"
         return cell
     }
@@ -90,7 +92,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func denyAction(sender: UIButton) {
-        print("touched the deny button")
+        print("touched the deny button at index \(sender.tag)")
     }
 }
 
