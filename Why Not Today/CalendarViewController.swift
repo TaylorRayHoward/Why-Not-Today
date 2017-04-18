@@ -34,6 +34,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         calendarView.scrollToDate(Date(), triggerScrollToDateDelegate: true, animateScroll: false,
                                   preferredScrollPosition: nil, extraAddedOffset: 0, completionHandler: nil)
         confirmDenyTable.tableFooterView = UIView()
+        calendarView.selectDates([Date()])
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -89,6 +90,19 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         cell.nameLabel?.text = habits[indexPath.row].name
         //if the habit has been done for that day, do it here maybe?
         
+        let habit = realm.objects(Habit.self).filter("name = '\(habits[indexPath.row].name)'").first!
+        if let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first {
+            if dc.successfullyCompleted == 1 {
+                cell.backgroundColor = UIColor.green
+            }
+            else if dc.successfullyCompleted == -1 {
+                cell.backgroundColor = UIColor.red
+            }
+        }
+        else {
+            cell.backgroundColor = UIColor.blue
+        }
+        
         return cell
     }
 
@@ -100,13 +114,10 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         var habit = habits[sender.tag]
         let dc = DateCompleted()
 
-        let cal = Calendar.current
-        let date = cal.startOfDay(for: selectedDate)
-        
-        dc.dateCompleted = date
+        dc.dateCompleted = selectedDate
         dc.successfullyCompleted = 1
         
-        let exists = habit.datesCompleted.filter("dateCompleted = %@", date).first != nil
+        let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
         
         if(!exists) {
             habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
@@ -117,31 +128,27 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
             habits = self.realm.objects(Habit.self)
         }
         else {
-            //TODO get from datescompleted where date = today
             habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
             
-            let dc = habit.datesCompleted.filter("dateCompleted = %@", date).first!
+            let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first!
             
             try! realm.write {
                 dc.successfullyCompleted = 1
             }
             habits = self.realm.objects(Habit.self)
         }
-        
+        reload()
     }
     
     func denyAction(sender: UIButton) {
         var habit = habits[sender.tag]
         let dc = DateCompleted()
 
-        let cal = Calendar.current
-        let date = cal.startOfDay(for: selectedDate)
-        
-        dc.dateCompleted = date
+        dc.dateCompleted = selectedDate
         dc.successfullyCompleted = -1
         
         
-        let exists = habit.datesCompleted.filter("dateCompleted = %@", date).first != nil
+        let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
         
         if(!exists) {
             habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
@@ -152,16 +159,16 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
             habits = self.realm.objects(Habit.self)
         }
         else {
-            //TODO Flip from other
             habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
             
-            let dc = habit.datesCompleted.filter("dateCompleted = %@", date).first!
+            let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first!
             
             try! realm.write {
                 dc.successfullyCompleted = -1
             }
             habits = self.realm.objects(Habit.self)
         }
+        reload()
     }
     
     func reload() {
