@@ -6,6 +6,7 @@
 //  Copyright © 2017 TaylorRayHoward. All rights reserved.
 //
 
+//TODO refactor out all realm things into outer class
 import UIKit
 import JTAppleCalendar
 import RealmSwift
@@ -60,17 +61,10 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func changeCellDisplay(_ cell: CustomCell, with calendar: JTAppleCalendarView, withState cellState: CellState) {
+        //TODO add filling green/red circle for if you have completed your things for the day
         cell.dateLabel.text = cellState.text
         
-//        TODO cellState.day in our list of dates
-        
-//        if cellState.date in list of dates {
-//            cell.circleView.isHidden = false
-//        }
-//        else {
-//            cell.circleView.isHidden = true
-//        }
-        
+        //try to pull out
         if cellState.dateBelongsTo != .thisMonth {
             cell.dateLabel.textColor = UIColor.gray
         }
@@ -84,13 +78,14 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //TODO fix terrible colors
         let cell = confirmDenyTable.dequeueReusableCell(withIdentifier: "ConfirmDenyCell", for: indexPath) as! ConfirmDenyHabitCell
+        //TODO could pull out
         cell.confirmButton?.tag = indexPath.row
         cell.confirmButton?.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
         cell.denyButton?.tag = indexPath.row
         cell.denyButton?.addTarget(self, action: #selector(denyAction), for: .touchUpInside)
         cell.nameLabel?.text = habits[indexPath.row].name
-        //if the habit has been done for that day, do it here maybe?
         
         let habit = realm.objects(Habit.self).filter("name = '\(habits[indexPath.row].name)'").first!
         if let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first {
@@ -113,6 +108,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func confirmAction(sender: UIButton) {
+        //TODO needs refactor
         var habit = habits[sender.tag]
         let dc = DateCompleted()
 
@@ -142,6 +138,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         reload()
     }
     
+    //TODO: needs refactor
     func denyAction(sender: UIButton) {
         var habit = habits[sender.tag]
         let dc = DateCompleted()

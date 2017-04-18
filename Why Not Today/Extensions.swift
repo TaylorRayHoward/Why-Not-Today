@@ -75,7 +75,6 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         guard let validCell = cell as? CustomCell else { return }
         validCell.circleView.isHidden = false
         self.reload()
-//        TODO Show list of Habits that they have created and then allow them to say completed or not completed
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {

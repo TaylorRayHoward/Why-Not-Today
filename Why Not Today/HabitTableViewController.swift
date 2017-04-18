@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 
+//TODO pull out all/most of realm stuff
 class HabitTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let realm = try! Realm()
     var habits: Results<Habit>!

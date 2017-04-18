@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 
+//TODO pull out all/most of realm stuff
 class EditHabitViewController: UIViewController {
 
     @IBOutlet weak var nameField: UITextField!

@@ -6,6 +6,7 @@
 import UIKit
 import RealmSwift
 
+//TODO pull out all/most of realm stuff
 class CreateHabitViewController: UIViewController {
 
     let realm = try! Realm()
