@@ -60,7 +60,9 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
                   indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         changeCellDisplay(cell, with: calendarView, withState: cellState)
+        cell.circleView.isHidden = Calendar.current.startOfDay(for: date) != selectedDate
         return cell
+        
     }
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setMonthLabel(from: visibleDates)
@@ -68,10 +70,12 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        self.selectedDate = date
+        
+        self.selectedDate = Calendar.current.startOfDay(for: date)
         
         guard let validCell = cell as? CustomCell else { return }
         validCell.circleView.isHidden = false
+        self.reload()
 //        TODO Show list of Habits that they have created and then allow them to say completed or not completed
     }
     
