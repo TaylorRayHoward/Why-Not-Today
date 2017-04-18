@@ -34,7 +34,9 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         calendarView.scrollToDate(Date(), triggerScrollToDateDelegate: true, animateScroll: false,
                                   preferredScrollPosition: nil, extraAddedOffset: 0, completionHandler: nil)
         confirmDenyTable.tableFooterView = UIView()
-        calendarView.selectDates([Date()])
+        let initialDate = Calendar.current.startOfDay(for: Date())
+        calendarView.selectDates([initialDate], triggerSelectionDelegate: true, keepSelectionIfMultiSelectionAllowed: false)
+        selectedDate = initialDate
     }
     
     override func viewWillAppear(_ animated: Bool) {
