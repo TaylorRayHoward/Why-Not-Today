@@ -24,6 +24,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         setupCalendarView()
         reload()
         calendarView.visibleDates { (visibleDates) in
@@ -96,20 +97,71 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func confirmAction(sender: UIButton) {
-        let habit = habits[sender.tag]
+        var habit = habits[sender.tag]
         let dc = DateCompleted()
-//        dc.dateCompleted = selectedDate
-//        dc.successfullyCompleted = true
-//        
-//        try! realm.write {
-//            habit.datesCompleted.append(dc)
-//        }
+
+        let cal = Calendar.current
+        let date = cal.startOfDay(for: selectedDate)
+        
+        dc.dateCompleted = date
+        dc.successfullyCompleted = 1
+        
+        let exists = habit.datesCompleted.filter("dateCompleted = %@", date).first != nil
+        
+        if(!exists) {
+            habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
+            
+            try! realm.write {
+                habit.datesCompleted.append(dc)
+            }
+            habits = self.realm.objects(Habit.self)
+        }
+        else {
+            //TODO get from datescompleted where date = today
+            habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
+            
+            let dc = habit.datesCompleted.filter("dateCompleted = %@", date).first!
+            
+            try! realm.write {
+                dc.successfullyCompleted = 1
+            }
+            habits = self.realm.objects(Habit.self)
+        }
+        
     }
     
     func denyAction(sender: UIButton) {
-        formatter.dateFormat = "MM/dd/yyyy"
-        let day = formatter.string(from: selectedDate)
-        print("touched the deny button at on day \(day)")
+        var habit = habits[sender.tag]
+        let dc = DateCompleted()
+
+        let cal = Calendar.current
+        let date = cal.startOfDay(for: selectedDate)
+        
+        dc.dateCompleted = date
+        dc.successfullyCompleted = -1
+        
+        
+        let exists = habit.datesCompleted.filter("dateCompleted = %@", date).first != nil
+        
+        if(!exists) {
+            habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
+            
+            try! realm.write {
+                habit.datesCompleted.append(dc)
+            }
+            habits = self.realm.objects(Habit.self)
+        }
+        else {
+            //TODO Flip from other
+            habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
+            
+            let dc = habit.datesCompleted.filter("dateCompleted = %@", date).first!
+            
+            try! realm.write {
+                dc.successfullyCompleted = -1
+            }
+            habits = self.realm.objects(Habit.self)
+        }
     }
     
     func reload() {

@@ -9,11 +9,11 @@ import RealmSwift
 class Habit: Object {
     dynamic var name = ""
     dynamic var type = ""
-    var datesCompleted = [DateCompleted]()
+    var datesCompleted = List<DateCompleted>()
 }
 
-class DateCompleted {
-    var dateCompleted: Date = Date()
-    var successfullyCompleted: Bool? = nil
+class DateCompleted: Object {
+    dynamic var dateCompleted: Date = Date()
+    dynamic var successfullyCompleted: Int = 0
 }
 
