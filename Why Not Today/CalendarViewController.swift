@@ -135,6 +135,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
             }
             habits = self.realm.objects(Habit.self)
         }
+        confirmDenyTable.reloadData()
         reload()
     }
     
@@ -167,6 +168,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
             }
             habits = self.realm.objects(Habit.self)
         }
+        confirmDenyTable.reloadData()
         reload()
     }
     

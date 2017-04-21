@@ -66,6 +66,10 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         for h in habits {
             if (h.datesCompleted.contains { $0.dateCompleted == date}) {
                 cell.fillView.isHidden = false
+                break
+            }
+            else {
+                cell.fillView.isHidden = true
             }
         }
         return cell
