@@ -20,11 +20,9 @@ class CreateHabitViewController: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     @IBAction func saveHabit(_ sender: UIBarButtonItem) {
-        let habit = Habit()
         if (nameText?.text != nil && nameText.text != "") || (typeText?.text != nil && typeText.text != "") {
-            habit.name = nameText.text!
-            habit.type = typeText.text!
-
+            let habit = Habit(n: nameText.text!, t: typeText.text!)
+            
             try! self.realm.write {
                 self.realm.add(habit)
             }

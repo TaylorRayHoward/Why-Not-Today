@@ -14,17 +14,13 @@ class HabitSpec: QuickSpec {
     override func spec() {
         describe("The habit object has multiple properties") {
             it("has a name property") {
-                let habit1 = Habit()
-                habit1.name = "Foo"
-                let habit2 = Habit()
-                habit2.name = "Foo"
+                let habit1 = Habit(n: "Foo", t: "")
+                let habit2 = Habit(n: "Foo", t: "")
                 expect(habit1.name).to(equal(habit2.name))
             }
             it("has a type property") {
-                let habit1 = Habit()
-                habit1.type = "Bar"
-                let habit2 = Habit()
-                habit2.type = "Bar"
+                let habit1 = Habit(n: "", t: "Bar")
+                let habit2 = Habit(n: "", t: "Bar")
                 expect(habit1.name).to(equal(habit2.name))
             }
             it("has a dates completed property that keeps track of days successfully/unsuccessfully completed") {
@@ -42,9 +38,7 @@ class HabitSpec: QuickSpec {
                 realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "TestRealm"))
             }
             it("can save a habit object") {
-                let habit = Habit()
-                habit.name = "Foo"
-                habit.type = "Bar"
+                let habit = Habit(n: "Foo", t: "Bar")
                 try! realm.write {
                     realm.add(habit)
                 }
@@ -54,9 +48,7 @@ class HabitSpec: QuickSpec {
             }
 
             it("can delete a habit object") {
-                let habit = Habit()
-                habit.name = "Foo"
-                habit.type = "Bar"
+                let habit = Habit(n: "Foo", t: "Bar")
                 try! realm.write {
                     realm.add(habit)
                 }
@@ -72,15 +64,11 @@ class HabitSpec: QuickSpec {
                 expect(habits.count).to(equal(0))
             }
             it("can query") {
-                var habit = Habit()
-                habit.name = "Foo"
-                habit.type = "Bar"
+                var habit = Habit(n: "Foo", t: "Bar")
                 try! realm.write {
                     realm.add(habit)
                 }
-                habit = Habit()
-                habit.name = "FooBar"
-                habit.type = "BarFoo"
+                habit = Habit(n: "FooBar", t: "BarFoo")
 
                 try! realm.write {
                     realm.add(habit)
@@ -90,9 +78,7 @@ class HabitSpec: QuickSpec {
                 expect(habits.count).to(equal(1))
             }
             it("can update") {
-                var habit = Habit()
-                habit.name = "Foe"
-                habit.type = "Bear"
+                var habit = Habit(n: "Foe", t: "Bear")
                 try! realm.write {
                     realm.add(habit)
                 }
@@ -109,9 +95,10 @@ class HabitSpec: QuickSpec {
                 expect(habit.type).to(equal("Bar"))
             }
             it("returns nothing when there is a bad filter") {
-                let habit = Habit()
-                habit.name = "Foo"
-                habit.type = "Bar"
+                let habit = Habit(n: "Foo", t: "Bar")
+                try! realm.write {
+                    realm.add(habit)
+                }
                 
                 let emptyHabit = realm.objects(Habit.self).filter("name == 'abc'").first
                 expect(emptyHabit).to(beNil())
