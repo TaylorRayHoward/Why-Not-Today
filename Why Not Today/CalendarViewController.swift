@@ -86,7 +86,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         cell.denyButton?.addTarget(self, action: #selector(denyAction), for: .touchUpInside)
         cell.nameLabel?.text = habits[indexPath.row].name
         
-        let habit = realm.objects(Habit.self).filter("name = '\(habits[indexPath.row].name)'").first!
+        
+        let habit = realm.objects(Habit.self).filter("name = %@", habits[indexPath.row].name).first!
         if let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first {
             if dc.successfullyCompleted == 1 {
                 cell.backgroundColor = UIColor.green
