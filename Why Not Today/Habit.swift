@@ -10,6 +10,12 @@ class Habit: Object {
     dynamic var name = ""
     dynamic var type = ""
     var datesCompleted = List<DateCompleted>()
+    
+    convenience init(n: String, t: String){
+        self.init()
+        self.name = n
+        self.type = t
+    }
 }
 
 class DateCompleted: Object {
