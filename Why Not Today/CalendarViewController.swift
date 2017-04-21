@@ -118,7 +118,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
         
         if(!exists) {
-            habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
+            habit = self.realm.objects(Habit.self).filter("name = %@", habit.name).first!
             
             try! realm.write {
                 habit.datesCompleted.append(dc)
@@ -126,7 +126,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
             habits = self.realm.objects(Habit.self)
         }
         else {
-            habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
+            habit = self.realm.objects(Habit.self).filter("name = %@", habit.name).first!
             
             let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first!
             
@@ -151,7 +151,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
         
         if(!exists) {
-            habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
+            habit = self.realm.objects(Habit.self).filter("name = %@", habit.name).first!
             
             try! realm.write {
                 habit.datesCompleted.append(dc)
@@ -159,7 +159,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
             habits = self.realm.objects(Habit.self)
         }
         else {
-            habit = self.realm.objects(Habit.self).filter("name = '\(habit.name)'").first!
+            habit = self.realm.objects(Habit.self).filter("name = %@", habit.name).first!
             
             let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first!
             

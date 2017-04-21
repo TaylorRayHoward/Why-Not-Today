@@ -60,16 +60,23 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         changeCellDisplay(cell, with: calendarView, withState: cellState)
         cell.selectedView.isHidden = Calendar.current.startOfDay(for: date) != selectedDate
+        cell.fillView.isHidden = true
         
         let habits = realm.objects(Habit.self)
-        
         for h in habits {
-            if (h.datesCompleted.contains { $0.dateCompleted == date}) {
-                cell.fillView.isHidden = false
-                break
-            }
-            else {
-                cell.fillView.isHidden = true
+            let dates = h.datesCompleted.filter { d in d.dateCompleted == date }
+            if(dates.count > 0) {
+                for d in dates {
+                    if(d.successfullyCompleted == 1) {
+                        cell.fillView.backgroundColor = UIColor.green
+                        cell.fillView.isHidden = false
+                        break
+                    }
+                    else if (d.successfullyCompleted == -1) {
+                        cell.fillView.backgroundColor = UIColor.red
+                        cell.fillView.isHidden = false
+                    }
+                }
             }
         }
         return cell
