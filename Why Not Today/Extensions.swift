@@ -43,13 +43,12 @@ extension CalendarViewController: JTAppleCalendarViewDataSource {
         formatter.locale = Calendar.current.locale
         formatter.timeZone = Calendar.current.timeZone
         
-        
         var components = DateComponents()
         components.year = 2016
         components.month = 1
         components.day = 1
         let startDate = Calendar.current.date(from: components)!
-        let params = ConfigurationParameters(startDate: startDate, endDate: Date())
+        let params = ConfigurationParameters(startDate: startDate, endDate: Date(), numberOfRows: 6, calendar: nil, generateInDates: nil, generateOutDates: .tillEndOfRow, firstDayOfWeek: nil, hasStrictBoundaries: nil)
         
         return params
     }

@@ -25,7 +25,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
         setupCalendarView()
         reload()
         calendarView.visibleDates { (visibleDates) in
@@ -107,8 +106,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    //TODO: Needs refactor
     func confirmAction(sender: UIButton) {
-        //TODO needs refactor
         var habit = habits[sender.tag]
         let dc = DateCompleted()
 
