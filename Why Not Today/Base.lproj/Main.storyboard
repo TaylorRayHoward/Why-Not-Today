@@ -306,6 +306,19 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="91" height="95"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvN-BP-Lzu">
+                                                            <rect key="frame" x="25" y="27" width="40" height="40"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.8831906786" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="G38-Cm-XMw"/>
+                                                                <constraint firstAttribute="height" constant="40" id="fm0-Io-rtv"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-hG-gL3">
                                                             <rect key="frame" x="26" y="28" width="40" height="40"/>
                                                             <color key="backgroundColor" red="0.85098039215686272" green="0.88319067861519607" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
@@ -328,14 +341,17 @@
                                                     </subviews>
                                                 </view>
                                                 <constraints>
+                                                    <constraint firstItem="UvN-BP-Lzu" firstAttribute="centerX" secondItem="TJJ-SH-Nr6" secondAttribute="centerX" id="415-ue-HVX"/>
+                                                    <constraint firstItem="UvN-BP-Lzu" firstAttribute="centerY" secondItem="TJJ-SH-Nr6" secondAttribute="centerY" id="MEb-kh-oel"/>
                                                     <constraint firstItem="bAL-gz-fSC" firstAttribute="centerX" secondItem="TJJ-SH-Nr6" secondAttribute="centerX" id="SYn-Q7-HAP"/>
                                                     <constraint firstItem="IUo-hG-gL3" firstAttribute="centerX" secondItem="TJJ-SH-Nr6" secondAttribute="centerX" id="VXX-Cy-wq3"/>
                                                     <constraint firstItem="bAL-gz-fSC" firstAttribute="centerY" secondItem="TJJ-SH-Nr6" secondAttribute="centerY" id="q4F-Wk-CA0"/>
                                                     <constraint firstItem="IUo-hG-gL3" firstAttribute="centerY" secondItem="TJJ-SH-Nr6" secondAttribute="centerY" id="xZQ-dT-3yz"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outlet property="circleView" destination="IUo-hG-gL3" id="wd2-iZ-Z9n"/>
                                                     <outlet property="dateLabel" destination="bAL-gz-fSC" id="3Xc-OC-AhR"/>
+                                                    <outlet property="fillView" destination="UvN-BP-Lzu" id="8J4-rj-jDi"/>
+                                                    <outlet property="selectedView" destination="IUo-hG-gL3" id="Mf1-IT-3XV"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>

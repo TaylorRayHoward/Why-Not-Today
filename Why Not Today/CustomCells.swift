@@ -11,7 +11,8 @@ import JTAppleCalendar
 
 class CustomCell: JTAppleCell {
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var selectedView: UIView!
+    @IBOutlet weak var fillView: UIView!
 }
 
 class HabitTableViewCell: UITableViewCell {

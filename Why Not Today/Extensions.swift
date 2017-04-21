@@ -59,7 +59,15 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
                   indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         changeCellDisplay(cell, with: calendarView, withState: cellState)
-        cell.circleView.isHidden = Calendar.current.startOfDay(for: date) != selectedDate
+        cell.selectedView.isHidden = Calendar.current.startOfDay(for: date) != selectedDate
+        
+        let habits = realm.objects(Habit.self)
+        
+        for h in habits {
+            if (h.datesCompleted.contains { $0.dateCompleted == date}) {
+                cell.fillView.isHidden = false
+            }
+        }
         return cell
         
     }
@@ -72,12 +80,12 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         
         self.selectedDate = Calendar.current.startOfDay(for: date)
         guard let validCell = cell as? CustomCell else { return }
-        validCell.circleView.isHidden = false
+        validCell.selectedView.isHidden = false
         self.reload()
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let validCell = cell as? CustomCell else { return }
-        validCell.circleView.isHidden = true
+        validCell.selectedView.isHidden = true
     }
 }
