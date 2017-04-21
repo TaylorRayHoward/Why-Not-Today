@@ -63,8 +63,9 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
             let cell = tableView.cellForRow(at: indexPath) as! HabitTableViewCell
 
             let predicate = NSPredicate(format: "name == %@", "\(cell.nameLabel!.text!)")
-            let deleteHabit = realm.objects(Habit.self).filter(predicate)
+            let deleteHabit = realm.objects(Habit.self).filter(predicate).first!
             try! realm.write {
+                realm.delete(deleteHabit.datesCompleted)
                 realm.delete(deleteHabit)
             }
             reload()
