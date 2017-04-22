@@ -26,6 +26,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCalendarView()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         reload()
         calendarView.visibleDates { (visibleDates) in
             self.setMonthLabel(from: visibleDates)
@@ -114,6 +115,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
 
         dc.dateCompleted = selectedDate
         dc.successfullyCompleted = 1
+        dc.Habit = habit
         
         let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
         

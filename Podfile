@@ -4,6 +4,7 @@ target 'Why Not Today' do
     use_frameworks!
     pod 'RealmSwift'
     pod 'JTAppleCalendar', '~> 7.0'
+    pod 'CircleProgressView', '~> 1.0'
 end
 target 'Why Not TodayTests' do
     use_frameworks!

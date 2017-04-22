@@ -60,25 +60,26 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         changeCellDisplay(cell, with: calendarView, withState: cellState)
         cell.selectedView.isHidden = Calendar.current.startOfDay(for: date) != selectedDate
-        cell.fillView.isHidden = true
+        cell.progressView.isHidden = true
         
         let habits = realm.objects(Habit.self)
-        for h in habits {
-            let dates = h.datesCompleted.filter { d in d.dateCompleted == date }
-            if(dates.count > 0) {
-                for d in dates {
-                    if(d.successfullyCompleted == 1) {
-                        cell.fillView.backgroundColor = UIColor.green
-                        cell.fillView.isHidden = false
-                        break
-                    }
-                    else if (d.successfullyCompleted == -1) {
-                        cell.fillView.backgroundColor = UIColor.red
-                        cell.fillView.isHidden = false
-                    }
+        let datesCompleted = realm.objects(DateCompleted.self)
+        let currentDates = datesCompleted.filter {
+            d in d.dateCompleted == date
+        }
+        
+        if currentDates.count > 0 {
+            cell.progressView.isHidden = false
+            var success = 0
+            for d in currentDates {
+                if d.successfullyCompleted == 1 {
+                    success += 1
                 }
             }
+            let percent = Double(success)/Double(habits.count)
+            cell.progressView.setProgress(percent, animated: false)
         }
+        
         return cell
         
     }

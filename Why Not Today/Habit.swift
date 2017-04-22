@@ -21,5 +21,6 @@ class Habit: Object {
 class DateCompleted: Object {
     dynamic var dateCompleted: Date = Date()
     dynamic var successfullyCompleted: Int = 0
+    dynamic var Habit: Habit?
 }
 

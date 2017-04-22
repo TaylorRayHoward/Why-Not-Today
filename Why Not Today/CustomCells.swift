@@ -8,11 +8,12 @@
 
 import UIKit
 import JTAppleCalendar
+import CircleProgressView
 
 class CustomCell: JTAppleCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var selectedView: UIView!
-    @IBOutlet weak var fillView: UIView!
+    @IBOutlet weak var progressView: CircleProgressView!
 }
 
 class HabitTableViewCell: UITableViewCell {

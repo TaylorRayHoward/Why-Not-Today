@@ -306,19 +306,6 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="91" height="95"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvN-BP-Lzu">
-                                                            <rect key="frame" x="25" y="27" width="40" height="40"/>
-                                                            <color key="backgroundColor" red="0.0" green="0.8831906786" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="40" id="G38-Cm-XMw"/>
-                                                                <constraint firstAttribute="height" constant="40" id="fm0-Io-rtv"/>
-                                                            </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="20"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-hG-gL3">
                                                             <rect key="frame" x="26" y="28" width="40" height="40"/>
                                                             <color key="backgroundColor" red="0.85098039215686272" green="0.88319067861519607" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
@@ -332,6 +319,32 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfz-5n-RLx" customClass="CircleProgressView" customModule="CircleProgressView">
+                                                            <rect key="frame" x="25" y="27" width="40" height="40"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="7Gy-32-r5o"/>
+                                                                <constraint firstAttribute="width" constant="40" id="GST-2b-n4r"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="centerFillColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="trackBorderColor">
+                                                                    <color key="value" red="0.13725490200000001" green="0.18823529410000001" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                                                    <color key="value" red="0.0" green="0.8831906786" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAL-gz-fSC">
                                                             <rect key="frame" x="24" y="37" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -341,16 +354,16 @@
                                                     </subviews>
                                                 </view>
                                                 <constraints>
-                                                    <constraint firstItem="UvN-BP-Lzu" firstAttribute="centerX" secondItem="TJJ-SH-Nr6" secondAttribute="centerX" id="415-ue-HVX"/>
-                                                    <constraint firstItem="UvN-BP-Lzu" firstAttribute="centerY" secondItem="TJJ-SH-Nr6" secondAttribute="centerY" id="MEb-kh-oel"/>
+                                                    <constraint firstItem="pfz-5n-RLx" firstAttribute="centerY" secondItem="TJJ-SH-Nr6" secondAttribute="centerY" id="8e8-Um-Uco"/>
                                                     <constraint firstItem="bAL-gz-fSC" firstAttribute="centerX" secondItem="TJJ-SH-Nr6" secondAttribute="centerX" id="SYn-Q7-HAP"/>
                                                     <constraint firstItem="IUo-hG-gL3" firstAttribute="centerX" secondItem="TJJ-SH-Nr6" secondAttribute="centerX" id="VXX-Cy-wq3"/>
+                                                    <constraint firstItem="pfz-5n-RLx" firstAttribute="centerX" secondItem="TJJ-SH-Nr6" secondAttribute="centerX" id="hed-Bj-YZT"/>
                                                     <constraint firstItem="bAL-gz-fSC" firstAttribute="centerY" secondItem="TJJ-SH-Nr6" secondAttribute="centerY" id="q4F-Wk-CA0"/>
                                                     <constraint firstItem="IUo-hG-gL3" firstAttribute="centerY" secondItem="TJJ-SH-Nr6" secondAttribute="centerY" id="xZQ-dT-3yz"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="bAL-gz-fSC" id="3Xc-OC-AhR"/>
-                                                    <outlet property="fillView" destination="UvN-BP-Lzu" id="8J4-rj-jDi"/>
+                                                    <outlet property="progressView" destination="pfz-5n-RLx" id="ryd-9d-nhH"/>
                                                     <outlet property="selectedView" destination="IUo-hG-gL3" id="Mf1-IT-3XV"/>
                                                 </connections>
                                             </collectionViewCell>

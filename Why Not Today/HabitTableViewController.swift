@@ -51,6 +51,7 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
         destination.typeText = cell.typeLabel.text!
         navigationController?.pushViewController(destination, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+        
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

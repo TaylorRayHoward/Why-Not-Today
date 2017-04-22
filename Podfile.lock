@@ -1,4 +1,5 @@
 PODS:
+  - CircleProgressView (1.1.1)
   - JTAppleCalendar (7.0.0)
   - Nimble (6.1.0)
   - Quick (1.1.0)
@@ -9,18 +10,20 @@ PODS:
     - Realm (= 2.5.1)
 
 DEPENDENCIES:
+  - CircleProgressView (~> 1.0)
   - JTAppleCalendar (~> 7.0)
   - Nimble
   - Quick
   - RealmSwift
 
 SPEC CHECKSUMS:
+  CircleProgressView: 3a02912b8cb05ca68f31d8a08e242f7b0f067665
   JTAppleCalendar: 2dd93a9b9ef65a1dcf2822c8e4ee0c7646705f6f
   Nimble: c53e6903fee94041b90ded74f135820437d8bf59
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   Realm: 32f86104d37c8521f864d4274050b38ba6190733
   RealmSwift: f719e7511c902b8908593e8f143f59e47931bdb6
 
-PODFILE CHECKSUM: dde396fcf09c07e7571250ec3752aa6d8a87bb27
+PODFILE CHECKSUM: 10659de0d6b679674a7ac7b9c1750a8b4e047444
 
 COCOAPODS: 1.2.1
