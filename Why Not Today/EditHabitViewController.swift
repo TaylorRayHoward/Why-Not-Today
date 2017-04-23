@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 //TODO pull out all/most of realm stuff
 class EditHabitViewController: UIViewController {
@@ -15,7 +14,6 @@ class EditHabitViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var typeField: UITextField!
 
-    let realm = try! Realm()
     var nameText = ""
     var typeText = ""
 
@@ -29,12 +27,12 @@ class EditHabitViewController: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     @IBAction func saveEdit(_ sender: UIBarButtonItem) {
-        if (nameField?.text != nil && nameField.text != "") || (typeField?.text != nil && typeField.text != "") {
-            let habit = realm.objects(Habit.self).filter("name == '\(nameText)' AND type == '\(typeText)'").first!
+        if (nameField?.text != nil && nameField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "") && (typeField?.text != nil && typeField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "") {
+            let habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@ AND type = %@", nameText, typeText).first! as! Habit
 
-            try! realm.write {
-                habit.name = nameField.text!
-                habit.type = typeField.text!
+            let exists = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@ AND type = %@", nameField.text!, typeField.text!).first != nil
+            if(!exists) {
+                DBHelper.sharedInstance.updateHabit(habit, name: nameField.text!, type: typeField.text!)
             }
 
            _ = navigationController?.popViewController(animated: true)
