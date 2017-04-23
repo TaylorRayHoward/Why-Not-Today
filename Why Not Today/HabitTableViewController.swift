@@ -12,8 +12,8 @@ import RealmSwift
 
 //TODO pull out all/most of realm stuff
 class HabitTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let realm = try! Realm()
-    var habits: Results<Habit>!
+//    let realm = try! Realm()
+    var habits: Results<Object>!
     @IBOutlet weak var habitTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +38,10 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = habitTable.dequeueReusableCell(withIdentifier: "HabitCell", for: indexPath) as! HabitTableViewCell
-        cell.nameLabel?.text = habits[indexPath.row].name
-        cell.typeLabel?.text = habits[indexPath.row].type
+        let habit = habits[indexPath.row] as! Habit
+        
+        cell.nameLabel?.text = habit.name
+        cell.typeLabel?.text = habit.type
         return cell
     }
 
@@ -64,17 +66,15 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
             let cell = tableView.cellForRow(at: indexPath) as! HabitTableViewCell
 
             let predicate = NSPredicate(format: "name == %@", "\(cell.nameLabel!.text!)")
-            let deleteHabit = realm.objects(Habit.self).filter(predicate).first!
-            try! realm.write {
-                realm.delete(deleteHabit.datesCompleted)
-                realm.delete(deleteHabit)
-            }
+            let deleteHabit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter(predicate).first! as! Habit
+            DBHelper.sharedInstance.deleteHabit(deleteHabit)
+            
             reload()
         }
     }
 
     func reload() {
-        habits = self.realm.objects(Habit.self)
+        habits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
         self.habitTable.reloadData()
     }
 }
