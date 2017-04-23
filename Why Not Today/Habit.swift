@@ -28,12 +28,14 @@ class DateCompleted: Object {
     dynamic var dateCompleted: Date = Date()
     dynamic var successfullyCompleted: Int = 0
     dynamic var Habit: Habit?
+    dynamic var id = ""
     
     convenience init(dateCompleted date: Date, success: Int, for habit: Habit) {
         self.init()
         self.dateCompleted = date
         self.successfullyCompleted = success
         self.Habit = habit
+        self.id = UUID().uuidString
     }
 }
 
