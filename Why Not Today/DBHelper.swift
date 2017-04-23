@@ -44,6 +44,11 @@ class DBHelper {
         }
     }
     
+    func updateHabit(_ habit: Habit) {
+        try! realm.write {
+            realm.add(habit, update: true)
+        }
+    }
     func updateHabit(_ habit: Habit, name: String, type: String) {
         try! realm.write {
             habit.name = name

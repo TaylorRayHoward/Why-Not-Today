@@ -245,7 +245,7 @@ A
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8C4-zA-L1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-678.75" y="-775.35211267605632"/>
+            <point key="canvasLocation" x="1307" y="-1400"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="7Ia-Y1-KFX">
@@ -319,7 +319,7 @@ A
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPH-bk-4cE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110" y="-758"/>
+            <point key="canvasLocation" x="122" y="-922"/>
         </scene>
         <!--Notification View Controller-->
         <scene sceneID="Pec-hH-E1a">
@@ -450,7 +450,7 @@ A
                                                     <subviews>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-hG-gL3">
                                                             <rect key="frame" x="26" y="28" width="40" height="40"/>
-                                                            <color key="backgroundColor" red="0.85098039215686272" green="0.88319067861519607" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="VSb-wV-Kew"/>
                                                                 <constraint firstAttribute="height" constant="40" id="eKI-ul-xmw"/>
@@ -632,7 +632,7 @@ A
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWw-O8-Muo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-542" y="-98"/>
+            <point key="canvasLocation" x="-853" y="-98"/>
         </scene>
     </scenes>
     <resources>

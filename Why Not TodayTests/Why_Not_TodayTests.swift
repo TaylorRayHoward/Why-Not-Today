@@ -32,6 +32,10 @@ class HabitSpec: QuickSpec {
             }
         }
         describe("The realm database has database features") {
+            afterEach {
+                DBHelper.testInstance.deleteAll(ofType: Habit.self)
+                DBHelper.testInstance.deleteAll(ofType: DateCompleted.self)
+            }
             
             it("can save a habit object") {
                 let habit = Habit(n: "Foo", t: "Bar")
@@ -84,8 +88,14 @@ class HabitSpec: QuickSpec {
                 expect(emptyHabit).to(beNil())
             }
             
-            pending("will delete the habit and the dates competed of that habit") {
+            it("will delete the habit and the dates competed of that habit") {
+                var habit = Habit(n: "Foo", t: "abr")
+                let dc = DateCompleted(dateCompleted: Date(), success: 1, for: habit)
+                habit.datesCompleted.append(dc)
+                DBHelper.testInstance.writeObject(objects: [habit, dc])
                 
+                habit = DBHelper.testInstance.getAll(ofType: Habit.self).filter("name = %@", "Foo").first! as! Habit
+                expect(habit.datesCompleted.count).to(equal(1))
             }
         }
     }
