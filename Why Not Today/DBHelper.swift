@@ -32,9 +32,29 @@ class DBHelper {
         }
     }
     
-    func getAll<T>(object: T) -> Results<Object> {
-        return realm.objects(object as! Object.Type)
+    func getAll(ofType type: Object.Type) -> Results<Object> {
+        return realm.objects(type)
     }
     
+    func writeObject(objects: [Object]) {
+        try! realm.write {
+            for o in objects {
+                realm.add(o)
+            }
+        }
+    }
     
+    func updateHabit(_ habit: Habit, name: String, type: String) {
+        try! realm.write {
+            habit.name = name
+            habit.type = type
+        }
+    }
+    
+    func deleteAll(ofType type: Object.Type) {
+        let objects = getAll(ofType: type)
+        try! realm.write {
+            realm.delete(objects)
+        }
+    }
 }

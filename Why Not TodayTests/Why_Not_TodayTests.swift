@@ -7,7 +7,6 @@
 
 import Quick
 import Nimble
-import RealmSwift
 @testable import Why_Not_Today
 
 class HabitSpec: QuickSpec {
@@ -33,74 +32,55 @@ class HabitSpec: QuickSpec {
             }
         }
         describe("The realm database has database features") {
-            var realm: Realm!
-            beforeEach {
-                realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "TestRealm"))
-            }
+            
             it("can save a habit object") {
                 let habit = Habit(n: "Foo", t: "Bar")
-                try! realm.write {
-                    realm.add(habit)
-                }
-
-                let habits = DBHelper.testInstance.getAll(object: Habit.self)
+                
+                DBHelper.testInstance.writeObject(objects: [habit])
+                let habits = DBHelper.testInstance.getAll(ofType: Habit.self)
+                
                 expect(habits.count).to(equal(1))
             }
 
             it("can delete a habit object") {
                 let habit = Habit(n: "Foo", t: "Bar")
-                try! realm.write {
-                    realm.add(habit)
-                }
+                DBHelper.testInstance.writeObject(objects: [habit])
 
-                var habits = realm.objects(Habit.self)
+                var habits = DBHelper.testInstance.getAll(ofType: Habit.self)
 
-                try! realm.write {
-                    realm.deleteAll()
-                }
-
-                habits = realm.objects(Habit.self)
+                DBHelper.testInstance.deleteAll(ofType: Habit.self)
+                habits = DBHelper.testInstance.getAll(ofType: Habit.self)
 
                 expect(habits.count).to(equal(0))
             }
             it("can query") {
                 var habit = Habit(n: "Foo", t: "Bar")
-                try! realm.write {
-                    realm.add(habit)
-                }
+                
+                DBHelper.testInstance.writeObject(objects: [habit])
                 habit = Habit(n: "FooBar", t: "BarFoo")
 
-                try! realm.write {
-                    realm.add(habit)
-                }
+                DBHelper.testInstance.writeObject(objects: [habit])
 
-                let habits = DBHelper.testInstance.getAll(object: Habit.self).filter("name == 'Foo'")
+                let habits = DBHelper.testInstance.getAll(ofType: Habit.self).filter("name == 'Foo'")
                 expect(habits.count).to(equal(1))
             }
             it("can update") {
                 var habit = Habit(n: "Foe", t: "Bear")
-                try! realm.write {
-                    realm.add(habit)
-                }
+                DBHelper.testInstance.writeObject(objects: [habit])
 
-                habit = DBHelper.testInstance.getAll(object: Habit.self).filter("name == 'Foe' AND type == 'Bear'").first! as! Habit
+                habit = DBHelper.testInstance.getAll(ofType: Habit.self).filter("name == 'Foe' AND type == 'Bear'").first! as! Habit
 
-                try! realm.write {
-                    habit.name = "Foo"
-                    habit.type = "Bar"
-                }
+                DBHelper.testInstance.updateHabit(habit, name: "Foo", type: "Bar")
 
-                habit = DBHelper.testInstance.getAll(object: Habit.self).filter("name == 'Foo' AND type == 'Bar'").first! as! Habit
+                habit = DBHelper.testInstance.getAll(ofType: Habit.self).filter("name == 'Foo' AND type == 'Bar'").first! as! Habit
                 expect(habit.name).to(equal("Foo"))
                 expect(habit.type).to(equal("Bar"))
             }
             it("returns nothing when there is a bad filter") {
                 let habit = Habit(n: "Foo", t: "Bar")
-                try! realm.write {
-                    realm.add(habit)
-                }
+                DBHelper.testInstance.writeObject(objects: [habit])
                 
-                let emptyHabit = DBHelper.testInstance.getAll(object: Habit.self).filter("name == 'abc'").first as? Habit
+                let emptyHabit = DBHelper.testInstance.getAll(ofType: Habit.self).filter("name == 'abc'").first as? Habit
                 expect(emptyHabit).to(beNil())
             }
         }
