@@ -7,29 +7,57 @@
 //
 
 import UIKit
+import UserNotifications
 
 class NotificationViewController: UIViewController {
 
+    @IBAction func testNotif(_ sender: UIButton) {
+        scheduleNotification(inSeconds: 5, completion: { success in
+            if success {
+                print("success")
+            } else {
+                print ("error")
+            }
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {
+            (granted, error) in
+            
+            if granted {
+                print("Granted")
+            }
+            else {
+                print(error?.localizedDescription ?? "")
+            }
+        })
+        // Dispose of any resources that can be recreated.
+        
+    }
+    
+    func scheduleNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool) -> ()) {
+        let notif = UNMutableNotificationContent()
+        notif.title = "Test"
+        notif.subtitle = "Test2"
+        notif.body = "Test3"
+        
+        let notifTrigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "test", content: notif, trigger: notifTrigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler:  { error in
+            if error != nil {
+                print(error ?? "")
+                completion(false)
+            } else {
+                completion(true)
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
