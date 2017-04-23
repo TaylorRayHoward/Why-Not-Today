@@ -4,12 +4,10 @@
 //
 
 import UIKit
-import RealmSwift
 
 //TODO pull out all/most of realm stuff
 class CreateHabitViewController: UIViewController {
 
-    let realm = try! Realm()
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var typeText: UITextField!
 
@@ -20,11 +18,12 @@ class CreateHabitViewController: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     @IBAction func saveHabit(_ sender: UIBarButtonItem) {
-        if (nameText?.text != nil && nameText.text != "") || (typeText?.text != nil && typeText.text != "") {
+        if (nameText?.text != nil && nameText.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "") && (typeText?.text != nil && typeText.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "") {
             let habit = Habit(n: nameText.text!, t: typeText.text!)
             
-            try! self.realm.write {
-                self.realm.add(habit)
+            let exists = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@ AND type = %@", nameText.text!, typeText.text!).first != nil
+            if(!exists) {
+                DBHelper.sharedInstance.writeObject(objects: [habit])
             }
             _ = navigationController?.popViewController(animated: true)
         }
