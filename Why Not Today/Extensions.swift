@@ -5,6 +5,7 @@
 
 import UIKit
 import JTAppleCalendar
+import RealmSwift
 
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
@@ -62,10 +63,15 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         cell.selectedView.isHidden = Calendar.current.startOfDay(for: date) != selectedDate
         cell.progressView.isHidden = true
         
-        let habits = realm.objects(Habit.self)
-        let datesCompleted = realm.objects(DateCompleted.self)
-        let currentDates = datesCompleted.filter {
-            d in d.dateCompleted == date
+        let habits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
+        let datesCompleted = DBHelper.sharedInstance.getAll(ofType: DateCompleted.self)
+        let currentDates = List<DateCompleted>()
+        
+        for d in datesCompleted {
+            let dateCompleted = d as! DateCompleted
+            if dateCompleted.dateCompleted == date {
+                currentDates.append(dateCompleted)
+            }
         }
         
         if currentDates.count > 0 {

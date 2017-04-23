@@ -19,8 +19,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     
     var formatter = DateFormatter()
-    lazy var realm = try! Realm()
-    var habits: Results<Habit>!
+//    lazy var realm = try! Realm()
+    var habits: Results<Object>!
     var selectedDate = Date()
 
     override func viewDidLoad() {
@@ -85,10 +85,12 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         cell.confirmButton?.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
         cell.denyButton?.tag = indexPath.row
         cell.denyButton?.addTarget(self, action: #selector(denyAction), for: .touchUpInside)
-        cell.nameLabel?.text = habits[indexPath.row].name
+        var habit = habits[indexPath.row] as! Habit
+        cell.nameLabel?.text = habit.name
         
         
-        let habit = realm.objects(Habit.self).filter("name = %@", habits[indexPath.row].name).first!
+        habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
+        
         if let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first {
             if dc.successfullyCompleted == 1 {
                 cell.backgroundColor = UIColor.green
@@ -110,32 +112,19 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     
     //TODO: Needs refactor
     func confirmAction(sender: UIButton) {
-        var habit = habits[sender.tag]
-        let dc = DateCompleted()
-
-        dc.dateCompleted = selectedDate
-        dc.successfullyCompleted = 1
-        dc.Habit = habit
+        var habit = habits[sender.tag] as! Habit
         
         let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
-        
         if(!exists) {
-            habit = self.realm.objects(Habit.self).filter("name = %@", habit.name).first!
-            
-            try! realm.write {
-                habit.datesCompleted.append(dc)
-            }
-            habits = self.realm.objects(Habit.self)
+            let dc = DateCompleted(dateCompleted: selectedDate, success: 1, for: habit)
+            habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
+            DBHelper.sharedInstance.addDateCompleted(for: habit, with: dc)
         }
         else {
-            habit = self.realm.objects(Habit.self).filter("name = %@", habit.name).first!
+            habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
             
             let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first!
-            
-            try! realm.write {
-                dc.successfullyCompleted = 1
-            }
-            habits = self.realm.objects(Habit.self)
+            DBHelper.sharedInstance.updateDateCompleted(dc, success: 1, date: nil)
         }
         
         calendarView.reloadData()
@@ -144,32 +133,18 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     
     //TODO: needs refactor
     func denyAction(sender: UIButton) {
-        var habit = habits[sender.tag]
-        let dc = DateCompleted()
-
-        dc.dateCompleted = selectedDate
-        dc.successfullyCompleted = -1
-        
-        
+        var habit = habits[sender.tag] as! Habit
         let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
         
         if(!exists) {
-            habit = self.realm.objects(Habit.self).filter("name = %@", habit.name).first!
-            
-            try! realm.write {
-                habit.datesCompleted.append(dc)
-            }
-            habits = self.realm.objects(Habit.self)
+            let dc = DateCompleted(dateCompleted: selectedDate, success: -1, for: habit)
+            habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
+            DBHelper.sharedInstance.addDateCompleted(for: habit, with: dc)
         }
         else {
-            habit = self.realm.objects(Habit.self).filter("name = %@", habit.name).first!
-            
+            habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
             let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first!
-            
-            try! realm.write {
-                dc.successfullyCompleted = -1
-            }
-            habits = self.realm.objects(Habit.self)
+            DBHelper.sharedInstance.updateDateCompleted(dc, success: -1, date: nil)
         }
         
         calendarView.reloadData()
@@ -177,7 +152,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func reload() {
-        habits = self.realm.objects(Habit.self)
+        habits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
         self.confirmDenyTable.reloadData()
     }
 }

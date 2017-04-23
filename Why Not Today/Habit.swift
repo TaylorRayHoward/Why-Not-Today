@@ -30,6 +30,10 @@ class DateCompleted: Object {
     dynamic var Habit: Habit?
     dynamic var id = ""
     
+    override class func primaryKey() -> String {
+        return "id"
+    }
+    
     convenience init(dateCompleted date: Date, success: Int, for habit: Habit) {
         self.init()
         self.dateCompleted = date

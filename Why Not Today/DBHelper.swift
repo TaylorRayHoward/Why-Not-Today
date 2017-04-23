@@ -49,10 +49,10 @@ class DBHelper {
             realm.add(habit, update: true)
         }
     }
-    func updateHabit(_ habit: Habit, name: String, type: String) {
+    func updateHabit(_ habit: Habit, name: String?, type: String?) {
         try! realm.write {
-            habit.name = name
-            habit.type = type
+            habit.name = name ?? habit.name
+            habit.type = type ?? habit.type
         }
     }
     
@@ -67,6 +67,26 @@ class DBHelper {
         try! realm.write {
             realm.delete(habit.datesCompleted)
             realm.delete(habit)
+        }
+    }
+    
+    func updateDateCompleted(_ dateCompleted: DateCompleted) {
+        try! realm.write {
+            realm.add(dateCompleted, update: true)
+        }
+    }
+    
+    func updateDateCompleted(_ dateCompleted: DateCompleted, success: Int?, date: Date?) {
+        try! realm.write {
+            dateCompleted.successfullyCompleted = success ?? dateCompleted.successfullyCompleted
+            dateCompleted.dateCompleted = date ?? dateCompleted.dateCompleted
+        }
+    }
+    
+    func addDateCompleted(for habit: Habit, with dateCompleted:DateCompleted) {
+        try! realm.write {
+            habit.datesCompleted.append(dateCompleted)
+            realm.add(habit, update: true)
         }
     }
 }
