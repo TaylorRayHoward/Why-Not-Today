@@ -9,16 +9,18 @@ import RealmSwift
 class Habit: Object {
     dynamic var name = ""
     dynamic var type = ""
+    dynamic var id = ""
     var datesCompleted = List<DateCompleted>()
     
     override class func primaryKey() -> String {
-        return "name"
+        return "id"
     }
     
     convenience init(n: String, t: String){
         self.init()
         self.name = n
         self.type = t
+        self.id = UUID().uuidString
     }
 }
 
