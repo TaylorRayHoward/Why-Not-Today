@@ -43,7 +43,7 @@ class HabitSpec: QuickSpec {
                     realm.add(habit)
                 }
 
-                let habits = realm.objects(Habit.self)
+                let habits = DBHelper.testInstance.getAll(object: Habit.self)
                 expect(habits.count).to(equal(1))
             }
 
@@ -74,7 +74,7 @@ class HabitSpec: QuickSpec {
                     realm.add(habit)
                 }
 
-                let habits = realm.objects(Habit.self).filter("name == 'Foo'")
+                let habits = DBHelper.testInstance.getAll(object: Habit.self).filter("name == 'Foo'")
                 expect(habits.count).to(equal(1))
             }
             it("can update") {
@@ -83,14 +83,14 @@ class HabitSpec: QuickSpec {
                     realm.add(habit)
                 }
 
-                habit = realm.objects(Habit.self).filter("name == 'Foe' AND type == 'Bear'").first!
+                habit = DBHelper.testInstance.getAll(object: Habit.self).filter("name == 'Foe' AND type == 'Bear'").first! as! Habit
 
                 try! realm.write {
                     habit.name = "Foo"
                     habit.type = "Bar"
                 }
 
-                habit = realm.objects(Habit.self).filter("name == 'Foo' AND type == 'Bar'").first!
+                habit = DBHelper.testInstance.getAll(object: Habit.self).filter("name == 'Foo' AND type == 'Bar'").first! as! Habit
                 expect(habit.name).to(equal("Foo"))
                 expect(habit.type).to(equal("Bar"))
             }
@@ -100,7 +100,7 @@ class HabitSpec: QuickSpec {
                     realm.add(habit)
                 }
                 
-                let emptyHabit = realm.objects(Habit.self).filter("name == 'abc'").first
+                let emptyHabit = DBHelper.testInstance.getAll(object: Habit.self).filter("name == 'abc'").first as? Habit
                 expect(emptyHabit).to(beNil())
             }
         }
