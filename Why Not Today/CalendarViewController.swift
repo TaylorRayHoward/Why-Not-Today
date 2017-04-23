@@ -112,48 +112,37 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     
     //TODO: Needs refactor
     func confirmAction(sender: UIButton) {
-        var habit = habits[sender.tag] as! Habit
-        
-        let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
-        if(!exists) {
-            let dc = DateCompleted(dateCompleted: selectedDate, success: 1, for: habit)
-            habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
-            DBHelper.sharedInstance.addDateCompleted(for: habit, with: dc)
-        }
-        else {
-            habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
-            
-            let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first!
-            DBHelper.sharedInstance.updateDateCompleted(dc, success: 1, date: nil)
-        }
-        
-        calendarView.reloadData()
-        reload()
+        resolveCompletionAction(tag: sender.tag, status: 1)
     }
     
     //TODO: needs refactor
     func denyAction(sender: UIButton) {
-        var habit = habits[sender.tag] as! Habit
-        let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
-        
-        if(!exists) {
-            let dc = DateCompleted(dateCompleted: selectedDate, success: -1, for: habit)
-            habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
-            DBHelper.sharedInstance.addDateCompleted(for: habit, with: dc)
-        }
-        else {
-            habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
-            let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first!
-            DBHelper.sharedInstance.updateDateCompleted(dc, success: -1, date: nil)
-        }
-        
-        calendarView.reloadData()
-        reload()
+        resolveCompletionAction(tag: sender.tag, status: -1)
     }
     
     func reload() {
         habits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
         self.confirmDenyTable.reloadData()
+    }
+    
+    func resolveCompletionAction(tag: Int, status: Int) {
+        var habit = habits[tag] as! Habit
+        let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
+        
+        if(!exists) {
+            let dc = DateCompleted(dateCompleted: selectedDate, success: status, for: habit)
+            habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
+            DBHelper.sharedInstance.addDateCompleted(for: habit, with: dc)
+        }
+        else {
+            habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
+            let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first!
+            DBHelper.sharedInstance.updateDateCompleted(dc, success: status, date: nil)
+        }
+        
+        calendarView.reloadData()
+        reload()
+        
     }
 }
 

@@ -107,3 +107,9 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         validCell.selectedView.isHidden = true
     }
 }
+
+
+enum ApproveDeny: Int {
+    case Approve = 1
+    case Deny = -1
+}
