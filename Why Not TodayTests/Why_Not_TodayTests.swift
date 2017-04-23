@@ -83,6 +83,10 @@ class HabitSpec: QuickSpec {
                 let emptyHabit = DBHelper.testInstance.getAll(ofType: Habit.self).filter("name == 'abc'").first as? Habit
                 expect(emptyHabit).to(beNil())
             }
+            
+            pending("will delete the habit and the dates competed of that habit") {
+                
+            }
         }
     }
 }

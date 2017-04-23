@@ -57,4 +57,11 @@ class DBHelper {
             realm.delete(objects)
         }
     }
+    
+    func deleteHabit(_ habit: Habit) {
+        try! realm.write {
+            realm.delete(habit.datesCompleted)
+            realm.delete(habit)
+        }
+    }
 }
