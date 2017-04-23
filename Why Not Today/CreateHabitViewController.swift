@@ -21,7 +21,7 @@ class CreateHabitViewController: UIViewController {
         if (nameText?.text != nil && nameText.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "") && (typeText?.text != nil && typeText.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "") {
             let habit = Habit(n: nameText.text!, t: typeText.text!)
             
-            let exists = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@ AND type = %@", nameText.text!, typeText.text!).first != nil
+            let exists = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", nameText.text!).first != nil
             if(!exists) {
                 DBHelper.sharedInstance.writeObject(objects: [habit])
             }

@@ -28,9 +28,9 @@ class EditHabitViewController: UIViewController {
     }
     @IBAction func saveEdit(_ sender: UIBarButtonItem) {
         if (nameField?.text != nil && nameField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "") && (typeField?.text != nil && typeField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "") {
-            let habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@ AND type = %@", nameText, typeText).first! as! Habit
+            let habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", nameText).first! as! Habit
 
-            let exists = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@ AND type = %@", nameField.text!, typeField.text!).first != nil
+            let exists = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", nameField.text!).first != nil
             if(!exists) {
                 DBHelper.sharedInstance.updateHabit(habit, name: nameField.text!, type: typeField.text!)
             }

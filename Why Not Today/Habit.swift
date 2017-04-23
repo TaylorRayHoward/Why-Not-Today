@@ -11,6 +11,10 @@ class Habit: Object {
     dynamic var type = ""
     var datesCompleted = List<DateCompleted>()
     
+    override class func primaryKey() -> String {
+        return "name"
+    }
+    
     convenience init(n: String, t: String){
         self.init()
         self.name = n
