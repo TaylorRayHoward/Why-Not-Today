@@ -110,12 +110,10 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    //TODO: Needs refactor
     func confirmAction(sender: UIButton) {
         resolveCompletionAction(tag: sender.tag, status: 1)
     }
     
-    //TODO: needs refactor
     func denyAction(sender: UIButton) {
         resolveCompletionAction(tag: sender.tag, status: -1)
     }
@@ -140,7 +138,15 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
             DBHelper.sharedInstance.updateDateCompleted(dc, success: status, date: nil)
         }
         
-        calendarView.reloadData()
+        
+        let indexPath = calendarView.indexPathsForSelectedItems![0]
+        let cell = calendarView.cellForItem(at: indexPath) as! CustomCell
+        let percentage = getProgressBarPercentage(forDate: selectedDate)
+        
+        if percentage != nil {
+            cell.progressView.setProgress(percentage!, animated: true)
+            cell.progressView.isHidden = false
+        }
         reload()
         
     }

@@ -63,27 +63,10 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         cell.selectedView.isHidden = Calendar.current.startOfDay(for: date) != selectedDate
         cell.progressView.isHidden = true
         
-        let habits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
-        let datesCompleted = DBHelper.sharedInstance.getAll(ofType: DateCompleted.self)
-        let currentDates = List<DateCompleted>()
-        
-        for d in datesCompleted {
-            let dateCompleted = d as! DateCompleted
-            if dateCompleted.dateCompleted == date {
-                currentDates.append(dateCompleted)
-            }
-        }
-        
-        if currentDates.count > 0 {
+        let percent = getProgressBarPercentage(forDate: date)
+        if percent != nil {
             cell.progressView.isHidden = false
-            var success = 0
-            for d in currentDates {
-                if d.successfullyCompleted == 1 {
-                    success += 1
-                }
-            }
-            let percent = Double(success)/Double(habits.count)
-            cell.progressView.setProgress(percent, animated: false)
+            cell.progressView.setProgress(percent!, animated: false)
         }
         
         return cell
@@ -106,6 +89,30 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         guard let validCell = cell as? CustomCell else { return }
         validCell.selectedView.isHidden = true
     }
+}
+
+
+func getProgressBarPercentage(forDate date: Date) -> Double? {
+    let habits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
+    let datesCompleted = DBHelper.sharedInstance.getAll(ofType: DateCompleted.self)
+    let currentDates = List<DateCompleted>()
+    for d in datesCompleted {
+        let dateCompleted = d as! DateCompleted
+        if dateCompleted.dateCompleted == date {
+            currentDates.append(dateCompleted)
+        }
+    }
+    
+    if currentDates.count == 0 {
+        return nil
+    }
+    var success = 0
+    for d in currentDates {
+        if d.successfullyCompleted == 1 {
+            success += 1
+        }
+    }
+    return  Double(success)/Double(habits.count)
 }
 
 
