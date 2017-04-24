@@ -109,10 +109,10 @@
 		56129CC51E9F146200E72834 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				56129CC21E9DCBA500E72834 /* CalendarViewController.swift */,
 				BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */,
 				3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */,
 				560A823A1E996B8300593671 /* EditHabitViewController.swift */,
-				56129CC21E9DCBA500E72834 /* CalendarViewController.swift */,
 				592588941EAC5F4200217E6A /* SettingsViewController.swift */,
 				592588961EAC64B300217E6A /* NotificationViewController.swift */,
 			);

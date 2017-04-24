@@ -42,6 +42,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         reload()
+        calendarView.reloadData()
     }
     
     func setupCalendarView() {
