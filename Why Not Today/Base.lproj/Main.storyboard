@@ -278,7 +278,7 @@ A
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="uvx-NR-Hvm" kind="show" id="6Fi-jo-PXL"/>
+                                            <segue destination="x5S-tb-Itl" kind="show" id="fTa-QD-nmY"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -320,37 +320,6 @@ A
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPH-bk-4cE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="122" y="-922"/>
-        </scene>
-        <!--Notification View Controller-->
-        <scene sceneID="Pec-hH-E1a">
-            <objects>
-                <viewController id="uvx-NR-Hvm" customClass="NotificationViewController" customModule="Why_Not_Today" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RB9-MN-R5l"/>
-                        <viewControllerLayoutGuide type="bottom" id="fkJ-e0-ee1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0sT-K1-crH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3k-VA-cOo">
-                                <rect key="frame" x="145" y="269" width="30" height="30"/>
-                                <state key="normal" title="Test"/>
-                                <connections>
-                                    <action selector="testNotif:" destination="uvx-NR-Hvm" eventType="touchUpInside" id="B9l-IH-BOc"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="d3k-VA-cOo" firstAttribute="centerX" secondItem="0sT-K1-crH" secondAttribute="centerX" id="csc-dz-gJr"/>
-                            <constraint firstItem="d3k-VA-cOo" firstAttribute="centerY" secondItem="0sT-K1-crH" secondAttribute="centerY" id="rap-XM-WCL"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e4z-Wq-QTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1307" y="-758"/>
         </scene>
         <!--Ib Calendar Data Source-->
         <scene sceneID="QaU-t5-ugg">
@@ -633,6 +602,79 @@ A
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWw-O8-Muo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-853" y="-98"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="Ugp-C8-ycm">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="x5S-tb-Itl" customClass="NotificationViewController" customModule="Why_Not_Today" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n6G-2w-Vsf"/>
+                        <viewControllerLayoutGuide type="bottom" id="QJm-rn-dWs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BwD-Gb-sSS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bda-Dj-Y25">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.18823529410000001" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.85098039219999999" green="0.8980392157" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NotificationCell" rowHeight="61" id="pA9-da-FiO" customClass="NotificationCell" customModule="Why_Not_Today" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pA9-da-FiO" id="IQY-LI-N9P">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification name that will be long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMv-KF-2vr">
+                                                    <rect key="frame" x="8" y="8" width="271" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.85098039215686272" green="0.89803921568627454" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:35 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLb-S0-T5x">
+                                                    <rect key="frame" x="8" y="36" width="57" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.29932678208116753" green="0.91601914167404175" blue="0.27557192109101314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BLb-S0-T5x" secondAttribute="bottom" id="66e-0M-23V"/>
+                                                <constraint firstItem="WMv-KF-2vr" firstAttribute="top" secondItem="IQY-LI-N9P" secondAttribute="topMargin" id="AAt-oD-4jF"/>
+                                                <constraint firstItem="WMv-KF-2vr" firstAttribute="leading" secondItem="IQY-LI-N9P" secondAttribute="leadingMargin" id="XWL-LL-cyc"/>
+                                                <constraint firstItem="BLb-S0-T5x" firstAttribute="leading" secondItem="IQY-LI-N9P" secondAttribute="leadingMargin" id="bTc-JJ-qqG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WMv-KF-2vr" secondAttribute="trailing" id="tgJ-qz-tiN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.13725490200000001" green="0.18823529410000001" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="WMv-KF-2vr" id="LnR-i3-BOc"/>
+                                            <outlet property="timeLabel" destination="BLb-S0-T5x" id="SF5-sc-BM8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bda-Dj-Y25" secondAttribute="trailing" id="HHa-eB-d8z"/>
+                            <constraint firstItem="Bda-Dj-Y25" firstAttribute="leading" secondItem="BwD-Gb-sSS" secondAttribute="leading" id="baI-ZY-tht"/>
+                            <constraint firstAttribute="bottom" secondItem="Bda-Dj-Y25" secondAttribute="bottom" id="eAP-yk-qG6"/>
+                            <constraint firstItem="Bda-Dj-Y25" firstAttribute="top" secondItem="n6G-2w-Vsf" secondAttribute="bottom" id="qhH-U1-Hgs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notifications" id="tM8-jE-DLn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qBe-fL-9g4"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="notificationTable" destination="Bda-Dj-Y25" id="5ZV-Oo-CUn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FKp-z7-Bbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1297.5" y="-762.67605633802816"/>
         </scene>
     </scenes>
     <resources>

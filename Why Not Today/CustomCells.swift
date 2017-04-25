@@ -26,3 +26,8 @@ class ConfirmDenyHabitCell: UITableViewCell {
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var denyButton: UIButton!
 }
+
+class NotificationCell: UITableViewCell {
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+}
