@@ -31,3 +31,8 @@ class NotificationCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
 }
+
+class MessageCell: UITableViewCell {
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+}
