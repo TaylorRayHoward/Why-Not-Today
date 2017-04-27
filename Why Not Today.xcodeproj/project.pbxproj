@@ -115,14 +115,8 @@
 		56129CC51E9F146200E72834 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				56129CC21E9DCBA500E72834 /* CalendarViewController.swift */,
-				BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */,
-				3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */,
-				560A823A1E996B8300593671 /* EditHabitViewController.swift */,
-				592588941EAC5F4200217E6A /* SettingsViewController.swift */,
-				592588961EAC64B300217E6A /* NotificationViewController.swift */,
-				5966E2C71EB0250500638DD3 /* CreateNotificationViewController.swift */,
-				5966E2C91EB0385F00638DD3 /* NotificationMessageViewController.swift */,
+				5960AE421EB168B700773B58 /* MainViewControllers */,
+				5960AE411EB168AC00773B58 /* SettingsViewControllers */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -151,6 +145,28 @@
 				5931F1131EAD1A4700431642 /* DBHelper.swift */,
 			);
 			name = Logic;
+			sourceTree = "<group>";
+		};
+		5960AE411EB168AC00773B58 /* SettingsViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				592588941EAC5F4200217E6A /* SettingsViewController.swift */,
+				592588961EAC64B300217E6A /* NotificationViewController.swift */,
+				5966E2C71EB0250500638DD3 /* CreateNotificationViewController.swift */,
+				5966E2C91EB0385F00638DD3 /* NotificationMessageViewController.swift */,
+			);
+			name = SettingsViewControllers;
+			sourceTree = "<group>";
+		};
+		5960AE421EB168B700773B58 /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				56129CC21E9DCBA500E72834 /* CalendarViewController.swift */,
+				BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */,
+				3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */,
+				560A823A1E996B8300593671 /* EditHabitViewController.swift */,
+			);
+			name = MainViewControllers;
 			sourceTree = "<group>";
 		};
 		99FADE995FF27570E71AAF04 /* Frameworks */ = {

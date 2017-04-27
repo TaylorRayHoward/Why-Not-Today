@@ -36,3 +36,7 @@ class MessageCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
 }
+
+class EditMessageCell: UITableViewCell {
+    @IBOutlet weak var messageInput: UITextField!
+}

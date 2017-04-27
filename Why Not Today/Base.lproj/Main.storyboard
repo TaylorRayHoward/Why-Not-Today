@@ -652,7 +652,6 @@ A
                                         <connections>
                                             <outlet property="messageLabel" destination="WMv-KF-2vr" id="LnR-i3-BOc"/>
                                             <outlet property="timeLabel" destination="BLb-S0-T5x" id="SF5-sc-BM8"/>
-                                            <segue destination="aSo-E9-gxb" kind="show" id="ZKd-56-eBV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -667,7 +666,11 @@ A
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Notifications" id="tM8-jE-DLn">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qBe-fL-9g4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qBe-fL-9g4">
+                            <connections>
+                                <segue destination="aSo-E9-gxb" kind="show" id="BXr-1I-nWC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="notificationTable" destination="Bda-Dj-Y25" id="5ZV-Oo-CUn"/>
@@ -732,7 +735,6 @@ A
                                         <connections>
                                             <outlet property="messageLabel" destination="LQx-HO-pv3" id="dEU-9G-KIq"/>
                                             <outlet property="titleLabel" destination="l0D-pm-Z5c" id="5ph-Y5-0L7"/>
-                                            <segue destination="fNp-OI-22u" kind="presentation" id="81h-84-bN5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -774,7 +776,7 @@ A
         <!--Message-->
         <scene sceneID="wq1-0z-r8O">
             <objects>
-                <viewController id="lpH-Ka-hSS" customClass="NotificationMessageViewController" customModule="Why_Not_Today" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationMessageViewController" id="lpH-Ka-hSS" customClass="NotificationMessageViewController" customModule="Why_Not_Today" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XKI-hV-K07"/>
                         <viewControllerLayoutGuide type="bottom" id="qMA-Vr-AbW"/>
@@ -782,7 +784,48 @@ A
                     <view key="view" contentMode="scaleToFill" id="QZ1-2q-2eh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="r9f-9z-dww">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EditMessageCell" id="fUT-66-bfL" customClass="EditMessageCell" customModule="Why_Not_Today" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fUT-66-bfL" id="fVc-0x-NJG">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fkd-rG-kNX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Fkd-rG-kNX" firstAttribute="centerX" secondItem="fVc-0x-NJG" secondAttribute="centerX" id="1X4-91-dII"/>
+                                                <constraint firstItem="Fkd-rG-kNX" firstAttribute="centerY" secondItem="fVc-0x-NJG" secondAttribute="centerY" id="4Lr-xN-heL"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fkd-rG-kNX" secondAttribute="trailing" id="7Tv-sG-RDv"/>
+                                                <constraint firstItem="Fkd-rG-kNX" firstAttribute="leading" secondItem="fVc-0x-NJG" secondAttribute="leading" id="UNc-kG-mi3"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fkd-rG-kNX" secondAttribute="bottom" id="YpQ-kU-UPH"/>
+                                                <constraint firstItem="Fkd-rG-kNX" firstAttribute="top" secondItem="fVc-0x-NJG" secondAttribute="top" id="gga-CY-Uf7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageInput" destination="Fkd-rG-kNX" id="a0O-DG-jhY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="r9f-9z-dww" secondAttribute="trailing" id="ExU-Pr-HaE"/>
+                            <constraint firstItem="qMA-Vr-AbW" firstAttribute="top" secondItem="r9f-9z-dww" secondAttribute="bottom" id="I76-ta-DFH"/>
+                            <constraint firstItem="r9f-9z-dww" firstAttribute="leading" secondItem="QZ1-2q-2eh" secondAttribute="leading" id="vIK-fj-RzA"/>
+                            <constraint firstItem="r9f-9z-dww" firstAttribute="top" secondItem="XKI-hV-K07" secondAttribute="bottom" id="xxG-d7-Jvy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Message" id="X7Y-vj-nXs">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="WFP-DE-gJg">
@@ -796,6 +839,9 @@ A
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="messageTable" destination="r9f-9z-dww" id="itn-ft-IND"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELd-dc-yTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

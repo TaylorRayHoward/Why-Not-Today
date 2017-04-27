@@ -27,6 +27,8 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     var notifications: Results<Object>!
     override func viewDidLoad() {
         super.viewDidLoad()
+        notificationTable.delegate = self
+        notificationTable.dataSource = self
         askForNotifications()
         setupTable()
         reload()

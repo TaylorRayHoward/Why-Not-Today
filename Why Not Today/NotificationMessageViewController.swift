@@ -8,9 +8,13 @@
 
 import UIKit
 
-class NotificationMessageViewController: UIViewController {
+class NotificationMessageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var previousText: String = ""
+    @IBOutlet weak var messageTable: UITableView!
     override func viewDidLoad() {
+        messageTable.delegate = self
+        messageTable.dataSource = self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -26,5 +30,16 @@ class NotificationMessageViewController: UIViewController {
     }
     @IBAction func saveMessage(_ sender: UIBarButtonItem) {
         
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = messageTable.dequeueReusableCell(withIdentifier: "EditMessageCell") as! EditMessageCell
+        cell.messageInput.text = previousText
+        cell.messageInput.becomeFirstResponder()
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
 }
