@@ -8,28 +8,40 @@
 
 import UIKit
 
+protocol DataSentDelegate {
+    func userDidEnterData(data: String)
+}
+
 class NotificationMessageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var previousText: String = ""
+    var delegate: DataSentDelegate? = nil
+    
     @IBOutlet weak var messageTable: UITableView!
     override func viewDidLoad() {
         messageTable.delegate = self
         messageTable.dataSource = self
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     @IBAction func cancelMessage(_ sender: UIBarButtonItem) {
         _ = navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     @IBAction func saveMessage(_ sender: UIBarButtonItem) {
-        
+        if delegate != nil {
+            let indexPath = IndexPath(row: 0, section: 0)
+            let cell = messageTable.cellForRow(at: indexPath) as! EditMessageCell
+            if cell.messageInput.text != nil {
+                let data = cell.messageInput.text!
+                delegate!.userDidEnterData(data: data)
+            }
+            _ = navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

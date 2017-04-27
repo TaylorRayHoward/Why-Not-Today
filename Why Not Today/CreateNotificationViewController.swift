@@ -8,11 +8,8 @@
 
 import UIKit
 
-protocol DataSentDelegate {
-    func userDidEnterData(data: String)
-}
 
-class CreateNotificationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CreateNotificationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DataSentDelegate {
 
     @IBOutlet weak var actionsTableView: UITableView!
     @IBOutlet weak var timePicker: UIDatePicker!
@@ -51,13 +48,23 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            let storyboard  = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let destination = storyboard.instantiateViewController(withIdentifier: "NotificationMessageViewController") as! NotificationMessageViewController
-            let cell = tableView.cellForRow(at: indexPath) as! MessageCell
-            destination.previousText = cell.messageLabel.text!
-            navigationController?.pushViewController(destination, animated: true)
-        }
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func userDidEnterData(data: String) {
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = actionsTableView.cellForRow(at: indexPath) as! MessageCell
+        cell.messageLabel.text = data
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToEditMessage" {
+            let nav = segue.destination as! UINavigationController
+            let vc = nav.topViewController as! NotificationMessageViewController
+            let indexPath = IndexPath(row: 0, section: 0)
+            let cell = actionsTableView.cellForRow(at: indexPath) as! MessageCell
+            vc.previousText = cell.messageLabel.text!
+            vc.delegate = self
+        }
     }
 }

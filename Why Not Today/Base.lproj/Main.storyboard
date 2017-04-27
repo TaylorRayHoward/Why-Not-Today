@@ -735,6 +735,7 @@ A
                                         <connections>
                                             <outlet property="messageLabel" destination="LQx-HO-pv3" id="dEU-9G-KIq"/>
                                             <outlet property="titleLabel" destination="l0D-pm-Z5c" id="5ph-Y5-0L7"/>
+                                            <segue destination="fNp-OI-22u" kind="presentation" identifier="ToEditMessage" id="6KS-mH-m7p"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
