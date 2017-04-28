@@ -89,4 +89,18 @@ class DBHelper {
             realm.add(habit, update: true)
         }
     }
+    
+    func updateNotificaiton(_ notif: Notification) {
+        try! realm.write {
+            realm.add(notif, update: true)
+        }
+    }
+    
+    func updateNotification(_ notif: Notification, date: Date?, message: String?) {
+        try! realm.write {
+            notif.FireTime = date ?? notif.FireTime
+            notif.Message = message ?? notif.Message
+        }
+    }
+    
 }

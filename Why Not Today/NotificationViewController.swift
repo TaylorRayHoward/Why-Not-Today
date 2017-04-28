@@ -27,10 +27,12 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     var notifications: Results<Object>!
     override func viewDidLoad() {
         super.viewDidLoad()
-        notificationTable.delegate = self
-        notificationTable.dataSource = self
         askForNotifications()
+        reload()
         setupTable()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         reload()
     }
     
@@ -38,7 +40,6 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         notificationTable.delegate = self
         notificationTable.dataSource = self
         notificationTable.tableFooterView = UIView()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,22 +48,34 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = notificationTable.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! NotificationCell
-        cell.messageLabel.text = "This here is a long label"
-        cell.timeLabel.text = "10:35 AM"
+        let notification = notifications[indexPath.row] as! Notification
+        cell.messageLabel.text = notification.Message
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        cell.timeLabel.text = dateFormatter.string(from: notification.FireTime)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard  = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let destination = storyboard.instantiateViewController(withIdentifier: "CreateNotificationView") as! CreateNotificationViewController
+        let notif = notifications[indexPath.row] as! Notification
+        destination.id = notif.id
+        destination.message = notif.Message
+        destination.time = notif.FireTime
+        navigationController?.pushViewController(destination, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return notifications.count
     }
     
     
     func reload() {
         notifications = DBHelper.sharedInstance.getAll(ofType: Notification.self)
+        notificationTable.reloadData()
     }
     
     func askForNotifications() {

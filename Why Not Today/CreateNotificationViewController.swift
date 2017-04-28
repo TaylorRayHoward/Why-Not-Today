@@ -7,12 +7,16 @@
 //
 
 import UIKit
-
+import UserNotifications
 
 class CreateNotificationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DataSentDelegate {
 
     @IBOutlet weak var actionsTableView: UITableView!
     @IBOutlet weak var timePicker: UIDatePicker!
+    
+    var id: String? = nil
+    var message: String? = nil
+    var time: Date? = nil
     
     var delegate: DataSentDelegate? = nil
     
@@ -20,6 +24,9 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
         super.viewDidLoad()
         actionsTableView.delegate = self
         actionsTableView.dataSource = self
+        if isEdit() {
+            timePicker.date = time!
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,13 +36,29 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
         _ = navigationController?.popViewController(animated: true)
     }
     @IBAction func saveNotification(_ sender: UIBarButtonItem) {
+        if isEdit() {
+            let notification = Notification(fireTime: timePicker.date, message: getMessage())
+            notification.id = id!
+            DBHelper.sharedInstance.updateNotificaiton(notification)
+        } else {
+            let notification = Notification(fireTime: timePicker.date, message: getMessage())
+            DBHelper.sharedInstance.writeObject(objects: [notification])
+        }
+        
+        setupNotificaiton()
+        _ = navigationController?.popViewController(animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = actionsTableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as! MessageCell
             cell.titleLabel.text = "Message"
-            cell.messageLabel.text = "This is a tesasdfasdfasdfadsfadsfadsfadsfadsfadsfadsfasf"
+            if isEdit() {
+                cell.messageLabel.text = message!
+            }
+            else {
+                cell.messageLabel.text = "Don't forget to log your completed habits"
+            }
             return cell
         }
         else {
@@ -61,10 +84,32 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
         if segue.identifier == "ToEditMessage" {
             let nav = segue.destination as! UINavigationController
             let vc = nav.topViewController as! NotificationMessageViewController
-            let indexPath = IndexPath(row: 0, section: 0)
-            let cell = actionsTableView.cellForRow(at: indexPath) as! MessageCell
-            vc.previousText = cell.messageLabel.text!
+            vc.previousText = getMessage()
             vc.delegate = self
         }
+    }
+    func getMessage() -> String {
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = actionsTableView.cellForRow(at: indexPath) as! MessageCell
+        return cell.messageLabel.text!
+    }
+    
+    func isEdit() -> Bool {
+        return id != nil && message != nil && time != nil
+    }
+    
+    func setupNotificaiton() {
+        let content = UNMutableNotificationContent()
+        content.title = "Why Not Today Reminder"
+        content.subtitle = "Daily Reminder"
+        content.body = "Message would go here"
+        content.badge = 1
+        
+        var date = DateComponents()
+        date.hour = 22
+        date.minute = 43
+        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
+        let request = UNNotificationRequest(identifier: "teststring", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
 }

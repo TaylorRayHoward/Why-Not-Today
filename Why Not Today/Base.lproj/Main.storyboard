@@ -683,7 +683,7 @@ A
         <!--Create Notification-->
         <scene sceneID="n99-NS-zca">
             <objects>
-                <viewController id="aSo-E9-gxb" customClass="CreateNotificationViewController" customModule="Why_Not_Today" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateNotificationView" id="aSo-E9-gxb" customClass="CreateNotificationViewController" customModule="Why_Not_Today" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ugU-Po-XFv"/>
                         <viewControllerLayoutGuide type="bottom" id="ei8-2T-arf"/>
@@ -772,7 +772,7 @@ A
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="na6-Vs-Xoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2291.25" y="-773.23943661971828"/>
+            <point key="canvasLocation" x="3255" y="-773"/>
         </scene>
         <!--Message-->
         <scene sceneID="wq1-0z-r8O">
@@ -801,7 +801,7 @@ A
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -846,7 +846,7 @@ A
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELd-dc-yTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4196.25" y="-770.07042253521126"/>
+            <point key="canvasLocation" x="4751" y="-773"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LZ9-96-JeV">
@@ -864,7 +864,7 @@ A
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehJ-8r-z9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3198.75" y="-770.07042253521126"/>
+            <point key="canvasLocation" x="4018" y="-773"/>
         </scene>
     </scenes>
     <resources>
