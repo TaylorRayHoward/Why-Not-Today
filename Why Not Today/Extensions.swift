@@ -36,6 +36,12 @@ extension Date {
     func numberMonthFromDate() -> Int? {
         return Calendar.current.dateComponents([.month], from: self).month
     }
+    func getHour() -> Int? {
+        return Calendar.current.dateComponents([.hour], from: self).hour
+    }
+    func getMinute() -> Int? {
+        return Calendar.current.dateComponents([.minute], from: self).minute
+    }
 }
 
 extension CalendarViewController: JTAppleCalendarViewDataSource {

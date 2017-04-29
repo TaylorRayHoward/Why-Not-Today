@@ -34,18 +34,18 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
     }
     @IBAction func cancelNotification(_ sender: UIBarButtonItem) {
         _ = navigationController?.popViewController(animated: true)
+        cancelNotifs()
     }
     @IBAction func saveNotification(_ sender: UIBarButtonItem) {
+        let notification = Notification(fireTime: timePicker.date, message: getMessage())
         if isEdit() {
-            let notification = Notification(fireTime: timePicker.date, message: getMessage())
             notification.id = id!
             DBHelper.sharedInstance.updateNotificaiton(notification)
         } else {
-            let notification = Notification(fireTime: timePicker.date, message: getMessage())
             DBHelper.sharedInstance.writeObject(objects: [notification])
         }
         
-        setupNotificaiton()
+        setupNotificaiton(for: notification)
         _ = navigationController?.popViewController(animated: true)
     }
     
@@ -98,16 +98,20 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
         return id != nil && message != nil && time != nil
     }
     
-    func setupNotificaiton() {
+    func cancelNotifs() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+    
+    func setupNotificaiton(for notif: Notification) {
         let content = UNMutableNotificationContent()
         content.title = "Why Not Today Reminder"
         content.subtitle = "Daily Reminder"
-        content.body = "Message would go here"
+        content.body = notif.Message
         content.badge = 1
         
         var date = DateComponents()
-        date.hour = 22
-        date.minute = 43
+        date.hour = notif.FireTime.getHour()!
+        date.minute = notif.FireTime.getMinute()!
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
         let request = UNNotificationRequest(identifier: "teststring", content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
