@@ -103,4 +103,10 @@ class DBHelper {
         }
     }
     
+    func deleteNotification(_ notif: Notification) {
+        try! realm.write {
+            realm.delete(notif)
+        }
+    }
+    
 }

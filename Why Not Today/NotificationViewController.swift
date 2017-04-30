@@ -72,6 +72,27 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         return notifications.count
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            let notif = notifications[indexPath.row] as! Notification
+            removeNotification(id: notif.id)
+            DBHelper.sharedInstance.deleteNotification(notif)
+            reload()
+        }
+    }
+    
+    func removeNotification(id: String) {
+        UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
+            var identifiers: [String] = []
+            for notification:UNNotificationRequest in notificationRequests {
+                if notification.identifier == id {
+                    identifiers.append(notification.identifier)
+                }
+            }
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+        }
+    }
     
     func reload() {
         notifications = DBHelper.sharedInstance.getAll(ofType: Notification.self)

@@ -78,6 +78,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         return habits.count
     }
 
+    //TODO make for efficient on queries
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //TODO fix terrible colors
         let cell = confirmDenyTable.dequeueReusableCell(withIdentifier: "ConfirmDenyCell", for: indexPath) as! ConfirmDenyHabitCell

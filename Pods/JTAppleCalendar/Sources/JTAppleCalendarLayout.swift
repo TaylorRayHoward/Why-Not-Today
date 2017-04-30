@@ -1,17 +1,37 @@
 //
 //  JTAppleCalendarLayout.swift
-//  JTAppleCalendar
 //
-//  Created by JayT on 2016-03-01.
-//  Copyright © 2016 OS-Tech. All rights reserved.
+//  Copyright (c) 2016-2017 JTAppleCalendar (https://github.com/patchthecode/JTAppleCalendar)
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
 /// Methods in this class are meant to be overridden and will be called by its collection view to gather layout information.
 class JTAppleCalendarLayout: UICollectionViewLayout, JTAppleCalendarLayoutProtocol {
     
-    var shouldClearCacheOnInvalidate = true
-    let errorDelta: CGFloat = 0.0000001
     var allowsDateCellStretching = true
+    var shouldClearCacheOnInvalidate = true
+    var firstContentOffsetWasSet = false
+    let errorDelta: CGFloat = 0.0000001
+    
+    var lastSetCollectionViewSize: CGRect = .zero
+    
     var cellSize: CGSize = CGSize.zero
     var itemSizeWasSet: Bool = false
     var scrollDirection: UICollectionViewScrollDirection = .horizontal
@@ -94,17 +114,25 @@ class JTAppleCalendarLayout: UICollectionViewLayout, JTAppleCalendarLayoutProtoc
         setupDataFromDelegate()
         
         if scrollDirection == .vertical {
-            verticalStuff()
+            configureVerticalLayout()
         } else {
-            horizontalStuff()
+            configureHorizontalLayout()
         }
         
         // Get rid of header data if dev didnt register headers.
-        // The were used for calculation but are not needed to be displayed
+        // They were used for calculation but are not needed to be displayed
         if !thereAreHeaders {
             headerCache.removeAll()
         }
+        
+        // Set the first content offset only once. This will prevent scrolling animation on viewDidload.
+        if !firstContentOffsetWasSet {
+            firstContentOffsetWasSet = true
+            let firstContentOffset = delegate.firstContentOffset()
+            collectionView!.setContentOffset(firstContentOffset, animated: false)
+        }
         daysInSection.removeAll() // Clear chache
+        lastSetCollectionViewSize = collectionView!.frame
     }
     
     func setupDataFromDelegate() {
@@ -145,7 +173,7 @@ class JTAppleCalendarLayout: UICollectionViewLayout, JTAppleCalendarLayoutProtoc
     }
 
     
-    func horizontalStuff() {
+    func configureHorizontalLayout() {
         var section = 0
         var totalDayCounter = 0
         var headerGuide = 0
@@ -221,7 +249,7 @@ class JTAppleCalendarLayout: UICollectionViewLayout, JTAppleCalendarLayoutProtoc
         contentHeight = self.collectionView!.bounds.size.height
     }
     
-    func verticalStuff() {
+    func configureVerticalLayout() {
         var section = 0
         var totalDayCounter = 0
         var headerGuide = 0
