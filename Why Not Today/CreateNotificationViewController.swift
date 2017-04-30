@@ -107,7 +107,6 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
         content.title = "Why Not Today Reminder"
         content.subtitle = "Daily Reminder"
         content.body = notif.Message
-        content.badge = 1
         
         var date = DateComponents()
         date.hour = notif.FireTime.getHour()!
