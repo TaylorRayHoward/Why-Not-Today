@@ -149,8 +149,11 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
             cell.progressView.setProgress(percentage!, animated: true)
             cell.progressView.isHidden = false
         }
-        reload()
         
+        if(isCompleteForDay(forDate: selectedDate)) {
+            print("completed")
+        }
+        reload()
     }
 }
 

@@ -99,16 +99,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
 
 
 func getProgressBarPercentage(forDate date: Date) -> Double? {
-    let habits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
-    let datesCompleted = DBHelper.sharedInstance.getAll(ofType: DateCompleted.self)
-    let currentDates = List<DateCompleted>()
-    for d in datesCompleted {
-        let dateCompleted = d as! DateCompleted
-        if dateCompleted.dateCompleted == date {
-            currentDates.append(dateCompleted)
-        }
-    }
-    
+    let currentDates = getCurrentDates(forDate: date)
     if currentDates.count == 0 {
         return nil
     }
@@ -118,7 +109,28 @@ func getProgressBarPercentage(forDate date: Date) -> Double? {
             success += 1
         }
     }
+    
+    let habits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
     return  Double(success)/Double(habits.count)
+}
+
+
+func getCurrentDates(forDate date: Date) ->  List<DateCompleted> {
+    let datesCompleted = DBHelper.sharedInstance.getAll(ofType: DateCompleted.self)
+    let currentDates = List<DateCompleted>()
+    for d in datesCompleted {
+        let dateCompleted = d as! DateCompleted
+        if dateCompleted.dateCompleted == date {
+            currentDates.append(dateCompleted)
+        }
+    }
+    return currentDates
+}
+
+func isCompleteForDay(forDate date: Date) -> Bool {
+    let currentDates = getCurrentDates(forDate: date)
+    let habits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
+    return currentDates.count == habits.count
 }
 
 

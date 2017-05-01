@@ -5,7 +5,6 @@
 
 import UIKit
 
-//TODO pull out all/most of realm stuff
 class CreateHabitViewController: UIViewController {
 
     @IBOutlet weak var nameText: UITextField!

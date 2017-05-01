@@ -8,7 +8,6 @@
 
 import UIKit
 
-//TODO pull out all/most of realm stuff
 class EditHabitViewController: UIViewController {
 
     @IBOutlet weak var nameField: UITextField!
