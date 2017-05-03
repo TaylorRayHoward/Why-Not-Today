@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DateToolsSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JTAppleCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,7 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>138477630C7F983DF2AF252C4926FC93</key>
+		<key>125DD65A11A4B983E01EE02DAADFF894</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,17 +72,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62F400FAE2335A896F1FDD02E76ED058</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AB8BFE9C706F6C468665B1213BA91844</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>BFED2E29E95E065400F8846E0231A970</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D81968417F37067BF1DB60FA1666FA13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2FA280C58883EE7C20B1BEEAFC95A7B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E89CFD99B895BCC6E8EDC2F95A03500C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
