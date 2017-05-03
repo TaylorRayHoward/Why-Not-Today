@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 import UserNotifications
+import DateToolsSwift
 
 class Notification: Object {
     dynamic var FireTime = Date()
@@ -32,25 +33,45 @@ func cancelNotifs() {
 }
 
 func setupNotificaiton(for notif: Notification) {
-    let content = UNMutableNotificationContent()
-    content.title = "Why Not Today Reminder"
-    content.subtitle = "Daily Reminder"
-    content.body = notif.Message
-    
+    let content = setupContent(with: notif)
     var date = DateComponents()
-    date.hour = notif.FireTime.getHour()!
-    date.minute = notif.FireTime.getMinute()!
+    date.hour = notif.FireTime.hour
+    date.minute = notif.FireTime.minute
     let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
     let request = UNNotificationRequest(identifier: notif.id, content: content, trigger: trigger)
     UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
 }
 
-func postponeNotifications(for date: Date) {
-    let notifications = DBHelper.sharedInstance.getAll(ofType: Notification.self)
-    let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: date)
+func setupNotification(for notif: Notification, at date: Date) {
+    let content = setupContent(with: notif)
+    var dc = DateComponents()
+    dc.hour = date.hour
+    dc.minute = date.minute
+    dc.day = date.day
+    dc.month = date.month
+    let trigger = UNCalendarNotificationTrigger(dateMatching: dc, repeats: false)
+    let request = UNNotificationRequest(identifier: notif.id, content: content, trigger: trigger)
+    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+}
+
+func setupContent(with notif: Notification) -> UNMutableNotificationContent {
+    let content = UNMutableNotificationContent()
+    content.title = "Why Not Today Reminder"
+    content.subtitle = "Daily Reminder"
+    content.body = notif.Message
+    return content
+}
+
+func postponeNotifications() {
     cancelNotifs()
-    for object in notifications {
-        let notif = object as! Notification
-        setupNotificaiton(for: notif)
+    
+    let notifs = DBHelper.sharedInstance.getAll(ofType: Notification.self)
+    for notif in notifs {
+        let notification = notif as! Notification
+        var date = Date()
+        date.hour(notification.FireTime.hour)
+        date.minute(notification.FireTime.minute)
+        date = date.add(1.days)
+        setupNotification(for: notification, at: date)
     }
 }

@@ -109,8 +109,8 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
         content.body = notif.Message
         
         var date = DateComponents()
-        date.hour = notif.FireTime.getHour()!
-        date.minute = notif.FireTime.getMinute()!
+        date.hour = notif.FireTime.hour
+        date.minute = notif.FireTime.minute
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
         let request = UNNotificationRequest(identifier: notif.id, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)

@@ -58,7 +58,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     
     func setYearLabel(from visibleDates: DateSegmentInfo) {
         let date = visibleDates.monthDates.first!.date
-        yearLabel.text =  "\(date.yearFromDate()!)"
+        yearLabel.text =  "\(date.year)"
     }
     
     func changeCellDisplay(_ cell: CustomCell, with calendar: JTAppleCalendarView, withState cellState: CellState) {
@@ -151,7 +151,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         if(isCompleteForDay(forDate: selectedDate)) {
-            print("completed")
+            postponeNotifications()
         }
         reload()
     }

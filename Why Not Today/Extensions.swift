@@ -25,25 +25,6 @@ extension UIColor {
     }
 }
 
-extension Date {
-    func numberDayFromDate() -> Int? {
-        //http://stackoverflow.com/a/35006174
-        return Calendar.current.dateComponents([.weekday], from: self).weekday
-    }
-    func yearFromDate() -> Int? {
-        return Calendar.current.dateComponents([.year], from: self).year
-    }
-    func numberMonthFromDate() -> Int? {
-        return Calendar.current.dateComponents([.month], from: self).month
-    }
-    func getHour() -> Int? {
-        return Calendar.current.dateComponents([.hour], from: self).hour
-    }
-    func getMinute() -> Int? {
-        return Calendar.current.dateComponents([.minute], from: self).minute
-    }
-}
-
 extension CalendarViewController: JTAppleCalendarViewDataSource {
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         formatter.dateFormat = "yyyy MM dd"
