@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="751eebd8-aedd-4072-9c8a-f13590d2dcdc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today.xcworkspace/xcuserdata/taylorrayhoward.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Why Not Today.xcworkspace/xcuserdata/taylorrayhoward.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/CustomCells.swift" afterPath="$PROJECT_DIR$/Why Not Today/CustomCells.swift" />
-    </list>
+    <list default="true" id="751eebd8-aedd-4072-9c8a-f13590d2dcdc" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -293,7 +290,7 @@
       <workItem from="1493860541420" duration="1906000" />
       <workItem from="1493852663316" duration="76000" />
       <workItem from="1493852759681" duration="261000" />
-      <workItem from="1493948410341" duration="2189000" />
+      <workItem from="1493948410341" duration="2199000" />
     </task>
     <servers />
   </component>
@@ -330,7 +327,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49670000" />
+    <option name="totallyTimeSpent" value="49680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1337" extended-state="6" />

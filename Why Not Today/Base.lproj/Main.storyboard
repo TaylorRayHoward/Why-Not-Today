@@ -131,6 +131,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="nameField" destination="DTX-D8-gU2" id="mgj-3O-Bgm"/>
                                             <segue destination="J4c-ls-2K1" kind="presentation" id="0x4-TX-4Py"/>
                                         </connections>
                                     </tableViewCell>
@@ -141,16 +142,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adE-6x-5XB">
-                                                    <rect key="frame" x="8" y="11" width="71" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adE-6x-5XB">
+                                                    <rect key="frame" x="8" y="8" width="271" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="adE-6x-5XB" secondAttribute="trailing" id="F82-AT-PmN"/>
+                                                <constraint firstItem="adE-6x-5XB" firstAttribute="leading" secondItem="HxE-ZF-ZSo" secondAttribute="leadingMargin" id="uKj-QF-LKd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="adE-6x-5XB" secondAttribute="bottom" id="xj4-bW-xdj"/>
+                                                <constraint firstItem="adE-6x-5XB" firstAttribute="top" secondItem="HxE-ZF-ZSo" secondAttribute="topMargin" id="yEg-iT-sc5"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="categoryField" destination="adE-6x-5XB" id="BP0-5b-2iO"/>
                                             <segue destination="BWL-6E-Efu" kind="presentation" id="A8l-cD-2tS"/>
                                         </connections>
                                     </tableViewCell>
