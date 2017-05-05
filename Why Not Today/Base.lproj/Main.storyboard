@@ -772,31 +772,31 @@ A
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditNameCell" rowHeight="45" id="jlh-ug-9k9" customClass="EditNameCell" customModule="Why_Not_Today" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EditNameCell" id="1aw-Ii-P6E" customClass="EditNameCell" customModule="Why_Not_Today" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="56" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jlh-ug-9k9" id="4Wd-5B-Z3d" customClass="EditNameCell" customModule="Why_Not_Today" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1aw-Ii-P6E" id="saF-RW-41F">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u3f-08-RSZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SL7-N2-l39">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="u3f-08-RSZ" firstAttribute="leading" secondItem="4Wd-5B-Z3d" secondAttribute="leading" id="KT9-hb-GHO"/>
-                                                <constraint firstItem="u3f-08-RSZ" firstAttribute="centerY" secondItem="4Wd-5B-Z3d" secondAttribute="centerY" id="PN8-mu-FkK"/>
-                                                <constraint firstAttribute="bottom" secondItem="u3f-08-RSZ" secondAttribute="bottom" id="Q5p-vl-rAM"/>
-                                                <constraint firstAttribute="trailing" secondItem="u3f-08-RSZ" secondAttribute="trailing" id="SRD-qn-OW8"/>
-                                                <constraint firstItem="u3f-08-RSZ" firstAttribute="top" secondItem="4Wd-5B-Z3d" secondAttribute="top" id="tDq-uX-0xw"/>
-                                                <constraint firstItem="u3f-08-RSZ" firstAttribute="centerX" secondItem="4Wd-5B-Z3d" secondAttribute="centerX" id="vpY-hA-f2P"/>
+                                                <constraint firstItem="SL7-N2-l39" firstAttribute="leading" secondItem="saF-RW-41F" secondAttribute="leading" id="CHu-up-lxE"/>
+                                                <constraint firstItem="SL7-N2-l39" firstAttribute="centerY" secondItem="saF-RW-41F" secondAttribute="centerY" id="CYx-hc-2RP"/>
+                                                <constraint firstAttribute="bottom" secondItem="SL7-N2-l39" secondAttribute="bottom" id="HMX-Ah-tsn"/>
+                                                <constraint firstItem="SL7-N2-l39" firstAttribute="top" secondItem="saF-RW-41F" secondAttribute="top" id="Wbv-CZ-3wx"/>
+                                                <constraint firstItem="SL7-N2-l39" firstAttribute="centerX" secondItem="saF-RW-41F" secondAttribute="centerX" id="cck-4Z-N3I"/>
+                                                <constraint firstAttribute="trailing" secondItem="SL7-N2-l39" secondAttribute="trailing" id="dWK-ma-w8D"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="nameInput" destination="u3f-08-RSZ" id="oFG-lP-VlT"/>
+                                            <outlet property="nameInput" destination="SL7-N2-l39" id="RTF-q1-jMG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -877,13 +877,13 @@ A
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EditMessageCell" id="fUT-66-bfL" customClass="EditMessageCell" customModule="Why_Not_Today" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fUT-66-bfL" id="fVc-0x-NJG">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fkd-rG-kNX">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fkd-rG-kNX">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
