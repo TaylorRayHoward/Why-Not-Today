@@ -40,3 +40,11 @@ class MessageCell: UITableViewCell {
 class EditMessageCell: UITableViewCell {
     @IBOutlet weak var messageInput: UITextField!
 }
+
+class NameCell: UITableViewCell {
+    @IBOutlet weak var nameInput: UITextField!
+}
+
+class CategoryCell: UITableViewCell {
+    @IBOutlet weak var categoryInput: UITextField!
+}

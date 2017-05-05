@@ -34,7 +34,6 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
     }
     @IBAction func cancelNotification(_ sender: UIBarButtonItem) {
         _ = navigationController?.popViewController(animated: true)
-//        cancelNotifs()
     }
     @IBAction func saveNotification(_ sender: UIBarButtonItem) {
         let notification = Notification(fireTime: timePicker.date, message: getMessage())

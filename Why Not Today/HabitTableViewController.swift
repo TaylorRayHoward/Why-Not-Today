@@ -44,14 +44,13 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard  = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let destination = storyboard.instantiateViewController(withIdentifier: "EditStoryboard") as! EditHabitViewController
-        let cell = tableView.cellForRow(at: indexPath) as! HabitTableViewCell
-        destination.nameText = cell.nameLabel.text!
-        destination.typeText = cell.typeLabel.text!
-        navigationController?.pushViewController(destination, animated: true)
+//        let storyboard  = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        let destination = storyboard.instantiateViewController(withIdentifier: "EditStoryboard") as! EditHabitViewController
+//        let cell = tableView.cellForRow(at: indexPath) as! HabitTableViewCell
+//        destination.nameText = cell.nameLabel.text!
+//        destination.typeText = cell.typeLabel.text!
+//        navigationController?.pushViewController(destination, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

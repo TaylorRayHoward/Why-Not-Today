@@ -5,32 +5,62 @@
 
 import UIKit
 
-class CreateHabitViewController: UIViewController {
+class CreateHabitViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var nameText: UITextField!
-    @IBOutlet weak var typeText: UITextField!
+    @IBOutlet weak var createTable: UITableView!
+    
+    var id: String? = ""
+    var name: String? = ""
+    var category: String? = ""
 
     override func viewDidLoad(){
-
+        super.viewDidLoad()
+        createTable.delegate = self
+        createTable.dataSource = self
     }
+
+
     @IBAction func cancelCreate(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
+    
     @IBAction func saveHabit(_ sender: UIBarButtonItem) {
-        if (nameText?.text != nil && nameText.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "") && (typeText?.text != nil && typeText.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "") {
-            let habit = Habit(n: nameText.text!, t: typeText.text!)
-            
-            let exists = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", nameText.text!).first != nil
-            if(!exists) {
-                DBHelper.sharedInstance.writeObject(objects: [habit])
-            }
-            _ = navigationController?.popViewController(animated: true)
+        
+    }
+    
+    func presentIncompleteAlert() {
+        let alert = UIAlertController(title: "Blank field", message: "All fields must be completed",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default))
+        self.present(alert, animated: true)
+    }
+    
+    
+    func isEdit() -> Bool {
+        return id != nil && name != nil && category != nil
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath) as! NameCell
+            return cell
         }
-        else{
-            let alert = UIAlertController(title: "Blank field", message: "All fields must be completed",
-                    preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Okay", style: .default))
-            self.present(alert, animated: true)
+        else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
+            return cell
+        }
+        else {
+            return UITableViewCell()
         }
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
 }
