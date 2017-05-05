@@ -53,6 +53,6 @@ class EditNameCell: UITableViewCell {
     @IBOutlet weak var nameInput: UITextField!
 }
 
-class editCategoryCell: UITableViewCell {
+class EditCategoryCell: UITableViewCell {
     @IBOutlet weak var categoryInput: UITextField!
 }
