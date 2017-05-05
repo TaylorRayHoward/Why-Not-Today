@@ -42,11 +42,11 @@ class EditMessageCell: UITableViewCell {
 }
 
 class NameCell: UITableViewCell {
-    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var nameField: UILabel!
 }
 
 class CategoryCell: UITableViewCell {
-    @IBOutlet weak var categoryField: UITextField!
+    @IBOutlet weak var categoryField: UILabel!
 }
 
 class EditNameCell: UITableVIewCell {
