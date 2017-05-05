@@ -63,6 +63,14 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToEditName" {
+            let nav = segue.destination as! UINavigationController
+            let vc = nav.topViewController as! HabitNameViewController
+            vc.delegate = self
+        }
+    }
+
     func userEnteredName(data: String) {
         let indexPath = IndexPath(row: 0, section: 0)
         let cell = createTable.cellForRow(at: indexPath) as! NameCell

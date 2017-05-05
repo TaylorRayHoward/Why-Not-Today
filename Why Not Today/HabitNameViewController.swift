@@ -12,13 +12,15 @@ protocol UserEnteredDataDelegate {
     func userEnteredName(data: String)
 }
 
-class HabitNameViewController: UIViewController {
+class HabitNameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var delegate: UserEnteredDataDelegate? = nil
 
-
+    @IBOutlet weak var nameTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTable.delegate = self
+        nameTable.dataSource = self
 
     }
 
@@ -28,14 +30,14 @@ class HabitNameViewController: UIViewController {
     }
 
     @IBAction func saveName(_ sender: UIBarButtonItem) {
-//        if delegate != nil {
-//            let indexPath = IndexPath(row: 0, section: 0)
-//            let cell = nameTableView.cellForRow(at: indexPath) as! EditNameCell
-//            if cell.nameInput.text != nil {
-//                let data = cell.nameInput.text!
-//                delegate!.userDidEnterData(data: data)
-//            }
-//        }
+        if delegate != nil {
+            let indexPath = IndexPath(row: 0, section: 0)
+            let cell = nameTable.cellForRow(at: indexPath) as! EditNameCell
+            if cell.nameInput.text != nil {
+                let data = cell.nameInput.text!
+                delegate!.userEnteredName(data: data)
+            }
+        }
         _ = navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
 
@@ -45,4 +47,21 @@ class HabitNameViewController: UIViewController {
         dismiss(animated: true)
     }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EditNameCell", for: indexPath) as! EditNameCell
+            return cell
+        }
+        else {
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
 }
