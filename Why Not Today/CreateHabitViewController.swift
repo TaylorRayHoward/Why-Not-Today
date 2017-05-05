@@ -5,7 +5,7 @@
 
 import UIKit
 
-class CreateHabitViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CreateHabitViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UserEnteredDataDelegate {
 
     @IBOutlet weak var createTable: UITableView!
     
@@ -61,6 +61,12 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    func userEnteredName(data: String) {
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = actionsTableView.cellForRow(at: indexPath) as! NameCell
+        cell.nameField.text = data
     }
 
 }

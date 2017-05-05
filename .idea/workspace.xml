@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="751eebd8-aedd-4072-9c8a-f13590d2dcdc" name="Default" comment="" />
+    <list default="true" id="751eebd8-aedd-4072-9c8a-f13590d2dcdc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" afterPath="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift" afterPath="$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,18 +18,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulatoriPhone_SE_10.3_x86_64_1" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CreateHabitViewController.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
+      <file leaf-file-name="CreateNotificationViewController.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Why Not Today/CreateNotificationViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="99" lean-forward="false" selection-start-line="43" selection-start-column="99" selection-end-line="43" selection-end-column="99" />
-              <folding />
+            <state relative-caret-position="780">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+              <folding>
+                <element signature="e#171#183#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HabitNameViewController.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift">
+      <file leaf-file-name="NotificationMessageViewController.swift" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Why Not Today/NotificationMessageViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
@@ -35,31 +40,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CreateHabitViewController.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HabitNameViewController.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="HabitCategoryViewController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Why Not Today/HabitCategoryViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomCells.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomCells.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Why Not Today/CustomCells.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="48" column="44" lean-forward="false" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateNotificationViewController.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Why Not Today/CreateNotificationViewController.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="420">
+              <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -82,11 +97,12 @@
         <option value="$PROJECT_DIR$/Why Not Today/Extensions.swift" />
         <option value="$PROJECT_DIR$/Podfile" />
         <option value="$PROJECT_DIR$/Why Not Today/CalendarViewController.swift" />
-        <option value="$PROJECT_DIR$/Why Not Today/CreateNotificationViewController.swift" />
-        <option value="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" />
-        <option value="$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/HabitCategoryViewController.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/CustomCells.swift" />
+        <option value="$PROJECT_DIR$/Why Not Today/CreateNotificationViewController.swift" />
+        <option value="$PROJECT_DIR$/Why Not Today/NotificationMessageViewController.swift" />
+        <option value="$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift" />
+        <option value="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" />
       </list>
     </option>
   </component>
@@ -178,7 +194,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="SearchEverywhereHistoryKey" value="category&#9;null&#9;null&#10;messagevi&#9;null&#9;null&#10;namecon&#9;null&#9;null&#10;cells&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CustomCells.swift&#10;createnot&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateNotificationViewController.swift&#10;createh&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;notificationview&#9;null&#9;null&#10;create&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;calendarviewcont&#9;null&#9;null&#10;appdel&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not Today/AppDelegate.swift&#10;habittable&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift&#10;test&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/Why_Not_TodayTests.swift&#10;habittabl&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift" />
+    <property name="SearchEverywhereHistoryKey" value="habitview&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;message&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/NotificationMessageViewController.swift&#10;category&#9;null&#9;null&#10;messagevi&#9;null&#9;null&#10;namecon&#9;null&#9;null&#10;cells&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CustomCells.swift&#10;createnot&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateNotificationViewController.swift&#10;createh&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;notificationview&#9;null&#9;null&#10;create&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;calendarviewcont&#9;null&#9;null&#10;appdel&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not Today/AppDelegate.swift&#10;habittable&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift&#10;test&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/Why_Not_TodayTests.swift&#10;habittabl&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Why Not Today" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Why Not Today.xcworkspace" />
@@ -290,7 +306,7 @@
       <workItem from="1493860541420" duration="1906000" />
       <workItem from="1493852663316" duration="76000" />
       <workItem from="1493852759681" duration="261000" />
-      <workItem from="1493948410341" duration="2199000" />
+      <workItem from="1493948410341" duration="2773000" />
     </task>
     <servers />
   </component>
@@ -327,7 +343,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49680000" />
+    <option name="totallyTimeSpent" value="50254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
@@ -720,50 +736,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Why Not Today/NotificationMessageViewController.swift">
+    <entry file="file://$PROJECT_DIR$/Why Not Today/CustomCells.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Why Not Today/CreateNotificationViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="99" lean-forward="false" selection-start-line="43" selection-start-column="99" selection-end-line="43" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/HabitCategoryViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Why Not Today/CustomCells.swift">
+    <entry file="file://$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="48" column="44" lean-forward="false" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
+        <state relative-caret-position="165">
+          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/CreateNotificationViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="e#171#183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/NotificationMessageViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
