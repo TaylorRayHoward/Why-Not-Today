@@ -50,9 +50,9 @@ class CategoryCell: UITableViewCell {
 }
 
 class EditNameCell: UITableViewCell {
-    @IBOutlet weak var nameInput: UITextInput!
+    @IBOutlet weak var nameInput: UITextField!
 }
 
 class editCategoryCell: UITableViewCell {
-    @IBOutlet weak var categoryInput: UITextInput!
+    @IBOutlet weak var categoryInput: UITextField!
 }
