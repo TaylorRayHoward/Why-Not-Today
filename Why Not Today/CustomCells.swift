@@ -42,9 +42,17 @@ class EditMessageCell: UITableViewCell {
 }
 
 class NameCell: UITableViewCell {
-    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var nameField: UITextField!
 }
 
 class CategoryCell: UITableViewCell {
-    @IBOutlet weak var categoryInput: UITextField!
+    @IBOutlet weak var categoryField: UITextField!
+}
+
+class EditNameCell: UITableVIewCell {
+    @IBOutlet weak var nameInput: UITextInput!
+}
+
+class editCategoryCell: UITableViewCell {
+    @IBOutlet weak var categoryInput: UITextInput!
 }

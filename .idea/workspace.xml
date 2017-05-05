@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751eebd8-aedd-4072-9c8a-f13590d2dcdc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Why Not Today/EditHabitViewController.swift" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today.xcworkspace/xcuserdata/taylorrayhoward.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Why Not Today.xcworkspace/xcuserdata/taylorrayhoward.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/taylorrayhoward.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/taylorrayhoward.xcuserdatad/xcschemes/xcschememanagement.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Why Not Today.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Why Not Today/Base.lproj/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" afterPath="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/CreateNotificationViewController.swift" afterPath="$PROJECT_DIR$/Why Not Today/CreateNotificationViewController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/CustomCells.swift" afterPath="$PROJECT_DIR$/Why Not Today/CustomCells.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift" afterPath="$PROJECT_DIR$/Why Not Today/HabitTableViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/HabitCategoryViewController.swift" afterPath="$PROJECT_DIR$/Why Not Today/HabitCategoryViewController.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,21 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HabitCategoryViewController.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HabitCategoryViewController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Why Not Today/HabitCategoryViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomCells.swift" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CustomCells.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Why Not Today/CustomCells.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+            <state relative-caret-position="810">
+              <caret line="56" column="49" lean-forward="false" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -94,10 +86,10 @@
         <option value="$PROJECT_DIR$/Podfile" />
         <option value="$PROJECT_DIR$/Why Not Today/CalendarViewController.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/CreateNotificationViewController.swift" />
-        <option value="$PROJECT_DIR$/Why Not Today/CustomCells.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/HabitCategoryViewController.swift" />
+        <option value="$PROJECT_DIR$/Why Not Today/CustomCells.swift" />
       </list>
     </option>
   </component>
@@ -301,7 +293,7 @@
       <workItem from="1493860541420" duration="1906000" />
       <workItem from="1493852663316" duration="76000" />
       <workItem from="1493852759681" duration="261000" />
-      <workItem from="1493948410341" duration="1953000" />
+      <workItem from="1493948410341" duration="2116000" />
     </task>
     <servers />
   </component>
@@ -338,7 +330,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49434000" />
+    <option name="totallyTimeSpent" value="49597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
@@ -731,14 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Why Not Today/CustomCells.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/NotificationMessageViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -773,8 +757,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/HabitCategoryViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/CustomCells.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="56" column="49" lean-forward="false" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
           <folding />
         </state>
       </provider>
