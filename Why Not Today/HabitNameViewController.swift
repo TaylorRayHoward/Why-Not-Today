@@ -28,6 +28,16 @@ class HabitNameViewController: UIViewController {
     }
 
     @IBAction func saveName(_ sender: UIBarButtonItem) {
+//        if delegate != nil {
+//            let indexPath = IndexPath(row: 0, section: 0)
+//            let cell = nameTableView.cellForRow(at: indexPath) as! EditNameCell
+//            if cell.nameInput.text != nil {
+//                let data = cell.nameInput.text!
+//                delegate!.userDidEnterData(data: data)
+//            }
+//        }
+        _ = navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
 
     }
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {

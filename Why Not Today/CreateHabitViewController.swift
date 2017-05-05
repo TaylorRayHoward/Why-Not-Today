@@ -65,7 +65,7 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
 
     func userEnteredName(data: String) {
         let indexPath = IndexPath(row: 0, section: 0)
-        let cell = actionsTableView.cellForRow(at: indexPath) as! NameCell
+        let cell = createTable.cellForRow(at: indexPath) as! NameCell
         cell.nameField.text = data
     }
 

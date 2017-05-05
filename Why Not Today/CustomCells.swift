@@ -49,7 +49,7 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var categoryField: UILabel!
 }
 
-class EditNameCell: UITableVIewCell {
+class EditNameCell: UITableViewCell {
     @IBOutlet weak var nameInput: UITextInput!
 }
 
