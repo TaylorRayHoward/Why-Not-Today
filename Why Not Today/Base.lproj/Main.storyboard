@@ -36,15 +36,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybV-OA-RlN">
-                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="8" y="8" width="271" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.85098039219999999" green="0.8980392157" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ybV-OA-RlN" firstAttribute="centerY" secondItem="YkT-go-nWk" secondAttribute="centerY" id="Pme-n2-K5b"/>
-                                                <constraint firstItem="ybV-OA-RlN" firstAttribute="leading" secondItem="YkT-go-nWk" secondAttribute="leadingMargin" id="bLu-cS-ifn"/>
+                                                <constraint firstItem="ybV-OA-RlN" firstAttribute="top" secondItem="YkT-go-nWk" secondAttribute="topMargin" id="A6u-Sa-aK1"/>
+                                                <constraint firstItem="ybV-OA-RlN" firstAttribute="leading" secondItem="YkT-go-nWk" secondAttribute="leadingMargin" id="Lkp-6n-tXk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ybV-OA-RlN" secondAttribute="bottom" id="QaK-92-rMx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ybV-OA-RlN" secondAttribute="trailing" id="cC3-ZK-AMd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.13725490200000001" green="0.18823529410000001" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -571,7 +573,7 @@ A
                                         <rect key="frame" x="0.0" y="28" width="320" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pA9-da-FiO" id="IQY-LI-N9P">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="61"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="60.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification name that will be long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMv-KF-2vr">
