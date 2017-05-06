@@ -97,21 +97,4 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
         return id != nil && message != nil && time != nil
     }
     
-    func cancelNotifs() {
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-    }
-    
-    func setupNotificaiton(for notif: Notification) {
-        let content = UNMutableNotificationContent()
-        content.title = "Why Not Today Reminder"
-        content.subtitle = "Daily Reminder"
-        content.body = notif.Message
-        
-        var date = DateComponents()
-        date.hour = notif.FireTime.hour
-        date.minute = notif.FireTime.minute
-        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
-        let request = UNNotificationRequest(identifier: notif.id, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-    }
 }

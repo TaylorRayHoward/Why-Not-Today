@@ -67,14 +67,30 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
         if segue.identifier == "ToEditName" {
             let nav = segue.destination as! UINavigationController
             let vc = nav.topViewController as! HabitNameViewController
+            vc.type = "name"
+            vc.delegate = self
+        }
+        if segue.identifier == "ToEditCategory" {
+            let nav = segue.destination as! UINavigationController
+            let vc = nav.topViewController as! HabitNameViewController
+            vc.type = "category"
             vc.delegate = self
         }
     }
 
-    func userEnteredName(data: String) {
-        let indexPath = IndexPath(row: 0, section: 0)
-        let cell = createTable.cellForRow(at: indexPath) as! NameCell
-        cell.nameField.text = data
+    func userEnteredName(data: String, type: String) {
+        switch(type){
+            case "name":
+                let indexPath = IndexPath(row: 0, section: 0)
+                let cell = createTable.cellForRow(at: indexPath) as! NameCell
+                cell.nameField.text = data
+            case "category":
+                let indexPath = IndexPath(row: 1, section: 0)
+                let cell = createTable.cellForRow(at: indexPath) as! CategoryCell
+                cell.categoryField.text = data
+            default:
+                return
+        }
     }
 
 }

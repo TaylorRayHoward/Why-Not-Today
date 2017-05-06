@@ -9,12 +9,13 @@
 import UIKit
 
 protocol UserEnteredDataDelegate {
-    func userEnteredName(data: String)
+    func userEnteredName(data: String, type: String)
 }
 
 class HabitNameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var delegate: UserEnteredDataDelegate? = nil
+    var type: String = ""
 
     @IBOutlet weak var nameTable: UITableView!
     override func viewDidLoad() {
@@ -35,7 +36,7 @@ class HabitNameViewController: UIViewController, UITableViewDelegate, UITableVie
             let cell = nameTable.cellForRow(at: indexPath) as! EditNameCell
             if cell.nameInput.text != nil {
                 let data = cell.nameInput.text!
-                delegate!.userEnteredName(data: data)
+                delegate!.userEnteredName(data: data, type: type)
             }
         }
         _ = navigationController?.popViewController(animated: true)
@@ -50,6 +51,7 @@ class HabitNameViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EditNameCell", for: indexPath) as! EditNameCell
+            cell.nameInput.becomeFirstResponder()
             return cell
         }
         else {
