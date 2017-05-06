@@ -9,9 +9,9 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
 
     @IBOutlet weak var createTable: UITableView!
     
-    var id: String? = ""
-    var name: String? = ""
-    var category: String? = ""
+    var id: String? = nil
+    var name: String? = nil
+    var category: String? = nil
 
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -26,7 +26,14 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     @IBAction func saveHabit(_ sender: UIBarButtonItem) {
-        
+        if(isEdit()) {
+
+        }
+        else {
+            let habit = Habit(n: getName(), t: getCategory())
+            DBHelper.sharedInstance.writeObject(objects: [habit])
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     func presentIncompleteAlert() {
@@ -91,6 +98,19 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
             default:
                 return
         }
+    }
+
+    func getName() -> String {
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = createTable.cellForRow(at: indexPath) as! NameCell
+        return cell.nameField.text!
+    }
+
+    func getCategory() -> String {
+        let indexPath = IndexPath(row: 1, section: 0)
+        let cell = createTable.cellForRow(at: indexPath) as! CategoryCell
+        return cell.categoryField.text!
+
     }
 
 }
