@@ -22,7 +22,6 @@ class HabitEditViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         nameTable.delegate = self
         nameTable.dataSource = self
-
     }
 
     override func didReceiveMemoryWarning() {

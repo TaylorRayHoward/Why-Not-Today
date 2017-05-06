@@ -17,6 +17,7 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         createTable.delegate = self
         createTable.dataSource = self
+
     }
 
 
@@ -26,14 +27,15 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     @IBAction func saveHabit(_ sender: UIBarButtonItem) {
+        let habit = Habit(n: getName(), t: getCategory())
         if(isEdit()) {
-
+            habit.id = id!
+            DBHelper.sharedInstance.updateHabit(habit)
         }
         else {
-            let habit = Habit(n: getName(), t: getCategory())
             DBHelper.sharedInstance.writeObject(objects: [habit])
-            navigationController?.popViewController(animated: true)
         }
+        navigationController?.popViewController(animated: true)
     }
     
     func presentIncompleteAlert() {
@@ -51,10 +53,16 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath) as! NameCell
+            if name != nil {
+                cell.nameField.text = name!
+            }
             return cell
         }
         else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
+            if category != nil {
+                cell.categoryField.text = category!
+            }
             return cell
         }
         else {
@@ -101,16 +109,23 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     func getName() -> String {
-        let indexPath = IndexPath(row: 0, section: 0)
-        let cell = createTable.cellForRow(at: indexPath) as! NameCell
-        return cell.nameField.text!
+        return getNameCell().nameField.text!
     }
 
     func getCategory() -> String {
+        return getCategoryCell().categoryField.text!
+    }
+
+    func getNameCell() -> NameCell {
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = createTable.cellForRow(at: indexPath) as! NameCell
+        return cell
+    }
+
+    func getCategoryCell() -> CategoryCell {
         let indexPath = IndexPath(row: 1, section: 0)
         let cell = createTable.cellForRow(at: indexPath) as! CategoryCell
-        return cell.categoryField.text!
-
+        return cell
     }
 
 }
