@@ -66,13 +66,13 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToEditName" {
             let nav = segue.destination as! UINavigationController
-            let vc = nav.topViewController as! HabitNameViewController
+            let vc = nav.topViewController as! HabitEditViewController
             vc.type = "name"
             vc.delegate = self
         }
         if segue.identifier == "ToEditCategory" {
             let nav = segue.destination as! UINavigationController
-            let vc = nav.topViewController as! HabitNameViewController
+            let vc = nav.topViewController as! HabitEditViewController
             vc.type = "category"
             vc.delegate = self
         }

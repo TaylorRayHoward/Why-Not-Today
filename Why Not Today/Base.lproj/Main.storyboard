@@ -759,7 +759,7 @@ A
         <!--Habit Name View Controller-->
         <scene sceneID="f6C-BS-y7m">
             <objects>
-                <viewController id="Qn4-Ei-MXd" customClass="HabitNameViewController" customModule="Why_Not_Today" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qn4-Ei-MXd" customClass="HabitEditViewController" customModule="Why_Not_Today" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eNK-dy-qfb"/>
                         <viewControllerLayoutGuide type="bottom" id="S5B-ph-kmN"/>

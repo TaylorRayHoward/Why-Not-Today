@@ -12,7 +12,7 @@ protocol UserEnteredDataDelegate {
     func userEnteredName(data: String, type: String)
 }
 
-class HabitNameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HabitEditViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var delegate: UserEnteredDataDelegate? = nil
     var type: String = ""
