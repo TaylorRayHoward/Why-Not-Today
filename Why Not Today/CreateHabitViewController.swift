@@ -84,12 +84,18 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
             let vc = nav.topViewController as! HabitEditViewController
             vc.type = "name"
             vc.delegate = self
+            if isEdit() {
+                vc.input = getName()
+            }
         }
         if segue.identifier == "ToEditCategory" {
             let nav = segue.destination as! UINavigationController
             let vc = nav.topViewController as! HabitEditViewController
             vc.type = "category"
             vc.delegate = self
+            if isEdit() {
+                vc.input = getCategory()
+            }
         }
     }
 

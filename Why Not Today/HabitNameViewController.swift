@@ -16,6 +16,7 @@ class HabitEditViewController: UIViewController, UITableViewDelegate, UITableVie
 
     var delegate: UserEnteredDataDelegate? = nil
     var type: String = ""
+    var input: String? = nil
 
     @IBOutlet weak var nameTable: UITableView!
     override func viewDidLoad() {
@@ -51,6 +52,9 @@ class HabitEditViewController: UIViewController, UITableViewDelegate, UITableVie
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EditNameCell", for: indexPath) as! EditNameCell
             cell.nameInput.becomeFirstResponder()
+            if input != nil {
+                cell.nameInput.text = input
+            }
             return cell
         }
         else {
