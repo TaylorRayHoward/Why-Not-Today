@@ -12,6 +12,7 @@ target 'Why Not TodayTests' do
     pod 'RealmSwift'
     pod 'Quick'
     pod 'Nimble'
+    pod 'DateToolsSwift'
 end
 
 post_install do |installer|

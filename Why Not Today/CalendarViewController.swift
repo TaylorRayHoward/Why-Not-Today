@@ -19,7 +19,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     
     var formatter = DateFormatter()
-//    lazy var realm = try! Realm()
     var habits: Results<Object>!
     var selectedDate = Date()
 

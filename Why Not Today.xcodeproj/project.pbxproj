@@ -19,7 +19,6 @@
 		5966E2C81EB0250500638DD3 /* CreateNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966E2C71EB0250500638DD3 /* CreateNotificationViewController.swift */; };
 		5966E2CA1EB0385F00638DD3 /* NotificationMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966E2C91EB0385F00638DD3 /* NotificationMessageViewController.swift */; };
 		59F1F7551EBC2DD70095E726 /* HabitNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F1F7541EBC2DD70095E726 /* HabitNameViewController.swift */; };
-		59F1F7571EBC2DF20095E726 /* HabitCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F1F7561EBC2DF20095E726 /* HabitCategoryViewController.swift */; };
 		BA9C757BC83B2DE70CD39D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C77EEADB3AD0A66B83C06 /* LaunchScreen.storyboard */; };
 		BA9C764833B679D807A45781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C7B6A3A4506FF202950B4 /* Main.storyboard */; };
 		BA9C79242B4FEF533D0C9CC2 /* Why_Not_TodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C717A9D1C67EA2BD94D91 /* Why_Not_TodayTests.swift */; };
@@ -68,7 +67,6 @@
 		5966E2C71EB0250500638DD3 /* CreateNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNotificationViewController.swift; sourceTree = "<group>"; };
 		5966E2C91EB0385F00638DD3 /* NotificationMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationMessageViewController.swift; sourceTree = "<group>"; };
 		59F1F7541EBC2DD70095E726 /* HabitNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitNameViewController.swift; sourceTree = "<group>"; };
-		59F1F7561EBC2DF20095E726 /* HabitCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCategoryViewController.swift; sourceTree = "<group>"; };
 		63EF0358EE37CC41EA38FFD1 /* Pods-Why Not Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not Today/Pods-Why Not Today.debug.xcconfig"; sourceTree = "<group>"; };
 		75B734C7AF4A0B2E72460209 /* Pods_Why_Not_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Why_Not_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8932D2C2153DB981E96A42F1 /* Pods-Why Not TodayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not TodayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not TodayTests/Pods-Why Not TodayTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 				BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */,
 				3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */,
 				59F1F7541EBC2DD70095E726 /* HabitNameViewController.swift */,
-				59F1F7561EBC2DF20095E726 /* HabitCategoryViewController.swift */,
 			);
 			name = MainViewControllers;
 			sourceTree = "<group>";
@@ -445,7 +442,6 @@
 				59F1F7551EBC2DD70095E726 /* HabitNameViewController.swift in Sources */,
 				5966E2C81EB0250500638DD3 /* CreateNotificationViewController.swift in Sources */,
 				5931F1141EAD1A4700431642 /* DBHelper.swift in Sources */,
-				59F1F7571EBC2DF20095E726 /* HabitCategoryViewController.swift in Sources */,
 				592588971EAC64B300217E6A /* NotificationViewController.swift in Sources */,
 				BA9C7E69E37960B290B75D78 /* AppDelegate.swift in Sources */,
 				BA9C7C01533C15B63244F330 /* HabitTableViewController.swift in Sources */,

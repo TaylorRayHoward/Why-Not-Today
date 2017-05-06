@@ -11,7 +11,6 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
     
     var id: String? = nil
     var name: String? = nil
-    var category: String? = nil
 
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -27,7 +26,7 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     @IBAction func saveHabit(_ sender: UIBarButtonItem) {
-        let habit = Habit(n: getName(), t: getCategory())
+        let habit = Habit(n: getName())
         if(isEdit()) {
             habit.id = id!
             DBHelper.sharedInstance.updateHabit(habit)
@@ -47,7 +46,7 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
     
     
     func isEdit() -> Bool {
-        return id != nil && name != nil && category != nil
+        return id != nil && name != nil 
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,20 +57,13 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
             }
             return cell
         }
-        else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
-            if category != nil {
-                cell.categoryField.text = category!
-            }
-            return cell
-        }
         else {
             return UITableViewCell()
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -88,15 +80,6 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
                 vc.input = getName()
             }
         }
-        if segue.identifier == "ToEditCategory" {
-            let nav = segue.destination as! UINavigationController
-            let vc = nav.topViewController as! HabitEditViewController
-            vc.type = "category"
-            vc.delegate = self
-            if isEdit() {
-                vc.input = getCategory()
-            }
-        }
     }
 
     func userEnteredName(data: String, type: String) {
@@ -105,10 +88,6 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
                 let indexPath = IndexPath(row: 0, section: 0)
                 let cell = createTable.cellForRow(at: indexPath) as! NameCell
                 cell.nameField.text = data
-            case "category":
-                let indexPath = IndexPath(row: 1, section: 0)
-                let cell = createTable.cellForRow(at: indexPath) as! CategoryCell
-                cell.categoryField.text = data
             default:
                 return
         }
@@ -118,19 +97,9 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
         return getNameCell().nameField.text!
     }
 
-    func getCategory() -> String {
-        return getCategoryCell().categoryField.text!
-    }
-
     func getNameCell() -> NameCell {
         let indexPath = IndexPath(row: 0, section: 0)
         let cell = createTable.cellForRow(at: indexPath) as! NameCell
-        return cell
-    }
-
-    func getCategoryCell() -> CategoryCell {
-        let indexPath = IndexPath(row: 1, section: 0)
-        let cell = createTable.cellForRow(at: indexPath) as! CategoryCell
         return cell
     }
 

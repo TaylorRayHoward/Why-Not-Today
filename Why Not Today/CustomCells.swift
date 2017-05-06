@@ -18,7 +18,6 @@ class CustomCell: JTAppleCell {
 
 class HabitTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var typeLabel: UILabel!
 }
 
 class ConfirmDenyHabitCell: UITableViewCell {
@@ -45,14 +44,6 @@ class NameCell: UITableViewCell {
     @IBOutlet weak var nameField: UILabel!
 }
 
-class CategoryCell: UITableViewCell {
-    @IBOutlet weak var categoryField: UILabel!
-}
-
 class EditNameCell: UITableViewCell {
     @IBOutlet weak var nameInput: UITextField!
-}
-
-class EditCategoryCell: UITableViewCell {
-    @IBOutlet weak var categoryInput: UITextField!
 }

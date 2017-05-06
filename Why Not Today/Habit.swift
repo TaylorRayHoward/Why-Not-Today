@@ -8,7 +8,6 @@ import RealmSwift
 
 class Habit: Object {
     dynamic var name = ""
-    dynamic var type = ""
     dynamic var id = ""
     var datesCompleted = List<DateCompleted>()
     
@@ -16,10 +15,9 @@ class Habit: Object {
         return "id"
     }
     
-    convenience init(n: String, t: String){
+    convenience init(n: String){
         self.init()
         self.name = n
-        self.type = t
         self.id = UUID().uuidString
     }
 }

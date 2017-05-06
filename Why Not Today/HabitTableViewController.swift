@@ -39,7 +39,6 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let habit = habits[indexPath.row] as! Habit
         
         cell.nameLabel?.text = habit.name
-        cell.typeLabel?.text = habit.type
         return cell
     }
 
@@ -48,7 +47,6 @@ class HabitTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let destination = storyboard.instantiateViewController(withIdentifier: "CreateHabit") as! CreateHabitViewController
         let habit = habits[indexPath.row] as! Habit
         destination.id = habit.id
-        destination.category = habit.type
         destination.name = habit.name
         navigationController?.pushViewController(destination, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)

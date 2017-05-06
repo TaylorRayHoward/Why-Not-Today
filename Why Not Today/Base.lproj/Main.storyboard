@@ -41,24 +41,15 @@
                                                     <color key="textColor" red="0.85098039219999999" green="0.8980392157" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6Q-r8-hQ9">
-                                                    <rect key="frame" x="225" y="11" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.85098039219999999" green="0.8980392157" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="x6Q-r8-hQ9" secondAttribute="trailing" constant="20" symbolic="YES" id="LWr-n1-2Py"/>
                                                 <constraint firstItem="ybV-OA-RlN" firstAttribute="centerY" secondItem="YkT-go-nWk" secondAttribute="centerY" id="Pme-n2-K5b"/>
-                                                <constraint firstItem="x6Q-r8-hQ9" firstAttribute="centerY" secondItem="YkT-go-nWk" secondAttribute="centerY" id="WZf-eU-HBV"/>
                                                 <constraint firstItem="ybV-OA-RlN" firstAttribute="leading" secondItem="YkT-go-nWk" secondAttribute="leadingMargin" id="bLu-cS-ifn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.13725490200000001" green="0.18823529410000001" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="nameLabel" destination="ybV-OA-RlN" id="mjO-hY-Jvd"/>
-                                            <outlet property="typeLabel" destination="x6Q-r8-hQ9" id="Cmv-et-fNQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -133,32 +124,6 @@
                                         <connections>
                                             <outlet property="nameField" destination="DTX-D8-gU2" id="mgj-3O-Bgm"/>
                                             <segue destination="J4c-ls-2K1" kind="presentation" identifier="ToEditName" id="0x4-TX-4Py"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryCell" id="Bbk-Mw-7M2" customClass="CategoryCell" customModule="Why_Not_Today" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="100" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bbk-Mw-7M2" id="HxE-ZF-ZSo">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adE-6x-5XB">
-                                                    <rect key="frame" x="8" y="8" width="271" height="27.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="adE-6x-5XB" secondAttribute="trailing" id="F82-AT-PmN"/>
-                                                <constraint firstItem="adE-6x-5XB" firstAttribute="leading" secondItem="HxE-ZF-ZSo" secondAttribute="leadingMargin" id="uKj-QF-LKd"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="adE-6x-5XB" secondAttribute="bottom" id="xj4-bW-xdj"/>
-                                                <constraint firstItem="adE-6x-5XB" firstAttribute="top" secondItem="HxE-ZF-ZSo" secondAttribute="topMargin" id="yEg-iT-sc5"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="categoryField" destination="adE-6x-5XB" id="BP0-5b-2iO"/>
-                                            <segue destination="J4c-ls-2K1" kind="presentation" identifier="ToEditCategory" id="ilj-sk-XBL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -946,7 +911,4 @@ A
         <image name="Ok-50" width="50" height="50"/>
         <image name="Settings-25" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ilj-sk-XBL"/>
-    </inferredMetricsTieBreakers>
 </document>
