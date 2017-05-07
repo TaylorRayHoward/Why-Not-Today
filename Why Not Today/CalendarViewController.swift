@@ -94,14 +94,20 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         
         if let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first {
             if dc.successfullyCompleted == 1 {
-                cell.backgroundColor = UIColor.green
+//                cell.backgroundColor = UIColor.green
+                cell.confirmButton.setImage(#imageLiteral(resourceName: "Ok-51"), for: .normal)
+                cell.denyButton.setImage(#imageLiteral(resourceName: "Cancel Clicked"), for: .normal)
             }
             else if dc.successfullyCompleted == -1 {
-                cell.backgroundColor = UIColor.red
+//                cell.backgroundColor = UIColor.red
+                cell.confirmButton.setImage(#imageLiteral(resourceName: "Ok Clicked"), for: .normal)
+                cell.denyButton.setImage(#imageLiteral(resourceName: "Cancel-50-2"), for: .normal)
             }
         }
         else {
-            cell.backgroundColor = UIColor.blue
+//            cell.backgroundColor = UIColor.blue
+                cell.confirmButton.setImage(#imageLiteral(resourceName: "Ok Clicked"), for: .normal)
+                cell.denyButton.setImage(#imageLiteral(resourceName: "Cancel Clicked"), for: .normal)
         }
         
         return cell
