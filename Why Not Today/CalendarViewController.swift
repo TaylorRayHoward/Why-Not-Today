@@ -95,19 +95,16 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         if let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first {
             if dc.successfullyCompleted == 1 {
 //                cell.backgroundColor = UIColor.green
-                cell.confirmButton.setImage(#imageLiteral(resourceName: "Ok-51"), for: .normal)
-                cell.denyButton.setImage(#imageLiteral(resourceName: "Cancel Clicked"), for: .normal)
+                changeButtonBackground(forState: .approve, at: cell)
             }
             else if dc.successfullyCompleted == -1 {
 //                cell.backgroundColor = UIColor.red
-                cell.confirmButton.setImage(#imageLiteral(resourceName: "Ok Clicked"), for: .normal)
-                cell.denyButton.setImage(#imageLiteral(resourceName: "Cancel-50-2"), for: .normal)
+                changeButtonBackground(forState: .deny, at: cell)
             }
         }
         else {
 //            cell.backgroundColor = UIColor.blue
-                cell.confirmButton.setImage(#imageLiteral(resourceName: "Ok Clicked"), for: .normal)
-                cell.denyButton.setImage(#imageLiteral(resourceName: "Cancel Clicked"), for: .normal)
+            changeButtonBackground(forState: .neutral, at: cell)
         }
         
         return cell
@@ -118,11 +115,11 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func confirmAction(sender: UIButton) {
-        resolveCompletionAction(tag: sender.tag, status: 1)
+        resolveCompletionAction(forStatus: .approve, at: sender.tag)
     }
     
     func denyAction(sender: UIButton) {
-        resolveCompletionAction(tag: sender.tag, status: -1)
+        resolveCompletionAction(forStatus: .deny, at: sender.tag)
     }
     
     func reload() {
@@ -130,35 +127,54 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         self.confirmDenyTable.reloadData()
     }
     
-    func resolveCompletionAction(tag: Int, status: Int) {
+    func resolveCompletionAction(forStatus status: ApproveDeny, at tag: Int) {
         var habit = habits[tag] as! Habit
         let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
         
         if(!exists) {
-            let dc = DateCompleted(dateCompleted: selectedDate, success: status, for: habit)
+            let dc = DateCompleted(dateCompleted: selectedDate, success: status.rawValue, for: habit)
             habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
             DBHelper.sharedInstance.addDateCompleted(for: habit, with: dc)
         }
         else {
             habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
             let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first!
-            DBHelper.sharedInstance.updateDateCompleted(dc, success: status, date: nil)
+            DBHelper.sharedInstance.updateDateCompleted(dc, success: status.rawValue, date: nil)
         }
         
         
-        let indexPath = calendarView.indexPathsForSelectedItems![0]
-        let cell = calendarView.cellForItem(at: indexPath) as! CustomCell
+        var indexPath = calendarView.indexPathsForSelectedItems![0]
+        let customCell = calendarView.cellForItem(at: indexPath) as! CustomCell
         let percentage = getProgressBarPercentage(forDate: selectedDate)
         
         if percentage != nil {
-            cell.progressView.setProgress(percentage!, animated: true)
-            cell.progressView.isHidden = false
+            customCell.progressView.setProgress(percentage!, animated: true)
+            customCell.progressView.isHidden = false
         }
+        
+        indexPath = IndexPath(row: tag, section: 0)
+        let habitCell = confirmDenyTable.cellForRow(at: indexPath) as! ConfirmDenyHabitCell
+        changeButtonBackground(forState: status, at: habitCell)
         
         if(isCompleteForDay(forDate: selectedDate)) {
             postponeNotifications()
         }
-        reload()
     }
+    
+    func changeButtonBackground(forState state: ApproveDeny, at cell: ConfirmDenyHabitCell) {
+        switch(state){
+        case .approve:
+            cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayClicked"), for: .normal)
+            cell.denyButton.setImage(#imageLiteral(resourceName: "CancelDefault"), for: .normal)
+        case .deny:
+            cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayDefault"), for: .normal)
+            cell.denyButton.setImage(#imageLiteral(resourceName: "CancelClicked"), for: .normal)
+        case .neutral:
+            cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayDefault"), for: .normal)
+            cell.denyButton.setImage(#imageLiteral(resourceName: "CancelDefault"), for: .normal)
+        }
+        
+    }
+    
 }
 

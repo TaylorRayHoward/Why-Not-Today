@@ -459,7 +459,7 @@ A
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-PS-DjQ">
                                                     <rect key="frame" x="8" y="10" width="50" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                    <state key="normal" image="Ok-51"/>
+                                                    <state key="normal" image="OkayDefault"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="N2l-mo-URa">
                                                     <rect key="frame" x="64" y="8" width="192" height="54"/>
@@ -469,7 +469,7 @@ A
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ri4-4G-lf7">
                                                     <rect key="frame" x="262" y="10" width="50" height="50"/>
-                                                    <state key="normal" image="Cancel-50-2"/>
+                                                    <state key="normal" image="CancelDefault"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -573,7 +573,7 @@ A
                                         <rect key="frame" x="0.0" y="28" width="320" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pA9-da-FiO" id="IQY-LI-N9P">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="60.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification name that will be long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMv-KF-2vr">
@@ -909,8 +909,8 @@ A
         </scene>
     </scenes>
     <resources>
-        <image name="Cancel-50-2" width="50" height="50"/>
-        <image name="Ok-51" width="50" height="50"/>
+        <image name="CancelDefault" width="50" height="50"/>
+        <image name="OkayDefault" width="50" height="50"/>
         <image name="Settings-25" width="25" height="25"/>
     </resources>
 </document>

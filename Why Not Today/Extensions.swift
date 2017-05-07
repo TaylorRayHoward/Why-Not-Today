@@ -116,6 +116,7 @@ func isCompleteForDay(forDate date: Date) -> Bool {
 
 
 enum ApproveDeny: Int {
-    case Approve = 1
-    case Deny = -1
+    case approve = 1
+    case deny = -1
+    case neutral = 0
 }
