@@ -4,9 +4,8 @@
     <list default="true" id="751eebd8-aedd-4072-9c8a-f13590d2dcdc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today.xcworkspace/xcuserdata/taylorrayhoward.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Why Not Today.xcworkspace/xcuserdata/taylorrayhoward.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/taylorrayhoward.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/taylorrayhoward.xcuserdatad/xcschemes/xcschememanagement.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Why Not Today/Base.lproj/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" afterPath="$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift" afterPath="$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +23,8 @@
       <file leaf-file-name="CreateHabitViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="108" column="60" lean-forward="false" selection-start-line="108" selection-start-column="60" selection-end-line="108" selection-end-column="60" />
+            <state relative-caret-position="417">
+              <caret line="74" column="65" lean-forward="false" selection-start-line="74" selection-start-column="65" selection-end-line="74" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -38,6 +37,12 @@
               <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding>
                 <element signature="e#169#181#0" expanded="true" />
+                <marker date="1494208217000" expanded="true" signature="295:2721" ph="{...}" />
+                <marker date="1494208217000" expanded="true" signature="1058:1289" ph="{...}" />
+                <marker date="1494208217000" expanded="true" signature="1675:1858" ph="{...}" />
+                <marker date="1494208217000" expanded="true" signature="1948:1975" ph="{...}" />
+                <marker date="1494208217000" expanded="true" signature="2122:2587" ph="{...}" />
+                <marker date="1494208217000" expanded="true" signature="2607:2719" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -46,7 +51,7 @@
       <file leaf-file-name="HabitNameViewController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
+            <state relative-caret-position="795">
               <caret line="53" column="42" lean-forward="false" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
               <folding />
             </state>
@@ -88,7 +93,6 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="24" />
     <option name="y" value="23" />
     <option name="width" value="2560" />
     <option name="height" value="1337" />
@@ -111,7 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -182,6 +185,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,7 +307,8 @@
       <workItem from="1493852663316" duration="76000" />
       <workItem from="1493852759681" duration="261000" />
       <workItem from="1493948410341" duration="5110000" />
-      <workItem from="1494037804615" duration="5432000" />
+      <workItem from="1494037804615" duration="5587000" />
+      <workItem from="1494208622194" duration="1162000" />
     </task>
     <servers />
   </component>
@@ -340,19 +345,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58023000" />
+    <option name="totallyTimeSpent" value="59340000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="24" y="23" width="2560" height="1337" extended-state="0" />
+    <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29022083" sideWeight="0.30078125" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29022083" sideWeight="0.2984375" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20189275" sideWeight="0.6183594" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20189275" sideWeight="0.3816406" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20189275" sideWeight="0.6207031" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20189275" sideWeight="0.37929687" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -398,6 +403,12 @@
           <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
           <folding>
             <element signature="e#169#181#0" expanded="true" />
+            <marker date="1494208217000" expanded="true" signature="295:2721" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1058:1289" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1675:1858" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1948:1975" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2122:2587" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2607:2719" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -423,6 +434,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#169#181#0" expanded="true" />
+            <marker date="1494208217000" expanded="true" signature="295:2721" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1058:1289" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1675:1858" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1948:1975" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2122:2587" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2607:2719" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -441,6 +458,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#169#181#0" expanded="true" />
+            <marker date="1494208217000" expanded="true" signature="295:2721" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1058:1289" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1675:1858" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1948:1975" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2122:2587" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2607:2719" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -466,6 +489,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#169#181#0" expanded="true" />
+            <marker date="1494208217000" expanded="true" signature="295:2721" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1058:1289" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1675:1858" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1948:1975" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2122:2587" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2607:2719" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -504,6 +533,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#169#181#0" expanded="true" />
+            <marker date="1494208217000" expanded="true" signature="295:2721" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1058:1289" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1675:1858" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1948:1975" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2122:2587" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2607:2719" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -542,6 +577,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#169#181#0" expanded="true" />
+            <marker date="1494208217000" expanded="true" signature="295:2721" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1058:1289" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1675:1858" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1948:1975" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2122:2587" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2607:2719" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -580,6 +621,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#169#181#0" expanded="true" />
+            <marker date="1494208217000" expanded="true" signature="295:2721" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1058:1289" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1675:1858" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1948:1975" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2122:2587" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2607:2719" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -604,6 +651,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#169#181#0" expanded="true" />
+            <marker date="1494208217000" expanded="true" signature="295:2721" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1058:1289" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1675:1858" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1948:1975" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2122:2587" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2607:2719" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -663,7 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="69" column="50" lean-forward="false" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,7 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,7 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,7 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,15 +766,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#171#183#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/HabitNameViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
+        <state relative-caret-position="795">
           <caret line="53" column="42" lean-forward="false" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
           <folding />
         </state>
@@ -738,14 +783,20 @@
           <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding>
             <element signature="e#169#181#0" expanded="true" />
+            <marker date="1494208217000" expanded="true" signature="295:2721" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1058:1289" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1675:1858" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="1948:1975" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2122:2587" ph="{...}" />
+            <marker date="1494208217000" expanded="true" signature="2607:2719" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/CreateHabitViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="108" column="60" lean-forward="false" selection-start-line="108" selection-start-column="60" selection-end-line="108" selection-end-column="60" />
+        <state relative-caret-position="417">
+          <caret line="74" column="65" lean-forward="false" selection-start-line="74" selection-start-column="65" selection-end-line="74" selection-end-column="65" />
           <folding />
         </state>
       </provider>
