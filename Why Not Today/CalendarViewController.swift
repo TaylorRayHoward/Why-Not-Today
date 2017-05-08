@@ -79,9 +79,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
 
     //TODO make for efficient on queries
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO fix terrible colors
         let cell = confirmDenyTable.dequeueReusableCell(withIdentifier: "ConfirmDenyCell", for: indexPath) as! ConfirmDenyHabitCell
-        //TODO could pull out
         cell.confirmButton?.tag = indexPath.row
         cell.confirmButton?.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
         cell.denyButton?.tag = indexPath.row
@@ -94,17 +92,14 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         
         if let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first {
             if dc.successfullyCompleted == 1 {
-//                cell.backgroundColor = UIColor.green
-                changeButtonBackground(forState: .approve, at: cell)
+                changeButtonBackground(forState: .approve, at: cell, animated: false)
             }
             else if dc.successfullyCompleted == -1 {
-//                cell.backgroundColor = UIColor.red
-                changeButtonBackground(forState: .deny, at: cell)
+                changeButtonBackground(forState: .deny, at: cell, animated: false)
             }
         }
         else {
-//            cell.backgroundColor = UIColor.blue
-            changeButtonBackground(forState: .neutral, at: cell)
+            changeButtonBackground(forState: .neutral, at: cell, animated: false)
         }
         
         return cell
@@ -154,24 +149,50 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         
         indexPath = IndexPath(row: tag, section: 0)
         let habitCell = confirmDenyTable.cellForRow(at: indexPath) as! ConfirmDenyHabitCell
-        changeButtonBackground(forState: status, at: habitCell)
+        changeButtonBackground(forState: status, at: habitCell, animated: true)
         
         if(isCompleteForDay(forDate: selectedDate)) {
             postponeNotifications()
         }
     }
     
-    func changeButtonBackground(forState state: ApproveDeny, at cell: ConfirmDenyHabitCell) {
+    func changeButtonBackground(forState state: ApproveDeny, at cell: ConfirmDenyHabitCell, animated: Bool) {
         switch(state){
         case .approve:
-            cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayClicked"), for: .normal)
-            cell.denyButton.setImage(#imageLiteral(resourceName: "CancelDefault"), for: .normal)
+            if animated {
+                UIView.transition(with: cell.confirmButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                    cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayClicked"), for: .normal)
+                }, completion: nil)
+                UIView.transition(with: cell.denyButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                    cell.denyButton.setImage(#imageLiteral(resourceName: "CancelDefault"), for: .normal)
+                }, completion: nil)
+            }
+            else {
+                cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayClicked"), for: .normal)
+                cell.denyButton.setImage(#imageLiteral(resourceName: "CancelDefault"), for: .normal)
+            }
         case .deny:
-            cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayDefault"), for: .normal)
-            cell.denyButton.setImage(#imageLiteral(resourceName: "CancelClicked"), for: .normal)
+            if animated {
+                UIView.transition(with: cell.denyButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                    cell.denyButton.setImage(#imageLiteral(resourceName: "CancelClicked"), for: .normal)
+                }, completion: nil)
+                UIView.transition(with: cell.confirmButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                    cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayDefault"), for: .normal)
+                }, completion: nil)
+
+            }
+            else {
+                cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayDefault"), for: .normal)
+                cell.denyButton.setImage(#imageLiteral(resourceName: "CancelClicked"), for: .normal)
+            }
         case .neutral:
-            cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayDefault"), for: .normal)
-            cell.denyButton.setImage(#imageLiteral(resourceName: "CancelDefault"), for: .normal)
+            if animated {
+
+            }
+            else {
+                cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayDefault"), for: .normal)
+                cell.denyButton.setImage(#imageLiteral(resourceName: "CancelDefault"), for: .normal)
+            }
         }
         
     }
