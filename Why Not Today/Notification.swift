@@ -33,25 +33,29 @@ func cancelNotifs() {
 }
 
 func setupNotificaiton(for notif: Notification) {
-    let content = setupContent(with: notif)
-    var date = DateComponents()
-    date.hour = notif.FireTime.hour
-    date.minute = notif.FireTime.minute
-    let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
-    let request = UNNotificationRequest(identifier: notif.id, content: content, trigger: trigger)
-    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    if notif.FireTime > Date() {
+        setupNotification(for: notif, at: notif.FireTime)
+    }
+    else {
+        let d = notif.FireTime.add(1.days)
+        setupNotification(for: notif, at: d)
+    }
 }
 
 func setupNotification(for notif: Notification, at date: Date) {
     let content = setupContent(with: notif)
     var dc = DateComponents()
-    dc.hour = date.hour
-    dc.minute = date.minute
-    dc.day = date.day
-    dc.month = date.month
-    let trigger = UNCalendarNotificationTrigger(dateMatching: dc, repeats: false)
-    let request = UNNotificationRequest(identifier: notif.id, content: content, trigger: trigger)
-    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    var d = date
+    for i in 0...10 {
+        d = d.add(i.minutes)
+        dc.hour = d.hour
+        dc.minute = d.minute
+        dc.day = d.day
+        dc.month = d.month
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dc, repeats: false)
+        let request = UNNotificationRequest(identifier: notif.id + "\(i)", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
 }
 
 func setupContent(with notif: Notification) -> UNMutableNotificationContent {
@@ -73,5 +77,17 @@ func postponeNotifications() {
         date.minute(notification.FireTime.minute)
         date = date.add(1.days)
         setupNotification(for: notification, at: date)
+    }
+}
+
+func removeNotification(id: String) {
+    UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
+        var identifiers: [String] = []
+        for notification:UNNotificationRequest in notificationRequests {
+            if notification.identifier.range(of: id) != nil {
+                identifiers.append(notification.identifier)
+            }
+        }
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
     }
 }

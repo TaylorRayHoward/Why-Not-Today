@@ -82,17 +82,6 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
-    func removeNotification(id: String) {
-        UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
-            var identifiers: [String] = []
-            for notification:UNNotificationRequest in notificationRequests {
-                if notification.identifier == id {
-                    identifiers.append(notification.identifier)
-                }
-            }
-            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
-        }
-    }
     
     func reload() {
         notifications = DBHelper.sharedInstance.getAll(ofType: Notification.self)
