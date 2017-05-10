@@ -138,12 +138,15 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         
         
         var indexPath = calendarView.indexPathsForSelectedItems![0]
-        let customCell = calendarView.cellForItem(at: indexPath) as! CustomCell
-        let percentage = getProgressBarPercentage(forDate: selectedDate)
+        let customCell = calendarView.cellForItem(at: indexPath) as? CustomCell
         
-        if percentage != nil {
-            customCell.progressView.setProgress(percentage!, animated: true)
-            customCell.progressView.isHidden = false
+        if(customCell != nil) {
+            let percentage = getProgressBarPercentage(forDate: selectedDate)
+            
+            if percentage != nil {
+                customCell!.progressView.setProgress(percentage!, animated: true)
+                customCell!.progressView.isHidden = false
+            }
         }
         
         indexPath = IndexPath(row: tag, section: 0)
