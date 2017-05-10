@@ -65,8 +65,12 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        
         self.selectedDate = Calendar.current.startOfDay(for: date)
+        if(date > Date()) {
+            calendar.selectDates(from: Date(), to: Date(), triggerSelectionDelegate: true,
+                    keepSelectionIfMultiSelectionAllowed: false)
+            return
+        }
         guard let validCell = cell as? CustomCell else { return }
         validCell.selectedView.isHidden = false
         self.reload()

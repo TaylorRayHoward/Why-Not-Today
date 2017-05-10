@@ -61,7 +61,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func changeCellDisplay(_ cell: CustomCell, with calendar: JTAppleCalendarView, withState cellState: CellState) {
-        //TODO add filling green/red circle for if you have completed your things for the day
         cell.dateLabel.text = cellState.text
         
         //try to pull out
