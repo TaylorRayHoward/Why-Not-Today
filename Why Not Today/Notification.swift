@@ -47,7 +47,7 @@ func setupNotification(for notif: Notification, at date: Date) {
     var dc = DateComponents()
     var d = date
     for i in 0...10 {
-        d = d.add(i.minutes)
+        d = d.add(i.days)
         dc.hour = d.hour
         dc.minute = d.minute
         dc.day = d.day
