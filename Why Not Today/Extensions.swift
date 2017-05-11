@@ -25,62 +25,6 @@ extension UIColor {
     }
 }
 
-extension CalendarViewController: JTAppleCalendarViewDataSource {
-    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-        formatter.dateFormat = "yyyy MM dd"
-        formatter.locale = Calendar.current.locale
-        formatter.timeZone = Calendar.current.timeZone
-        
-        var components = DateComponents()
-        components.year = 2016
-        components.month = 1
-        components.day = 1
-        let startDate = Calendar.current.date(from: components)!
-        let params = ConfigurationParameters(startDate: startDate, endDate: Date(), numberOfRows: 6, calendar: nil, generateInDates: nil, generateOutDates: .tillEndOfRow, firstDayOfWeek: nil, hasStrictBoundaries: nil)
-        
-        return params
-    }
-}
-
-extension CalendarViewController: JTAppleCalendarViewDelegate {
-    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState,
-                  indexPath: IndexPath) -> JTAppleCell {
-        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
-        changeCellDisplay(cell, with: calendarView, withState: cellState)
-        cell.selectedView.isHidden = Calendar.current.startOfDay(for: date) != selectedDate
-        cell.progressView.isHidden = true
-        
-        let percent = getProgressBarPercentage(forDate: date)
-        if percent != nil {
-            cell.progressView.isHidden = false
-            cell.progressView.setProgress(percent!, animated: false)
-        }
-        
-        return cell
-        
-    }
-    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-        setMonthLabel(from: visibleDates)
-        setYearLabel(from: visibleDates)
-    }
-    
-    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        self.selectedDate = Calendar.current.startOfDay(for: date)
-        if(date > Date()) {
-            calendar.selectDates(from: Date(), to: Date(), triggerSelectionDelegate: true,
-                    keepSelectionIfMultiSelectionAllowed: false)
-            return
-        }
-        guard let validCell = cell as? CustomCell else { return }
-        validCell.selectedView.isHidden = false
-        self.reload()
-    }
-    
-    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        guard let validCell = cell as? CustomCell else { return }
-        validCell.selectedView.isHidden = true
-    }
-}
 
 
 func getProgressBarPercentage(forDate date: Date) -> Double? {
