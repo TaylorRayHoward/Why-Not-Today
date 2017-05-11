@@ -9,6 +9,7 @@ import RealmSwift
 class Habit: Object {
     dynamic var name = ""
     dynamic var id = ""
+    dynamic var createDate = Date()
     var datesCompleted = List<DateCompleted>()
     
     override class func primaryKey() -> String {

@@ -4,7 +4,7 @@
     <list default="true" id="751eebd8-aedd-4072-9c8a-f13590d2dcdc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today.xcworkspace/xcuserdata/taylorrayhoward.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Why Not Today.xcworkspace/xcuserdata/taylorrayhoward.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today.xcodeproj/xcuserdata/taylorrayhoward.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Why Not Today.xcodeproj/xcuserdata/taylorrayhoward.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/Habit.swift" afterPath="$PROJECT_DIR$/Why Not Today/Habit.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalendarViewController.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalendarViewController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Why Not Today/CalendarViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="140" column="78" lean-forward="false" selection-start-line="140" selection-start-column="78" selection-end-line="140" selection-end-column="78" />
+            <state relative-caret-position="675">
+              <caret line="45" column="3" lean-forward="false" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
               <folding>
                 <element signature="e#207#219#0" expanded="true" />
               </folding>
@@ -58,24 +58,22 @@
       <file leaf-file-name="Extensions.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Why Not Today/Extensions.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="49" column="37" lean-forward="false" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+            <state relative-caret-position="375">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
-                <marker date="1494384548000" expanded="true" signature="1578:1968" ph="{...}" />
-                <marker date="1494384548000" expanded="true" signature="1734:1968" ph="{...}" />
-                <marker date="1494384548000" expanded="true" signature="4085:4176" ph="{...}" />
-                <marker date="1494384548000" expanded="true" signature="4228:4399" ph="{...}" />
-                <marker date="1494384548000" expanded="true" signature="4424:4488" ph="{...}" />
+                <marker date="1494466391000" expanded="true" signature="1504:1595" ph="{...}" />
+                <marker date="1494466391000" expanded="true" signature="1647:1818" ph="{...}" />
+                <marker date="1494466391000" expanded="true" signature="1843:1907" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Habit.swift" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Habit.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Why Not Today/Habit.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="450">
+              <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -87,7 +85,8 @@
             <state relative-caret-position="480">
               <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
               <folding>
-                <marker date="1494387330000" expanded="true" signature="777:783" ph="{...}" />
+                <marker date="1494460079000" expanded="true" signature="777:783" ph="{...}" />
+                <marker date="1494460079000" expanded="true" signature="2772:2781" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -125,7 +124,6 @@
         <option value="$PROJECT_DIR$/Why Not Today/ViewController.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/EditHabitViewController.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/AppDelegate.swift" />
-        <option value="$PROJECT_DIR$/Why Not Today/Habit.swift" />
         <option value="$PROJECT_DIR$/Why Not TodayTests/Why_Not_TodayTests.swift" />
         <option value="$PROJECT_DIR$/Podfile" />
         <option value="$PROJECT_DIR$/Why Not Today/HabitCategoryViewController.swift" />
@@ -140,6 +138,7 @@
         <option value="$PROJECT_DIR$/Why Not TodayTests/HabitTests.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/Extensions.swift" />
         <option value="$PROJECT_DIR$/Why Not Today/CalendarViewController.swift" />
+        <option value="$PROJECT_DIR$/Why Not Today/Habit.swift" />
       </list>
     </option>
   </component>
@@ -462,7 +461,7 @@
       <workItem from="1494208622194" duration="2090000" />
       <workItem from="1494281173187" duration="163000" />
       <workItem from="1494381032240" duration="2847000" />
-      <workItem from="1494459326607" duration="148000" />
+      <workItem from="1494459326607" duration="339000" />
     </task>
     <servers />
   </component>
@@ -499,7 +498,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63426000" />
+    <option name="totallyTimeSpent" value="63617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
@@ -542,7 +541,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Why Not Today/CalendarViewController.swift</url>
-          <line>125</line>
+          <line>128</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
@@ -859,21 +858,20 @@
         <state relative-caret-position="480">
           <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding>
-            <marker date="1494387330000" expanded="true" signature="777:783" ph="{...}" />
+            <marker date="1494460079000" expanded="true" signature="777:783" ph="{...}" />
+            <marker date="1494460079000" expanded="true" signature="2772:2781" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/Extensions.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="49" column="37" lean-forward="false" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+        <state relative-caret-position="375">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <marker date="1494384548000" expanded="true" signature="1578:1968" ph="{...}" />
-            <marker date="1494384548000" expanded="true" signature="1734:1968" ph="{...}" />
-            <marker date="1494384548000" expanded="true" signature="4085:4176" ph="{...}" />
-            <marker date="1494384548000" expanded="true" signature="4228:4399" ph="{...}" />
-            <marker date="1494384548000" expanded="true" signature="4424:4488" ph="{...}" />
+            <marker date="1494466391000" expanded="true" signature="1504:1595" ph="{...}" />
+            <marker date="1494466391000" expanded="true" signature="1647:1818" ph="{...}" />
+            <marker date="1494466391000" expanded="true" signature="1843:1907" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -882,14 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="98" column="8" lean-forward="false" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Why Not Today/Habit.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,11 +905,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/CalendarViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="140" column="78" lean-forward="false" selection-start-line="140" selection-start-column="78" selection-end-line="140" selection-end-column="78" />
+        <state relative-caret-position="675">
+          <caret line="45" column="3" lean-forward="false" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
           <folding>
             <element signature="e#207#219#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Why Not Today/Habit.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
