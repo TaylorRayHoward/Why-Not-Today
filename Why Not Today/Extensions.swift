@@ -39,7 +39,13 @@ func getProgressBarPercentage(forDate date: Date) -> Double? {
         }
     }
     
-    let habits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
+    let habits = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter {
+        h in
+        if let habit = h as? Habit {
+            return habit.createDate < date || habit.createDate.isSameDay(date: date)
+        }
+        else { return false }
+    }
     return  Double(success)/Double(habits.count)
 }
 
@@ -49,7 +55,7 @@ func getCurrentDates(forDate date: Date) ->  List<DateCompleted> {
     let currentDates = List<DateCompleted>()
     for d in datesCompleted {
         let dateCompleted = d as! DateCompleted
-        if dateCompleted.dateCompleted == date {
+        if dateCompleted.dateCompleted == date && dateCompleted.Habit!.createDate < date || dateCompleted.Habit!.createDate.isSameDay(date: date){
             currentDates.append(dateCompleted)
         }
     }
