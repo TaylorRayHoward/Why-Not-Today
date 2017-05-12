@@ -40,7 +40,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        reload(forDate: Date().endOfDay)
+        reload(forDate: selectedDate.endOfDay)
         calendarView.reloadData()
     }
     
