@@ -26,7 +26,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         setupCalendarView()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-        reload()
+        reload(forDate: Date().endOfDay)
         calendarView.visibleDates { (visibleDates) in
             self.setMonthLabel(from: visibleDates)
             self.setYearLabel(from: visibleDates)
@@ -40,7 +40,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        reload()
+        reload(forDate: Date().endOfDay)
         calendarView.reloadData()
     }
     
@@ -119,8 +119,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         resolveCompletionAction(forStatus: .deny, at: sender.tag)
     }
     
-    func reload() {
-        habits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
+    func reload(forDate date: Date) {
+        habits = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("createDate < %@", date)
         self.confirmDenyTable.reloadData()
     }
     
@@ -276,7 +276,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         }, completion: {
             finished in validCell.selectedView.isHidden = false
         })
-        self.reload()
+        self.reload(forDate: date.endOfDay)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {

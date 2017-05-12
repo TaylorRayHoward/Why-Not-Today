@@ -68,6 +68,19 @@ func isCompleteForDay(forDate date: Date) -> Bool {
     return currentDates.count == habits.count
 }
 
+extension Date {
+    var startOfDay: Date {
+        return Calendar.current.startOfDay(for: self)
+    }
+
+    var endOfDay: Date {
+        var components = DateComponents()
+        components.day = 1
+        components.second = -1
+        return Calendar.current.date(byAdding: components, to: startOfDay)!
+    }
+}
+
 
 enum ApproveDeny: Int {
     case approve = 1

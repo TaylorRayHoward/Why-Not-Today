@@ -113,5 +113,9 @@ class DBHelper {
             realm.delete(dc)
         }
     }
+
+    func getAllHabits() -> Results<Habit> {
+        return realm.objects(Habit.self)
+    }
     
 }
