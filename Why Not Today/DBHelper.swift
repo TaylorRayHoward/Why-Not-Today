@@ -107,5 +107,11 @@ class DBHelper {
             realm.delete(notif)
         }
     }
+
+    func deleteDateCompleted(_ dc: DateCompleted) {
+        try! realm.write {
+            realm.delete(dc)
+        }
+    }
     
 }

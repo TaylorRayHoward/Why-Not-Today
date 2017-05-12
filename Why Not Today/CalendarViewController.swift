@@ -127,33 +127,46 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     func resolveCompletionAction(forStatus status: ApproveDeny, at tag: Int) {
         var habit = habits[tag] as! Habit
         let exists = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first != nil
-        
-        if(!exists) {
-            let dc = DateCompleted(dateCompleted: selectedDate, success: status.rawValue, for: habit)
+        let dc = exists ? habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first! : DateCompleted(dateCompleted: selectedDate, success: status.rawValue, for: habit)
+        var toggle = false
+
+        if !exists {
             habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
             DBHelper.sharedInstance.addDateCompleted(for: habit, with: dc)
         }
         else {
             habit = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", habit.name).first! as! Habit
-            let dc = habit.datesCompleted.filter("dateCompleted = %@", selectedDate).first!
-            DBHelper.sharedInstance.updateDateCompleted(dc, success: status.rawValue, date: nil)
+            if dc.successfullyCompleted == status.rawValue {
+                toggle = true
+                DBHelper.sharedInstance.deleteDateCompleted(dc)
+            }
+            else {
+                DBHelper.sharedInstance.updateDateCompleted(dc, success: status.rawValue, date: nil)
+            }
         }
         
         
         var indexPath = calendarView.indexPathsForSelectedItems![0]
         let customCell = calendarView.cellForItem(at: indexPath) as? CustomCell
         
-        if(customCell != nil) {
+        if customCell != nil {
             let percentage = getProgressBarPercentage(forDate: selectedDate)
             
             if percentage != nil {
                 customCell!.progressView.setProgress(percentage!, animated: true)
                 customCell!.progressView.isHidden = false
             }
+            else {
+                customCell!.progressView.setProgress(0, animated: true)
+            }
         }
         
         indexPath = IndexPath(row: tag, section: 0)
         let habitCell = confirmDenyTable.cellForRow(at: indexPath) as! ConfirmDenyHabitCell
+        if toggle {
+            changeButtonBackground(forState: .neutral, at: habitCell, animated: true)
+            return
+        }
         changeButtonBackground(forState: status, at: habitCell, animated: true)
         
         if(isCompleteForDay(forDate: selectedDate)) {
@@ -192,7 +205,12 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
             }
         case .neutral:
             if animated {
-
+                UIView.transition(with: cell.denyButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                    cell.denyButton.setImage(#imageLiteral(resourceName: "CancelDefault"), for: .normal)
+                }, completion: nil)
+                UIView.transition(with: cell.confirmButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                    cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayDefault"), for: .normal)
+                }, completion: nil)
             }
             else {
                 cell.confirmButton.setImage(#imageLiteral(resourceName: "OkayDefault"), for: .normal)
