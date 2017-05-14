@@ -25,23 +25,27 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCalendarView()
+        initialLoad()
+        confirmDenyTable.tableFooterView = UIView()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        reload(forDate: selectedDate.endOfDay)
+        calendarView.reloadData()
+    }
+
+    func initialLoad() {
         print(Realm.Configuration.defaultConfiguration.fileURL!)
+        let initialDate = Calendar.current.startOfDay(for: Date())
         reload(forDate: Date().endOfDay)
         calendarView.visibleDates { (visibleDates) in
             self.setMonthLabel(from: visibleDates)
             self.setYearLabel(from: visibleDates)
         }
         calendarView.scrollToDate(Date(), triggerScrollToDateDelegate: true, animateScroll: false,
-                                  preferredScrollPosition: nil, extraAddedOffset: 0, completionHandler: nil)
-        confirmDenyTable.tableFooterView = UIView()
-        let initialDate = Calendar.current.startOfDay(for: Date())
+                preferredScrollPosition: nil, extraAddedOffset: 0, completionHandler: nil)
         calendarView.selectDates([initialDate], triggerSelectionDelegate: true, keepSelectionIfMultiSelectionAllowed: false)
         selectedDate = initialDate
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        reload(forDate: selectedDate.endOfDay)
-        calendarView.reloadData()
     }
     
     func setupCalendarView() {
