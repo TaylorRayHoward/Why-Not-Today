@@ -67,7 +67,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     func changeCellDisplay(_ cell: CustomCell, with calendar: JTAppleCalendarView, withState cellState: CellState) {
         cell.dateLabel.text = cellState.text
         
-        //try to pull out
         if cellState.dateBelongsTo != .thisMonth {
             cell.dateLabel.textColor = UIColor.gray
         }
@@ -156,12 +155,19 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         if customCell != nil {
             let percentage = getProgressBarPercentage(forDate: selectedDate)
             
-            if percentage != nil {
-                customCell!.progressView.setProgress(percentage!, animated: true)
+            if percentage.0 != nil {
+                customCell!.progressView.setProgress(percentage.0!, animated: true)
                 customCell!.progressView.isHidden = false
             }
             else {
                 customCell!.progressView.setProgress(0, animated: true)
+            }
+            if percentage.1 != nil {
+                customCell!.failedProgressView.setProgress(percentage.1!, animated: true)
+                customCell!.failedProgressView.isHidden = false
+            }
+            else {
+                customCell!.failedProgressView.setProgress(0, animated: true)
             }
         }
         
@@ -250,11 +256,17 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         changeCellDisplay(cell, with: calendarView, withState: cellState)
         cell.selectedView.isHidden = Calendar.current.startOfDay(for: date) != selectedDate
         cell.progressView.isHidden = true
+        cell.failedProgressView.isHidden = true
+        cell.failedProgressView.transform = CGAffineTransform.init(scaleX: -1, y: 1)
         
         let percent = getProgressBarPercentage(forDate: date)
-        if percent != nil {
+        if percent.0 != nil {
             cell.progressView.isHidden = false
-            cell.progressView.setProgress(percent!, animated: false)
+            cell.progressView.setProgress(percent.0!, animated: false)
+        }
+        if percent.1 != nil {
+            cell.failedProgressView.isHidden = false
+            cell.failedProgressView.setProgress(percent.1!, animated: false)
         }
         
         return cell

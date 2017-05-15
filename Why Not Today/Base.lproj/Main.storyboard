@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Obr-f8-be9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Obr-f8-be9">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -116,7 +116,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example: Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8Y-bc-zg6">
-                                                    <rect key="frame" x="61" y="0.0" width="226" height="43.5"/>
+                                                    <rect key="frame" x="61" y="0.0" width="226" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.43401812229999998" green="0.45395482510000001" blue="0.43280745329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -292,7 +292,7 @@ A
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-EN-zLd">
-                                <rect key="frame" x="0.0" y="64" width="320" height="324.5"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="325"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="T8U-9Y-8CV">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="48.5"/>
@@ -359,7 +359,7 @@ A
                                         </subviews>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2BY-Lf-oeI" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                        <rect key="frame" x="0.0" y="69" width="320" height="255.5"/>
+                                        <rect key="frame" x="0.0" y="69" width="320" height="256"/>
                                         <color key="backgroundColor" red="0.18122032284736633" green="0.24981680512428284" blue="0.35399287939071655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="85s-WB-crs">
                                             <size key="itemSize" width="91" height="95"/>
@@ -414,6 +414,32 @@ A
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkR-vU-oYn" customClass="CircleProgressView" customModule="CircleProgressView">
+                                                            <rect key="frame" x="25" y="27" width="40" height="40"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="BOp-5b-buR"/>
+                                                                <constraint firstAttribute="height" constant="40" id="sNf-g1-ibs"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="centerFillColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="trackBorderColor">
+                                                                    <color key="value" red="0.13725490200000001" green="0.18823529410000001" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                                                    <color key="value" red="0.88701647520000004" green="0.29819513180000001" blue="0.31356891809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAL-gz-fSC">
                                                             <rect key="frame" x="24" y="37" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -426,12 +452,15 @@ A
                                                     <constraint firstItem="pfz-5n-RLx" firstAttribute="centerY" secondItem="TJJ-SH-Nr6" secondAttribute="centerY" id="8e8-Um-Uco"/>
                                                     <constraint firstItem="bAL-gz-fSC" firstAttribute="centerX" secondItem="TJJ-SH-Nr6" secondAttribute="centerX" id="SYn-Q7-HAP"/>
                                                     <constraint firstItem="IUo-hG-gL3" firstAttribute="centerX" secondItem="TJJ-SH-Nr6" secondAttribute="centerX" id="VXX-Cy-wq3"/>
+                                                    <constraint firstItem="rkR-vU-oYn" firstAttribute="centerX" secondItem="TJJ-SH-Nr6" secondAttribute="centerX" id="ZLj-gm-zgC"/>
                                                     <constraint firstItem="pfz-5n-RLx" firstAttribute="centerX" secondItem="TJJ-SH-Nr6" secondAttribute="centerX" id="hed-Bj-YZT"/>
                                                     <constraint firstItem="bAL-gz-fSC" firstAttribute="centerY" secondItem="TJJ-SH-Nr6" secondAttribute="centerY" id="q4F-Wk-CA0"/>
+                                                    <constraint firstItem="rkR-vU-oYn" firstAttribute="centerY" secondItem="TJJ-SH-Nr6" secondAttribute="centerY" id="uyz-jp-jN4"/>
                                                     <constraint firstItem="IUo-hG-gL3" firstAttribute="centerY" secondItem="TJJ-SH-Nr6" secondAttribute="centerY" id="xZQ-dT-3yz"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="bAL-gz-fSC" id="3Xc-OC-AhR"/>
+                                                    <outlet property="failedProgressView" destination="rkR-vU-oYn" id="fUf-8u-C7b"/>
                                                     <outlet property="progressView" destination="pfz-5n-RLx" id="ryd-9d-nhH"/>
                                                     <outlet property="selectedView" destination="IUo-hG-gL3" id="Mf1-IT-3XV"/>
                                                 </connections>
@@ -454,7 +483,7 @@ A
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E1o-z5-QhK">
-                                <rect key="frame" x="0.0" y="388.5" width="320" height="179.5"/>
+                                <rect key="frame" x="0.0" y="389" width="320" height="179"/>
                                 <color key="backgroundColor" red="0.13725490196078433" green="0.18823529411764706" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.97647058819999999" green="0.98431372549999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -462,7 +491,7 @@ A
                                         <rect key="frame" x="0.0" y="28" width="320" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="msN-Zs-CeV" id="5di-s5-sXu">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-PS-DjQ">
@@ -681,7 +710,7 @@ A
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQx-HO-pv3" userLabel="input message">
-                                                    <rect key="frame" x="85" y="0.0" width="202" height="43.5"/>
+                                                    <rect key="frame" x="85" y="0.0" width="202" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.43401812229999998" green="0.45395482510000001" blue="0.43280745329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>

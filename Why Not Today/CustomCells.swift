@@ -14,6 +14,7 @@ class CustomCell: JTAppleCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var selectedView: UIView!
     @IBOutlet weak var progressView: CircleProgressView!
+    @IBOutlet weak var failedProgressView: CircleProgressView!
 }
 
 class HabitTableViewCell: UITableViewCell {

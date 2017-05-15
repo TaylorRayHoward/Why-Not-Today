@@ -27,15 +27,19 @@ extension UIColor {
 
 
 
-func getProgressBarPercentage(forDate date: Date) -> Double? {
+func getProgressBarPercentage(forDate date: Date) -> (Double?, Double?) {
     let currentDates = getCurrentDates(forDate: date)
     if currentDates.count == 0 {
-        return nil
+        return (nil, nil)
     }
     var success = 0
+    var fail = 0
     for d in currentDates {
         if d.successfullyCompleted == 1 {
             success += 1
+        }
+        else if d.successfullyCompleted == -1 {
+            fail += 1
         }
     }
     
@@ -46,7 +50,7 @@ func getProgressBarPercentage(forDate date: Date) -> Double? {
         }
         else { return false }
     }
-    return  Double(success)/Double(habits.count)
+    return  (Double(success)/Double(habits.count), (Double(fail)/Double(habits.count)))
 }
 
 
