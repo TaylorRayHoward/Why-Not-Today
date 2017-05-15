@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751eebd8-aedd-4072-9c8a-f13590d2dcdc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Why Not Today/Base.lproj/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/CalendarViewController.swift" afterPath="$PROJECT_DIR$/Why Not Today/CalendarViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/CustomCells.swift" afterPath="$PROJECT_DIR$/Why Not Today/CustomCells.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Why Not Today/Extensions.swift" afterPath="$PROJECT_DIR$/Why Not Today/Extensions.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +35,8 @@
       <file leaf-file-name="Extensions.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Why Not Today/Extensions.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+            <state relative-caret-position="594">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -322,7 +318,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="SearchEverywhereHistoryKey" value="getperce&#9;null&#9;null&#10;getpercentage&#9;null&#9;null&#10;getprogress&#9;null&#9;null&#10;calendarvi&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CalendarViewController.swift&#10;percentage&#9;null&#9;null&#10;appdele&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/AppDelegate.swift&#10;viewwill&#9;null&#9;null&#10;dbh&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/DBHelper.swift&#10;dbher&#9;null&#9;null&#10;dbhelper&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/DBHelper.swift&#10;exten&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/Extensions.swift&#10;habittest&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/HabitTests.swift&#10;datetests&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/DateTests.swift&#10;whynot&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/Why_Not_TodayTests.swift&#10;Extensions&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/Extensions.swift&#10;selectdate&#9;null&#9;null&#10;calendar&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CalendarViewController.swift&#10;createnot&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateNotificationViewController.swift&#10;dbhel&#9;null&#9;null&#10;notification&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateNotificationViewController.swift&#10;habittable&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift&#10;createhabitviewcontroller&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;notification.s&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/Notification.swift&#10;habitview&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;message&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/NotificationMessageViewController.swift&#10;category&#9;null&#9;null&#10;messagevi&#9;null&#9;null&#10;namecon&#9;null&#9;null&#10;cells&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CustomCells.swift&#10;createh&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;notificationview&#9;null&#9;null&#10;create&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;calendarviewcont&#9;null&#9;null&#10;appdel&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not Today/AppDelegate.swift&#10;test&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/Why_Not_TodayTests.swift&#10;habittabl&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift" />
+    <property name="SearchEverywhereHistoryKey" value="percentage&#9;null&#9;null&#10;getperce&#9;null&#9;null&#10;getpercentage&#9;null&#9;null&#10;getprogress&#9;null&#9;null&#10;calendarvi&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CalendarViewController.swift&#10;appdele&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/AppDelegate.swift&#10;viewwill&#9;null&#9;null&#10;dbh&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/DBHelper.swift&#10;dbher&#9;null&#9;null&#10;dbhelper&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/DBHelper.swift&#10;exten&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/Extensions.swift&#10;habittest&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/HabitTests.swift&#10;datetests&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/DateTests.swift&#10;whynot&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/Why_Not_TodayTests.swift&#10;Extensions&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/Extensions.swift&#10;selectdate&#9;null&#9;null&#10;calendar&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CalendarViewController.swift&#10;createnot&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateNotificationViewController.swift&#10;dbhel&#9;null&#9;null&#10;notification&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateNotificationViewController.swift&#10;habittable&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift&#10;createhabitviewcontroller&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;notification.s&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/Notification.swift&#10;habitview&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;message&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/NotificationMessageViewController.swift&#10;category&#9;null&#9;null&#10;messagevi&#9;null&#9;null&#10;namecon&#9;null&#9;null&#10;cells&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CustomCells.swift&#10;createh&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;notificationview&#9;null&#9;null&#10;create&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/CreateHabitViewController.swift&#10;calendarviewcont&#9;null&#9;null&#10;appdel&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not Today/AppDelegate.swift&#10;test&#9;FILE&#9;file:///Users/taylorhoward/Programming/iOS/Why-Not-Today/Why Not TodayTests/Why_Not_TodayTests.swift&#10;habittabl&#9;FILE&#9;file:///Users/taylorrayhoward/Programming/iOS/Why-Not-Today/Why Not Today/HabitTableViewController.swift" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Why Not Today" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Why Not Today.xcworkspace" />
@@ -456,7 +452,7 @@
       <workItem from="1494555440673" duration="5546000" />
       <workItem from="1494734135359" duration="3522000" />
       <workItem from="1494776973185" duration="222000" />
-      <workItem from="1494799727963" duration="2300000" />
+      <workItem from="1494799727963" duration="2638000" />
     </task>
     <servers />
   </component>
@@ -493,7 +489,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78764000" />
+    <option name="totallyTimeSpent" value="79102000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -518,7 +514,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23599052" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23599052" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -543,7 +539,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -567,8 +563,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Why Not Today/Extensions.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+        <state relative-caret-position="594">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
