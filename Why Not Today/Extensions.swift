@@ -59,7 +59,7 @@ func getCurrentDates(forDate date: Date) ->  List<DateCompleted> {
     let currentDates = List<DateCompleted>()
     for d in datesCompleted {
         let dateCompleted = d as! DateCompleted
-        if dateCompleted.dateCompleted == date && dateCompleted.Habit!.createDate < date {
+        if dateCompleted.dateCompleted == date && dateCompleted.Habit!.createDate < date.endOfDay {
             currentDates.append(dateCompleted)
         }
     }
