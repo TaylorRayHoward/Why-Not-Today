@@ -46,6 +46,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
                 preferredScrollPosition: nil, extraAddedOffset: 0, completionHandler: nil)
         calendarView.selectDates([initialDate], triggerSelectionDelegate: true, keepSelectionIfMultiSelectionAllowed: false)
         selectedDate = initialDate
+        calendarView.reloadData()
     }
     
     func setupCalendarView() {
