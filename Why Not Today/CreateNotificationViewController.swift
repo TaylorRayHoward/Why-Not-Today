@@ -24,6 +24,7 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
         super.viewDidLoad()
         actionsTableView.delegate = self
         actionsTableView.dataSource = self
+        timePicker.setValue(UIColor.white, forKeyPath: "textColor")
         if isEdit() {
             timePicker.date = time!
         }
