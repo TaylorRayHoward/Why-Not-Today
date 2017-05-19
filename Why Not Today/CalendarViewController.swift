@@ -36,19 +36,20 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
 
     func initialLoad() {
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-        let initialDate = Calendar.current.startOfDay(for: Date())
+        let initialDate = Date().startOfDay
         reload(forDate: Date().endOfDay)
         calendarView.visibleDates { (visibleDates) in
             self.setMonthLabel(from: visibleDates)
             self.setYearLabel(from: visibleDates)
         }
-        calendarView.scrollToDate(Date(), triggerScrollToDateDelegate: true, animateScroll: false,
+        calendarView.deselectAllDates(triggerSelectionDelegate: true)
+        calendarView.scrollToDate(initialDate, triggerScrollToDateDelegate: true, animateScroll: false,
                 preferredScrollPosition: nil, extraAddedOffset: 0, completionHandler: nil)
-        calendarView.selectDates([initialDate], triggerSelectionDelegate: true, keepSelectionIfMultiSelectionAllowed: false)
+        calendarView.selectDates(from: initialDate, to: initialDate, triggerSelectionDelegate: true, keepSelectionIfMultiSelectionAllowed: false)
         selectedDate = initialDate
         calendarView.reloadData()
     }
-    
+
     func setupCalendarView() {
         calendarView.minimumLineSpacing = 0
         calendarView.minimumInteritemSpacing = 0
@@ -280,18 +281,16 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         self.selectedDate = Calendar.current.startOfDay(for: date)
-        if(date > Date()) {
-            calendar.selectDates(from: Calendar.current.startOfDay(for: Date()), to: Calendar.current.startOfDay(for: Date()), triggerSelectionDelegate: true,
-                    keepSelectionIfMultiSelectionAllowed: false)
-            return
-        }
         guard let validCell = cell as? CustomCell else { return }
+        if(date > Date()) {
+            calendar.deselectAllDates()
+            calendar.selectDates(from: Date().startOfDay, to: Date().startOfDay, triggerSelectionDelegate: true,
+                    keepSelectionIfMultiSelectionAllowed: false)
+        }
         validCell.selectedView.alpha = 0.0
         validCell.selectedView.isHidden = false
         UIView.animate(withDuration: 0.5, animations: {
             validCell.selectedView.alpha = 1.0
-        }, completion: {
-            finished in validCell.selectedView.isHidden = false
         })
         self.reload(forDate: date.endOfDay)
     }

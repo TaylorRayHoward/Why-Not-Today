@@ -38,6 +38,12 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
     }
     @IBAction func saveNotification(_ sender: UIBarButtonItem) {
         let notification = Notification(fireTime: timePicker.date, message: getMessage())
+        if getMessage() == "" {
+            let alert = UIAlertController(title: "Missing fields", message: "All fields cannot be blank", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         if isEdit() {
             notification.id = id!
             DBHelper.sharedInstance.updateNotificaiton(notification)
@@ -48,7 +54,7 @@ class CreateNotificationViewController: UIViewController, UITableViewDataSource,
         setupNotificaiton(for: notification)
         _ = navigationController?.popViewController(animated: true)
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = actionsTableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as! MessageCell

@@ -72,10 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if nav.topViewController is CalendarViewController {
             let vc = nav.topViewController as! CalendarViewController
-            vc.selectedDate = Date().startOfDay
             vc.initialLoad()
-            vc.reload(forDate: vc.selectedDate.endOfDay)
-            print("hello")
         }
     }
 

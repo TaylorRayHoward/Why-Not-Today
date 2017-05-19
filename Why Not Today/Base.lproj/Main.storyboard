@@ -103,7 +103,7 @@
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.18823529410000001" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NameCell" id="Ns8-7F-FVd" customClass="NameCell" customModule="Why_Not_Today" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ns8-7F-FVd" id="BMf-Go-RIC">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
@@ -184,7 +184,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9a-0R-4Ku">
                                 <rect key="frame" x="16" y="64" width="288" height="504"/>
-                                <mutableString key="text">Why Not Today 1.0.0
+                                <string key="text">Why Not Today 1.0.0
 
 Icons where pulled from the wonderful icons8.com
 
@@ -192,7 +192,7 @@ I developed this app for fun and for free to get used to Swift development.  If 
 
 Any and all bugs can also be reported to the same email.
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" red="0.85098039219999999" green="0.8980392157" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.13725490196078433" green="0.18823529411764706" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
@@ -626,7 +626,7 @@ dWwgaWNvbnM4LmNvbQ
                                         <rect key="frame" x="0.0" y="28" width="320" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pA9-da-FiO" id="IQY-LI-N9P">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="61"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="60.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification name that will be long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMv-KF-2vr">
@@ -808,7 +808,7 @@ dWwgaWNvbnM4LmNvbQ
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.18823529410000001" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EditNameCell" id="1aw-Ii-P6E" customClass="EditNameCell" customModule="Why_Not_Today" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="56" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1aw-Ii-P6E" id="saF-RW-41F">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
@@ -890,7 +890,7 @@ dWwgaWNvbnM4LmNvbQ
                                 <color key="sectionIndexBackgroundColor" red="0.13725490200000001" green="0.18823529410000001" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EditMessageCell" id="fUT-66-bfL" customClass="EditMessageCell" customModule="Why_Not_Today" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fUT-66-bfL" id="fVc-0x-NJG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

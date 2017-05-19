@@ -27,6 +27,19 @@ class CreateHabitViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBAction func saveHabit(_ sender: UIBarButtonItem) {
         let habit = Habit(n: getName())
+        if getName() == "" {
+            let alert = UIAlertController(title: "Missing fields", message: "All fields cannot be blank", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        let dupe = DBHelper.sharedInstance.getAll(ofType: Habit.self).filter("name = %@", getName()).first as? Habit
+        if dupe != nil {
+            let alert = UIAlertController(title: "Duplicate", message: "Cannot have a duplicate habit name", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         if(isEdit()) {
             habit.id = id!
             DBHelper.sharedInstance.updateHabit(habit)

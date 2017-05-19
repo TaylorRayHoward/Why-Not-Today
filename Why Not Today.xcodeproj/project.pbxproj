@@ -291,7 +291,7 @@
 						DevelopmentTeam = SEDJW78WSB;
 					};
 					BA9C77679F435FF195EC7FBD = {
-						DevelopmentTeam = SEDJW78WSB;
+						DevelopmentTeam = GMBUTMZ22C;
 					};
 				};
 			};
@@ -533,7 +533,7 @@
 			baseConfigurationReference = 63EF0358EE37CC41EA38FFD1 /* Pods-Why Not Today.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SEDJW78WSB;
+				DEVELOPMENT_TEAM = GMBUTMZ22C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -545,7 +545,7 @@
 				INFOPLIST_FILE = "Why Not Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorRayHoward.Why-Not-Today";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TaylorRayHoward.WhyNotToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -556,7 +556,7 @@
 			baseConfigurationReference = D4CB02203E41EA9ABC31F96F /* Pods-Why Not Today.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SEDJW78WSB;
+				DEVELOPMENT_TEAM = GMBUTMZ22C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -564,7 +564,7 @@
 				INFOPLIST_FILE = "Why Not Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorRayHoward.Why-Not-Today";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TaylorRayHoward.WhyNotToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
