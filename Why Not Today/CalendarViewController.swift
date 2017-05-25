@@ -278,14 +278,14 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         setMonthLabel(from: visibleDates)
         setYearLabel(from: visibleDates)
     }
-    
+
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         self.selectedDate = Calendar.current.startOfDay(for: date)
         guard let validCell = cell as? CustomCell else { return }
         if(date > Date()) {
-            calendar.deselectAllDates()
-            calendar.selectDates(from: Date().startOfDay, to: Date().startOfDay, triggerSelectionDelegate: true,
+            calendar.selectDates([Date().startOfDay], triggerSelectionDelegate: true,
                     keepSelectionIfMultiSelectionAllowed: false)
+            return
         }
         validCell.selectedView.alpha = 0.0
         validCell.selectedView.isHidden = false
@@ -297,6 +297,11 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let validCell = cell as? CustomCell else { return }
+        if date > Date() {
+            validCell.selectedView.alpha = 0.0
+            validCell.selectedView.isHidden = true
+            return
+        }
         UIView.animate(withDuration: 0.5, animations: {
             validCell.selectedView.alpha = 0.0
         }, completion: {
