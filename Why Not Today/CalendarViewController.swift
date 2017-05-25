@@ -303,7 +303,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         }
         validCell.selectedView.alpha = 0.0
         validCell.selectedView.isHidden = false
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.25, animations: {
             validCell.selectedView.alpha = 1.0
         }, completion: {
             finished in validCell.selectedView.isHidden = false
@@ -318,7 +318,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
             validCell.selectedView.isHidden = true
             return
         }
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.25, animations: {
             validCell.selectedView.alpha = 0.0
         }, completion: {
             finished in validCell.selectedView.isHidden = true
