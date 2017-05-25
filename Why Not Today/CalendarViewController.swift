@@ -34,6 +34,20 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         calendarView.reloadData()
     }
 
+    @IBAction func addHabit(_ sender: UIBarButtonItem) {
+        let totalHabits = DBHelper.sharedInstance.getAll(ofType: Habit.self)
+        let storyboard  = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if totalHabits.count == 0 {
+            let calendarViewVc = storyboard.instantiateViewController(withIdentifier: "CalendarView") as! CalendarViewController
+            let habitTableVc = storyboard.instantiateViewController(withIdentifier: "HabitTable") as! HabitTableViewController
+            let createHabit = storyboard.instantiateViewController(withIdentifier: "CreateHabit") as! CreateHabitViewController
+            navigationController?.setViewControllers([calendarViewVc, habitTableVc, createHabit], animated: true)
+        }
+        else {
+            let habitTableVc = storyboard.instantiateViewController(withIdentifier: "HabitTable") as! HabitTableViewController
+            navigationController?.pushViewController(habitTableVc, animated: true)
+        }
+    }
     func initialLoad() {
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         let initialDate = Date().startOfDay
