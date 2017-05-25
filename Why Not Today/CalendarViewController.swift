@@ -284,13 +284,15 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         guard let validCell = cell as? CustomCell else { return }
         if(date > Date()) {
             calendar.selectDates([Date().startOfDay], triggerSelectionDelegate: true,
-                    keepSelectionIfMultiSelectionAllowed: false)
+                    keepSelectionIfMultiSelectionAllowed: true)
             return
         }
         validCell.selectedView.alpha = 0.0
         validCell.selectedView.isHidden = false
         UIView.animate(withDuration: 0.5, animations: {
             validCell.selectedView.alpha = 1.0
+        }, completion: {
+            finished in validCell.selectedView.isHidden = false
         })
         self.reload(forDate: date.endOfDay)
     }
