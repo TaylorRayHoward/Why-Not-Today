@@ -30,6 +30,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        calendarView.deselectAllDates()
+        calendarView.selectDates([selectedDate], triggerSelectionDelegate: true, keepSelectionIfMultiSelectionAllowed: false)
         reload(forDate: selectedDate.endOfDay)
         calendarView.reloadData()
     }
