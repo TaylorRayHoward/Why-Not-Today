@@ -82,7 +82,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     
     func changeCellDisplay(_ cell: CustomCell, with calendar: JTAppleCalendarView, withState cellState: CellState) {
         cell.dateLabel.text = cellState.text
-        
+        cell.isUserInteractionEnabled = true
+
         if cellState.dateBelongsTo != .thisMonth && cellState.date < Date(){
             cell.dateLabel.textColor = UIColor.gray
         }
@@ -131,6 +132,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         let storyboard  = UIStoryboard(name: "Main", bundle: Bundle.main)
         let destination = storyboard.instantiateViewController(withIdentifier: "StatsController") as! StatsViewController
         let habit = habits[indexPath.row] as! Habit
+        destination.habit = habit
         navigationController?.pushViewController(destination, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
