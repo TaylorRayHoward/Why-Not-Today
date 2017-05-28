@@ -590,7 +590,6 @@ dWwgaWNvbnM4LmNvbQ
         <!--Stats View Controller-->
         <scene sceneID="Z6Y-b7-OmZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ttL-yZ-ijr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="StatsController" automaticallyAdjustsScrollViewInsets="NO" id="JFl-Si-0Rt" customClass="StatsViewController" customModule="Why_Not_Today" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VQa-g8-kcG"/>
@@ -601,7 +600,7 @@ dWwgaWNvbnM4LmNvbQ
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npZ-UV-HuD">
-                                <rect key="frame" x="0.0" y="28" width="320" height="142"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="142"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DAe-Cz-Ik2">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
@@ -792,11 +791,21 @@ dWwgaWNvbnM4LmNvbQ
                                     <constraint firstAttribute="trailing" secondItem="DAe-Cz-Ik2" secondAttribute="trailing" id="grV-WP-IdC"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89E-jl-BY2">
+                                <rect key="frame" x="16" y="20" width="288" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.85098039219999999" green="0.8980392157" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490200000001" green="0.18823529410000001" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="89E-jl-BY2" firstAttribute="leading" secondItem="Bdu-v7-r76" secondAttribute="leadingMargin" id="8c4-tH-eqA"/>
                             <constraint firstItem="npZ-UV-HuD" firstAttribute="leading" secondItem="Bdu-v7-r76" secondAttribute="leading" id="IPd-8m-Htp"/>
-                            <constraint firstItem="npZ-UV-HuD" firstAttribute="top" secondItem="VQa-g8-kcG" secondAttribute="bottom" constant="8" id="Lk6-Qp-Mca"/>
+                            <constraint firstItem="npZ-UV-HuD" firstAttribute="top" secondItem="VQa-g8-kcG" secondAttribute="bottom" constant="50" id="Lk6-Qp-Mca"/>
+                            <constraint firstItem="npZ-UV-HuD" firstAttribute="top" secondItem="89E-jl-BY2" secondAttribute="bottom" constant="8" id="MrJ-TB-l6l"/>
+                            <constraint firstItem="89E-jl-BY2" firstAttribute="top" secondItem="VQa-g8-kcG" secondAttribute="bottom" id="dAs-Cg-i78"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="89E-jl-BY2" secondAttribute="trailing" id="dsW-81-Ttb"/>
                             <constraint firstItem="npZ-UV-HuD" firstAttribute="height" secondItem="Bdu-v7-r76" secondAttribute="height" multiplier="0.25" id="pCm-5e-GW7"/>
                             <constraint firstAttribute="trailing" secondItem="npZ-UV-HuD" secondAttribute="trailing" id="qC5-ZM-0gg"/>
                         </constraints>
@@ -811,6 +820,7 @@ dWwgaWNvbnM4LmNvbQ
                         <outlet property="wedLabel" destination="1F1-dW-rgw" id="O3Y-px-97K"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ttL-yZ-ijr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.875" y="671.83098591549299"/>
         </scene>
