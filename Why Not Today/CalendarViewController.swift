@@ -83,11 +83,12 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     func changeCellDisplay(_ cell: CustomCell, with calendar: JTAppleCalendarView, withState cellState: CellState) {
         cell.dateLabel.text = cellState.text
         
-        if cellState.dateBelongsTo != .thisMonth {
+        if cellState.dateBelongsTo != .thisMonth && cellState.date < Date(){
             cell.dateLabel.textColor = UIColor.gray
         }
         else if(cellState.date > Date()) {
             cell.dateLabel.textColor = UIColor.gray
+            cell.isUserInteractionEnabled = false
         }
         else {
             cell.dateLabel.textColor = UIColor(rgb: 0xD9E5D6)
@@ -243,9 +244,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
                 cell.denyButton.setImage(#imageLiteral(resourceName: "CancelDefault"), for: .normal)
             }
         }
-        
     }
-    
 }
 
 extension CalendarViewController: JTAppleCalendarViewDataSource {
@@ -296,11 +295,6 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         self.selectedDate = Calendar.current.startOfDay(for: date)
         guard let validCell = cell as? CustomCell else { return }
-        if(date > Date()) {
-            calendar.selectDates([Date().startOfDay], triggerSelectionDelegate: true,
-                    keepSelectionIfMultiSelectionAllowed: true)
-            return
-        }
         validCell.selectedView.alpha = 0.0
         validCell.selectedView.isHidden = false
         UIView.animate(withDuration: 0.25, animations: {
@@ -313,11 +307,6 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let validCell = cell as? CustomCell else { return }
-        if date > Date() {
-            validCell.selectedView.alpha = 0.0
-            validCell.selectedView.isHidden = true
-            return
-        }
         UIView.animate(withDuration: 0.25, animations: {
             validCell.selectedView.alpha = 0.0
         }, completion: {
