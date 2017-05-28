@@ -9,6 +9,7 @@ PODS:
   - Realm/Headers (2.7.0)
   - RealmSwift (2.7.0):
     - Realm (= 2.7.0)
+  - UICountingLabel (1.4.0)
 
 DEPENDENCIES:
   - CircleProgressView (~> 1.0)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - Nimble
   - Quick
   - RealmSwift
+  - UICountingLabel
 
 SPEC CHECKSUMS:
   CircleProgressView: 3a02912b8cb05ca68f31d8a08e242f7b0f067665
@@ -26,7 +28,8 @@ SPEC CHECKSUMS:
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
+  UICountingLabel: ed5ce5b6d5ef278ff40d99cfa49577a30ab0c87b
 
-PODFILE CHECKSUM: 364d14bf587853ab587900810385603a116275a9
+PODFILE CHECKSUM: 02f53424ef77c286db1b94e1c86aa54368bb6e34
 
 COCOAPODS: 1.2.1

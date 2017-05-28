@@ -3,17 +3,18 @@
 // Copyright (c) 2017 TaylorRayHoward. All rights reserved.
 //
 import UIKit
+import UICountingLabel
 
 class StatsViewController: UIViewController {
-    @IBOutlet weak var monLabel: UILabel!
-    @IBOutlet weak var tuesLabel: UILabel!
-    @IBOutlet weak var wedLabel: UILabel!
-    @IBOutlet weak var thursLabel: UILabel!
-    @IBOutlet weak var friLabel: UILabel!
-    @IBOutlet weak var satLabel: UILabel!
-    @IBOutlet weak var sunLabel: UILabel!
+    @IBOutlet weak var monLabel: UICountingLabel!
+    @IBOutlet weak var tuesLabel: UICountingLabel!
+    @IBOutlet weak var wedLabel: UICountingLabel!
+    @IBOutlet weak var thursLabel: UICountingLabel!
+    @IBOutlet weak var friLabel: UICountingLabel!
+    @IBOutlet weak var satLabel: UICountingLabel!
+    @IBOutlet weak var sunLabel: UICountingLabel!
 
-    var labelList = [UILabel]()
+    var labelList = [UICountingLabel]()
     var habit: Habit? = nil
 
     override func viewDidLoad() {
@@ -24,7 +25,9 @@ class StatsViewController: UIViewController {
     func setDayPercentText() {
         for day in iterateEnum(dayOfWeek.self){
             let label = labelList[day.rawValue - 1]
-            label.text = "\(calcDay(forDay: day))%"
+            label.format = "%d%%"
+            label.method = UILabelCountingMethod.linear
+            label.count(from: 0, to: CGFloat(calcDay(forDay: day)), withDuration: 1.0)
         }
     }
     func calcDay(forDay weekday: dayOfWeek) -> Int {
