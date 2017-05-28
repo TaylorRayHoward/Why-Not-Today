@@ -303,22 +303,12 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         self.selectedDate = Calendar.current.startOfDay(for: date)
         guard let validCell = cell as? CustomCell else { return }
-        validCell.selectedView.alpha = 0.0
         validCell.selectedView.isHidden = false
-        UIView.animate(withDuration: 0.25, animations: {
-            validCell.selectedView.alpha = 1.0
-        }, completion: {
-            finished in validCell.selectedView.isHidden = false
-        })
         self.reload(forDate: date.endOfDay)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let validCell = cell as? CustomCell else { return }
-        UIView.animate(withDuration: 0.25, animations: {
-            validCell.selectedView.alpha = 0.0
-        }, completion: {
-            finished in validCell.selectedView.isHidden = true
-        })
+        validCell.selectedView.isHidden = true
     }
 }
