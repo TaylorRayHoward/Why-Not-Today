@@ -128,6 +128,10 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard  = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let destination = storyboard.instantiateViewController(withIdentifier: "StatsController") as! StatsViewController
+        let habit = habits[indexPath.row] as! Habit
+        navigationController?.pushViewController(destination, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

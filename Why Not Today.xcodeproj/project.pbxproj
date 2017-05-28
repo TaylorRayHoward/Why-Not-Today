@@ -10,6 +10,7 @@
 		3BB0908205B4D55FCAE69362 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB0929F429D46083CAD9F18 /* Habit.swift */; };
 		3BB090B625A988EC286CBC39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB090BBD82C1CF8449905C7 /* Extensions.swift */; };
 		3BB09B3303E1EE63BE6B3913 /* CreateHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */; };
+		3BB09E874A168B0884AC981D /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB090527D213308304D5715 /* StatsViewController.swift */; };
 		56129CC11E9DC9C700E72834 /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56129CC01E9DC9C700E72834 /* CustomCells.swift */; };
 		56129CC31E9DCBA500E72834 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56129CC21E9DCBA500E72834 /* CalendarViewController.swift */; };
 		592588951EAC5F4200217E6A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592588941EAC5F4200217E6A /* SettingsViewController.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHabitViewController.swift; sourceTree = "<group>"; };
+		3BB090527D213308304D5715 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		3BB090BBD82C1CF8449905C7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3BB0929F429D46083CAD9F18 /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		45AC03E4B28CF057FBDF3031 /* Pods-Why Not TodayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Why Not TodayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Why Not TodayTests/Pods-Why Not TodayTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				BA9C7949583DD7F10F9345B4 /* HabitTableViewController.swift */,
 				3BB09005F05B8AE4CC642825 /* CreateHabitViewController.swift */,
 				59F1F7541EBC2DD70095E726 /* HabitNameViewController.swift */,
+				3BB090527D213308304D5715 /* StatsViewController.swift */,
 			);
 			name = MainViewControllers;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				3BB090B625A988EC286CBC39 /* Extensions.swift in Sources */,
 				592588951EAC5F4200217E6A /* SettingsViewController.swift in Sources */,
 				5966E2CA1EB0385F00638DD3 /* NotificationMessageViewController.swift in Sources */,
+				3BB09E874A168B0884AC981D /* StatsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
