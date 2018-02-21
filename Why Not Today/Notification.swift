@@ -12,9 +12,9 @@ import UserNotifications
 import DateToolsSwift
 
 class Notification: Object {
-    dynamic var FireTime = Date()
-    dynamic var Message = ""
-    dynamic var id = ""
+    @objc dynamic var FireTime = Date()
+    @objc dynamic var Message = ""
+    @objc dynamic var id = ""
     
     override class func primaryKey() -> String {
         return "id"

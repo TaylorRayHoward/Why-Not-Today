@@ -136,11 +136,11 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
-    func confirmAction(sender: UIButton) {
+    @objc func confirmAction(sender: UIButton) {
         resolveCompletionAction(forStatus: .approve, at: sender.tag)
     }
 
-    func denyAction(sender: UIButton) {
+    @objc func denyAction(sender: UIButton) {
         resolveCompletionAction(forStatus: .deny, at: sender.tag)
     }
 
